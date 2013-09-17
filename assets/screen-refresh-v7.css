@@ -1550,7 +1550,7 @@ hr.light {
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
     border-radius: 6px;
-    background: url("http://turbo.paulstamatiou.com/assets/stammy-sq-80.jpg") no-repeat 0 0
+    background: url("/assets/img/bwhinnen_head.jpg") no-repeat 0 0
 }
 
 @media only screen and (min-width: 40.001em) {
@@ -1567,7 +1567,7 @@ hr.light {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
     #masthead .stammy {
-        background-image: url("http://turbo.paulstamatiou.com/assets/stammy-sq-160.jpg");
+        background-image: url("/assets/img/bwhinnen_head.jpg");
         background-size: 80px 80px;
         -moz-background-size: 80px 80px;
         -webkit-background-size: 80px 80px;
