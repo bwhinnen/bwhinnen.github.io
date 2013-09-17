@@ -1,0 +1,9 @@
+markdown: rdiscount
+pygments: false
+permalink: /:year/:month/:title.html
+multiviews: true
+sass: true
+haml: true
+baseurl: 
+post_defaults:
+  layout: post
