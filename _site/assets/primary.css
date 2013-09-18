@@ -827,7 +827,7 @@ table {
 #st-results-container h3 {
     margin: 0 !important;
     font-size: 1rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-family: "Jacques Francois", serif;
     font-weight: normal;
     line-height: 1.4;
     font-weight: normal
@@ -1271,7 +1271,7 @@ html {
 
 body {
     background-color: white;
-    font-family: "Jacques Francois", serif, "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-family: "Jacques Francois", serif;
     font-weight: normal;
     text-align: left;
     color: #4a4235;
@@ -1302,7 +1302,7 @@ em {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "ratio-1", "ratio-2", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-family: "Jacques Francois", serif;
     font-weight: 400;
     font-weight: bold;
     text-rendering: optimizeLegibility
@@ -1537,7 +1537,7 @@ hr.light {
 
 #masthead {
     margin: 0 auto;
-    color: #57626b;
+/*    color: #57626b;*/
     width: 43.75em
 }
 
@@ -2575,7 +2575,7 @@ time {
 }
 
 #site {
-    font-family: "ratio-1", "ratio-2", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-family: "Jacques Francois", serif;
     font-weight: 400;
     line-height: 1.65;
     min-height: 500px;
