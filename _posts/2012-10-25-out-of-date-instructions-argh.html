@@ -1,0 +1,30 @@
+---
+layout: post
+title: Out of date instructions = ARGH
+summary: Upgrade instructions for Zarafa threw a curveball and meant more work was needed to upgrade.
+oneliner: When instructions are out of date, more work is involved.
+excerpt: That is correct people still have out of date instructions for upgrading things. Our website and email services are all hosted on a HyperVM based VPS ...
+categories:
+- Random
+tags:
+- Linux
+- VPS
+- Zarafa
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  if_slider_image: ''
+  slider_hidetitle: 'on'
+  slider_custom_thumb: ''
+---
+<p><section><p>That is correct people still have out of date instructions for upgrading things. Our website and email services are all hosted on a HyperVM based VPS, it is currently running Debian 5.0 and is restricted to a kernel version of 2.6.18, while on its own this is not a great drama it can be a little restrictive as the kernel and Debian version cannot be updated easily.</p></p>
+
+<p>In my infinite wisdom, well in my defence it was required, I decided to update the mail server software (Zarafa) to the current version 7.1 from the 7.05 I was previously running. As always I do my due diligence of reading the release notes, update guide etc. Lucky for me I did and took a full backup of the mail database! Running through the notes it tells you to do certain steps at certain times, and of course being on Debian it uses dpkg to install the locally held packages you receive as part of the Zarafa distribution. Well this is usually all well and good, doing the installs and following the notes is generally not an issue, they have been in the past very good.</p>
+
+<p>This time, they have split up certain functionality into other modules, one of which needs a new package to be installed which is NOT referenced in the upgrade guide anywhere. Of course me being me I googled it and found that I needed to add a certain source to my sources.list file. Well that was mistake number one! The source I added just happened to be the new Debian distribution "sid", I didn't realise this until WAY too late, after updating umpteen packages and suddenly finding that I needed to have a newer kernel installed to support libc6, oops!</p>
+
+<p>So some quick investigation shows that I can get a new VPS with my current hosting company and it will support a) custom kernels, b) Debian 6.0 and future releases and c) it is faster, and more well appointed. The catch, it costs an extra $50 a year, big whoopie, and I have to migrate everything and set it back up. I go through the trouble of setting it up and use the same sources.list I used previously, with the exception of Debian 6.0 sources instead of Debian 5.0 sources, but of course I hadn't clicked that the "sid" source was a new distribution/version yet. So go through most of the setup and then realise that I've screwed the pooch. Start again, this time knowing what I've done wrong.</p>
+
+<p>Now installing Zarafa 7.1 I find I still need that same package, but where will I get it? ... Oh come on, seriously, it was included in the distribution all along? So did I go through all this trouble for naught? Well yes and no. Yes because I did extra work I didn't need to do and spent money I really didn't need to, and things would have kept running away for a while. No because I did need to update to a later version of Debian as 5.0 is pretty much unsupported and I need to keep on top of security patches etc and of course the new VPS is quite speedy in comparison!</p></section>
