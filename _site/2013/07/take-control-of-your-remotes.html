@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Whinnen.COM - Take control of your remotes</title>
+    <meta name="description" content="Replacing a dedicated IR receiver and remote with a simple IR device like the Flirc and using a generic remote makes life so much easier.">
+    <meta name="description" content="Flirc is a great little IR receiver that acts as a HID keyboard a MUST HAVE!">
+    <meta name="description" content="Sometimes entertaining, sometimes mindless, mostly rambling shabiness by nerd Brett Whinnen."/>
+    <meta name="author" content="Brett Whinnen"/>
+    <meta name="copyright" content="&copy; Copyright 2010 to Present"/>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta property="twitter:account_id" content="36923861"/>
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <link rel="alternate" type="application/rss+xml" title="Whinnen.COM Feed" href="http://whinnen.com/posts.xml"/>
+    <link type="text/plain" rel="author" href="/humans.txt" />
+    
+    <link rel="stylesheet" href="/assets/primary.css" type="text/css"/>
+    
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="/assets/primary.js"></script>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@bwhinnen">
+    <meta name="twitter:creator" content="@bwhinnen">
+    
+    <meta name="twitter:url" content="http://whinnen.com/2013/07/take-control-of-your-remotes.html">
+    
+    <meta name="twitter:title" content="Take control of your remotes">
+    <meta name="twitter:description" content="Recently I've struggled a bit with Braden's HTPC and its remote setup. For some reason the Dell branded RC6 IR receiver ...">
+    <!-- <meta name="twitter:image" content=""> -->
+    
+    <link rel="canonical" href="http://whinnen.com"/>
+  </head>
+
+  <body>
+    <div id="fb-root" style="display:none;"></div>
+    <div id="mastwrap">
+      <header id="masthead" class="clearfix">
+        <a href="/" class="ir stammy " title="Brett Whinnen"></a>
+        <hgroup class="intro">
+          <h1>Mostly the ramblings of a mad man!</h1>
+          <h2><span>IT nerd/geek and jack of all trades, master of a few. <br/>Storage Performance specialist and developer in general.</span></h2>
+        </hgroup>
+      </header>
+   </div>
+   <div id="cover_wrap" class="clearfix">
+      <nav>
+        <ul id="left_nav" class="list-none">
+          <li><a href="/" title="Home" class="home ir">Home</a></li>
+          <li class="rss-li"><a href="http://whinnen.com/posts.xml" title="Subscribe via RSS Feed" class="rss ir">RSS Feed</a></li>
+        </ul>
+      </nav>
+      <nav id="cover">
+        <ul id="headernav" class="list-none">
+          <li><a href="http://whinnen.com/about" title="About" class="about"><i></i> <span>About</span></a></li>
+          <li><a href="http://whinnen.com/posts" title="Posts" class="posts"><i></i> <span>Posts</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="progress-bar-container"></div>
+    <div id="site" class="sep">
+
+	  <article id="postex" class="is-post" role="main">
+  <aside id="post-content" class="clearfix">
+    <time class="date" datetime="2013-07-29 00:00:00 +1000">29 Jul 2013</time>
+  </aside>
+
+  <header class="entry-title">
+    <h1>Take control of your remotes</h1>
+    <h3>Flirc is a great little IR receiver that acts as a HID keyboard a MUST HAVE!</h3>
+  </header>
+
+  <p><section></p>Recently I've struggled a bit with Braden's HTPC and its remote setup. For some reason the Dell branded RC6 IR receiver and remote would not wake up his HTPC reliably resulting in him having to reach over the TV to turn on the HTPC himself. This to me is highly annoying as I like to be able to get settled and press a button, so to an eight year old I am sure it was equally annoying, especially one as technically minded as him.</p></p>
+
+<p>Recently the <a title="OpenELEC" href="http://openelec.tv" target="_blank">OpenELEC</a> forum in conjunction with <a title="The Pi Hut" href="http://thepihut.com" target="_blank">The Pi Hut</a> and <a title="Flirc" href="http://flirc.tv" target="_blank">Flirc</a> had a competition (well it is still going on at the time of penning this note) to win a flirc device. I was one of the lucky ones to win one. I must of course say a big thank you to each of the team members involved from the three places, the prize is not only greatly appreciated but is immensely useful!</p>
+
+<p>What is a flirc device? Simply it is a lovely, and I must say pretty sexy looking, USB compatible IR receiver that presents itself as a HID device to the OS. There is a simple programming application that can be run on OS X, Linux and of course Windows which allows it to capture any IR signal from any remote regardless of what proprietary codes it uses and then allocate these to a variety of functions. As I use XBMC I chose to use the full keyboard option as I could then have many different buttons to control the plethora of options that XBMC uses. The cool thing about the flirc is that you program it and it remembers the settings and you can then move it to any device with a USB port that supports HID functions with no further management or changes required to that end device.</p>
+
+<p>Pretty cool! It meant that I could program it up and then move it onto the OpenELEC system and not have to do anything but use the remote, this is especially important as OpenELEC and XBMC itself has no way of changing the way the keyboard or remote works without delving down into the config files by hand via the base operating system, yes that is right no pretty GUI for those technically challenged people out there.</p>
+
+<p>Of course I did have to modify the keyboard.xml file slightly as I wanted certain functionality to continue over from the old RC6 setup. One was the power button, to put the device to sleep, in this case I simply mapped the power button on the remote to the function 4 (F4) key and then setup the keyboard config to do a XBMC.Suspend() on receipt of that key press. The other main change was that the |&lt; and &gt;| buttons would do a skip in the video play mode, I wanted them to act like the remote and actually skip to the next item in the playlist (for music video clips especially), this was also a simple change on the keyboard configuration changing the , and . keys used by default to SkipPrevious and SkipNext.</p>
+
+<p>Overall the flirc is an excellent device and well worth it. Even if I had to buy one outright I certainly would now as it is just as cheap as a RC6 setup from eBay, but with infinitely more uses and functionality!</p></section>
+
+
+</article>
+
+
+
+    </div>
+    <footer id="footer" class="clearfix">
+      <div class="center_mod">
+        <ul id="nav" class="list-none">
+          <li><a href="http://whinnen.com" title="Home">Home</a></li>
+          <li><a href="http://whinnen.com/about" title="About">About</a></li>
+          <li><a href="http://whinnen.com/posts" title="Posts">Posts</a></li>
+          <li><a href="http://whinnen.com/contact" class="email" title="Contact">Contact</a></li>
+          <li><a href="http://whinnen.com/posts.xml" class="rss" title="Subscribe via RSS Feed">RSS</a></li>
+          <li><a href="http://twitter.com/bwhinnen">@bwhinnen</a></li>
+        </ul>
+        <a href="#" class="back_up" title="Back to the top"><i></i></a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,3544 @@
+/*
+ * This CSS file was taken from Paul Stamatiou @Stammy, http://paulstamatiou.com.
+ *
+ * The original title was "screen-refresh-v7.css" and has been changed.
+ * Some items have been changed to suit my own website and have been commented where
+ * changed. All thanks goes to Paul for the original CSS file.
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
+mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.focal-point {
+    width: 100%;
+    height: auto;
+    overflow: hidden
+}
+
+.focal-point img {
+    width: 100%;
+    max-width: 100%;
+    height: auto
+}
+
+.focal-point div {
+    position: relative;
+    max-width: none;
+    height: auto
+}
+
+@media all and (max-width: 767px) {
+    .focal-point div {
+        margin: -3em -4em
+    }
+
+    .down-1 div {
+        margin-top: -3.5em;
+        margin-bottom: -2.5em
+    }
+
+    .down-2 div {
+        margin-top: -4em;
+        margin-bottom: -2em
+    }
+
+    .down-3 div {
+        margin-top: -4.5em;
+        margin-bottom: -1.5em
+    }
+
+    .down-4 div {
+        margin-top: -5em;
+        margin-bottom: -1em
+    }
+
+    .down-5 div {
+        margin-top: -5.5em;
+        margin-bottom: -0.5em
+    }
+
+    .down-6 div {
+        margin-top: -6em;
+        margin-bottom: 0
+    }
+
+    .up-1 div {
+        margin-top: -2.5em;
+        margin-bottom: -3.5em
+    }
+
+    .up-2 div {
+        margin-top: -2em;
+        margin-bottom: -4em
+    }
+
+    .up-3 div {
+        margin-top: -1.5em;
+        margin-bottom: -4.5em
+    }
+
+    .up-4 div {
+        margin-top: -1em;
+        margin-bottom: -5em
+    }
+
+    .up-5 div {
+        margin-top: -0.5em;
+        margin-bottom: -5.5em
+    }
+
+    .up-6 div {
+        margin-top: 0;
+        margin-bottom: -6em
+    }
+
+    .right-1 div {
+        margin-left: -4.66em;
+        margin-right: -3.34em
+    }
+
+    .right-2 div {
+        margin-left: -5.33em;
+        margin-right: -2.67em
+    }
+
+    .right-3 div {
+        margin-left: -6em;
+        margin-right: -2em
+    }
+
+    .right-4 div {
+        margin-left: -6.66em;
+        margin-right: -1.34em
+    }
+
+    .right-5 div {
+        margin-left: -7.33em;
+        margin-right: -0.67em
+    }
+
+    .right-6 div {
+        margin-left: -8em;
+        margin-right: 0
+    }
+
+    .left-1 div {
+        margin-left: -3.34em;
+        margin-right: -4.66em
+    }
+
+    .left-2 div {
+        margin-left: -2.67em;
+        margin-right: -5.33em
+    }
+
+    .left-3 div {
+        margin-left: -2em;
+        margin-right: -6em
+    }
+
+    .left-4 div {
+        margin-left: -1.34em;
+        margin-right: -6.66em
+    }
+
+    .left-5 div {
+        margin-left: -0.67em;
+        margin-right: -7.33em
+    }
+
+    .left-6 div {
+        margin-left: 0;
+        margin-right: -8em
+    }
+
+    .focal-point.portrait div {
+        margin: -4em -3em
+    }
+
+    .portrait.down-1 div {
+        margin-top: -4.66em;
+        margin-bottom: -3.34em
+    }
+
+    .portrait.down-2 div {
+        margin-top: -5.33em;
+        margin-bottom: -2.67em
+    }
+
+    .portrait.down-3 div {
+        margin-top: -6em;
+        margin-bottom: -2em
+    }
+
+    .portrait.down-4 div {
+        margin-top: -6.66em;
+        margin-bottom: -1.34em
+    }
+
+    .portrait.down-5 div {
+        margin-top: -7.33em;
+        margin-bottom: -0.67em
+    }
+
+    .portrait.down-6 div {
+        margin-top: -8em;
+        margin-bottom: 0
+    }
+
+    .portrait.right-1 div {
+        margin-left: -3.5em;
+        margin-right: -2.5em
+    }
+
+    .portrait.right-2 div {
+        margin-left: -4em;
+        margin-right: -2em
+    }
+
+    .portrait.right-3 div {
+        margin-left: -4.5em;
+        margin-right: -1.5em
+    }
+
+    .portrait.right-4 div {
+        margin-left: -5em;
+        margin-right: -1em
+    }
+
+    .portrait.right-5 div {
+        margin-left: -5.5em;
+        margin-right: -0.5em
+    }
+
+    .portrait.right-6 div {
+        margin-left: -6em;
+        margin-right: 0
+    }
+
+    .portrait.up-1 div {
+        margin-top: -3.34em;
+        margin-bottom: -4.66em
+    }
+
+    .portrait.up-2 div {
+        margin-top: -2.67em;
+        margin-bottom: -5.33em
+    }
+
+    .portrait.up-3 div {
+        margin-top: -2em;
+        margin-bottom: -6em
+    }
+
+    .portrait.up-4 div {
+        margin-top: -1.34em;
+        margin-bottom: -6.66em
+    }
+
+    .portrait.up-5 div {
+        margin-top: -0.67em;
+        margin-bottom: -7.33em
+    }
+
+    .portrait.up-6 div {
+        margin-top: 0;
+        margin-bottom: -8em
+    }
+
+    .portrait.left-1 div {
+        margin-left: -2.5em;
+        margin-right: -3.5em
+    }
+
+    .portrait.left-2 div {
+        margin-left: -2em;
+        margin-right: -4em
+    }
+
+    .portrait.left-3 div {
+        margin-left: -1.5em;
+        margin-right: -4.5em
+    }
+
+    .portrait.left-4 div {
+        margin-left: -1em;
+        margin-right: -5em
+    }
+
+    .portrait.left-5 div {
+        margin-left: -0.5em;
+        margin-right: -5.5em
+    }
+
+    .portrait.left-6 div {
+        margin-left: 0;
+        margin-right: -6em
+    }
+}
+
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    -ms-animation-duration: 0.2s;
+    -o-animation-duration: 0.2s;
+    animation-duration: 0.2s
+}
+
+.animated-long {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s
+}
+
+@keyframes fallout {
+    0% {
+        transform: rotate(0deg) translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        transform-origin: left bottom;
+        transform: rotate(25deg) translateY(100px);
+        opacity: 0;
+        z-index: -1
+    }
+}
+
+@-moz-keyframes fallout {
+    0% {
+        -mox-transform: rotate(0deg) translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        -moz-transform-origin: left bottom;
+        -moz-transform: rotate(25deg) translateY(100px);
+        opacity: 0;
+        z-index: -1
+    }
+}
+
+@-webkit-keyframes fallout {
+    0% {
+        -webkit-transform: rotate(0deg) translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform-origin: left bottom;
+        -webkit-transform: rotate(25deg) translateY(100px);
+        opacity: 0;
+        z-index: -1
+    }
+}
+
+.fallout {
+    -webkit-animation-name: fallout;
+    -moz-animation-name: fallout;
+    -o-animation-name: fallout;
+    animation-name: fallout
+}
+
+@-webkit-keyframes backnforth {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    33% {
+        -webkit-transform: rotate(30deg)
+    }
+
+    67% {
+        -webkit-transform: rotate(-30deg)
+    }
+}
+
+@-moz-keyframes backnforth {
+    0% {
+        -moz-transform: rotate(0deg)
+    }
+
+    33% {
+        -moz-transform: rotate(30deg)
+    }
+
+    67% {
+        -moz-transform: rotate(-30deg)
+    }
+}
+
+@-o-keyframes backnforth {
+    0% {
+        -o-transform: rotate(0deg)
+    }
+
+    33% {
+        -o-transform: rotate(30deg)
+    }
+
+    67% {
+        -o-transform: rotate(-30deg)
+    }
+}
+
+@keyframes backnforth {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    33% {
+        transform: rotate(30deg)
+    }
+
+    67% {
+        transform: rotate(-30deg)
+    }
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-moz-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0)
+    }
+}
+
+@-o-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -ms-transform: translateY(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        -ms-transform: translateY(0)
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}
+
+@-webkit-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px)
+    }
+}
+
+@-moz-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -moz-transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateY(-20px)
+    }
+}
+
+@-o-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -o-transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: translateY(-20px)
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    -moz-animation-name: fadeOutUp;
+    -o-animation-name: fadeOutUp;
+    animation-name: fadeOutUp
+}
+
+.highlight {
+    background: white
+}
+
+.highlight .c {
+    color: #999988;
+    font-style: italic
+}
+
+.highlight .err {
+    color: #a61717;
+    background-color: #e3d2d2
+}
+
+.highlight .k {
+    font-weight: bold
+}
+
+.highlight .o {
+    font-weight: bold
+}
+
+.highlight .cm {
+    color: #999988;
+    font-style: italic
+}
+
+.highlight .cp {
+    color: #999999;
+    font-weight: bold
+}
+
+.highlight .c1 {
+    color: #999988;
+    font-style: italic
+}
+
+.highlight .cs {
+    color: #999999;
+    font-weight: bold;
+    font-style: italic
+}
+
+.highlight .gd {
+    color: black;
+    background-color: #ffdddd
+}
+
+.highlight .gd .x {
+    color: black;
+    background-color: #ffaaaa
+}
+
+.highlight .ge {
+    font-style: italic
+}
+
+.highlight .gr {
+    color: #aa0000
+}
+
+.highlight .gh {
+    color: #999999
+}
+
+.highlight .gi {
+    color: black;
+    background-color: #ddffdd
+}
+
+.highlight .gi .x {
+    color: black;
+    background-color: #aaffaa
+}
+
+.highlight .go {
+    color: #888888
+}
+
+.highlight .gp {
+    color: #555555
+}
+
+.highlight .gs {
+    font-weight: bold
+}
+
+.highlight .gu {
+    color: #aaaaaa
+}
+
+.highlight .gt {
+    color: #aa0000
+}
+
+.highlight .kc {
+    font-weight: bold
+}
+
+.highlight .kd {
+    font-weight: bold
+}
+
+.highlight .kp {
+    font-weight: bold
+}
+
+.highlight .kr {
+    font-weight: bold
+}
+
+.highlight .kt {
+    color: #445588;
+    font-weight: bold
+}
+
+.highlight .m {
+    color: #009999
+}
+
+.highlight .s {
+    color: #dd1144
+}
+
+.highlight .na {
+    color: teal
+}
+
+.highlight .nb {
+    color: #0086b3
+}
+
+.highlight .nc {
+    color: #445588;
+    font-weight: bold
+}
+
+.highlight .no {
+    color: teal
+}
+
+.highlight .ni {
+    color: purple
+}
+
+.highlight .ne {
+    color: #990000;
+    font-weight: bold
+}
+
+.highlight .nf {
+    color: #990000;
+    font-weight: bold
+}
+
+.highlight .nn {
+    color: #555555
+}
+
+.highlight .nt {
+    color: navy
+}
+
+.highlight .nv {
+    color: teal
+}
+
+.highlight .ow {
+    font-weight: bold
+}
+
+.highlight .w {
+    color: #bbbbbb
+}
+
+.highlight .mf {
+    color: #009999
+}
+
+.highlight .mh {
+    color: #009999
+}
+
+.highlight .mi {
+    color: #009999
+}
+
+.highlight .mo {
+    color: #009999
+}
+
+.highlight .sb {
+    color: #dd1144
+}
+
+.highlight .sc {
+    color: #dd1144
+}
+
+.highlight .sd {
+    color: #dd1144
+}
+
+.highlight .s2 {
+    color: #dd1144
+}
+
+.highlight .se {
+    color: #dd1144
+}
+
+.highlight .sh {
+    color: #dd1144
+}
+
+.highlight .si {
+    color: #dd1144
+}
+
+.highlight .sx {
+    color: #dd1144
+}
+
+.highlight .sr {
+    color: #009926
+}
+
+.highlight .s1 {
+    color: #dd1144
+}
+
+.highlight .ss {
+    color: #990073
+}
+
+.highlight .bp {
+    color: #999999
+}
+
+.highlight .vc {
+    color: teal
+}
+
+.highlight .vg {
+    color: teal
+}
+
+.highlight .vi {
+    color: teal
+}
+
+.highlight .il {
+    color: #009999
+}
+
+#st-results-container {
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 0px;
+    display: none
+}
+
+@media only screen and (max-width: 30em) {
+    #st-results-container {
+        width: 100%
+    }
+}
+
+#st-results-container h3 {
+    margin: 0 !important;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+    font-weight: normal
+}
+
+form .st-search-input {
+    background: #fff url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png") no-repeat -462px 6px;
+    font-size: 100%;
+    margin-top: 3px;
+    padding: 5px 25px 5px 30px;
+    width: 240px;
+    font-weight: 300;
+    color: #6d758f;
+    border: 1px solid #d2d5de;
+    outline: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    -khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    form .st-search-input {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px;
+        background-position: -229px 7px
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    form .st-search-input {
+        width: 180px
+    }
+}
+
+form .cancel_search {
+    background: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png") no-repeat -304px 0;
+    opacity: 0.5;
+    display: none;
+    width: 18px;
+    height: 18px;
+    margin: 0 6px -3px -28px;
+    -webkit-transition: opacity, 0.2s;
+    -moz-transition: opacity, 0.2s;
+    -ms-transition: opacity, 0.2s;
+    -o-transition: opacity, 0.2s;
+    transition: opacity, 0.2s
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    form .cancel_search {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px;
+        background-position: -152px 0
+    }
+}
+
+form .cancel_search:hover {
+    opacity: 1
+}
+
+form .close_search {
+    color: #8f95a8;
+    text-transform: lowercase;
+    font-size: 1em;
+    margin-left: 3px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+}
+
+@media only screen and (max-width: 30em) {
+    form .close_search {
+        margin-left: 10px
+    }
+}
+
+form .close_search:hover {
+    color: #4c6296
+}
+
+.st-results-wrap {
+    padding: 30px 0
+}
+
+@media only screen and (max-width: 30em) {
+    .st-results-wrap {
+        margin: 0 12px
+    }
+}
+
+.st-results-wrap.no-results {
+    width: 350px;
+    margin: 0 auto
+}
+
+@media only screen and (max-width: 30em) {
+    .st-results-wrap.no-results {
+        width: 80%
+    }
+}
+
+div.st-result {
+    border-bottom: 1px solid #f2f5f8;
+    padding-bottom: 7px;
+    margin-bottom: 7px
+}
+
+div.st-result:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.st-prev {
+    margin-right: 20px;
+    margin-left: 0 !important
+}
+
+.st-prev i {
+    background-position: -98px -50px !important;
+    margin: 0 1em -3px 0 !important
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    .st-prev i {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px;
+        background-position: -49px -25px
+    }
+}
+
+.st-next, .st-prev {
+    color: #fff !important;
+    font-size: 14px;
+    line-height: 1
+}
+
+.st-page {
+    margin: 0 auto 0;
+    text-align: center;
+    padding-top: 20px
+}
+
+.st-page:last-child {
+    background-image: url("http://turbo.paulstamatiou.com/assets/hr.png");
+    background-image: url("http://turbo.paulstamatiou.com/assets/hr.png"), -webkit-radial-gradient(50% -13%, 200px 10px, rgba(0, 0, 0, 0.05) -7%, #fff 100%);
+    background-image: url("http://turbo.paulstamatiou.com/assets/hr.png"), -o-radial-gradient(50% -13%, 200px 10px, rgba(0, 0, 0, 0.05) -7%, #fff 100%);
+    background-image: url("http://turbo.paulstamatiou.com/assets/hr.png"), radial-gradient(50% -13%, 200px 10px, rgba(0, 0, 0, 0.05) -7%, #ffffff 100%);
+    background-position: center 0, 0 0;
+    background-repeat: no-repeat, no-repeat
+}
+
+.st-loading-message {
+    font-size: 22px;
+    color: #848077;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 100px 0
+}
+
+#archives_timeline {
+    width: 100%
+}
+
+#archives_timeline time {
+    font-size: 1rem;
+    float: right;
+    margin-top: 0.6em;
+    color: #abc
+}
+
+@media only screen and (max-width: 40em) {
+    #archives_timeline time {
+        display: none
+    }
+}
+
+#archives_timeline h1 {
+    color: #dcdee4;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 3px solid #dcdee4;
+    margin-bottom: 0
+}
+
+#archives_timeline .timeline {
+    background: url("http://turbo.paulstamatiou.com/assets/line.png") 0 0 repeat-y;
+    list-style: none;
+    padding: 30px 0 30px;
+    margin: 0 auto 5em;
+    position: relative
+}
+
+#archives_timeline .timeline .spine {
+    position: absolute;
+    left: 0;
+    width: 29px;
+    height: 100%;
+    z-index: 1
+}
+
+#archives_timeline .timeline>li {
+    float: right;
+    clear: right;
+    margin-left: 0;
+    width: 94%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2
+}
+
+#archives_timeline .timeline .end .pointer {
+    width: 12px;
+    height: 12px;
+    left: -7.3%;
+    border: none
+}
+
+#archives_timeline .timeline .pointer {
+    width: 5px;
+    height: 5px;
+    background: #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    position: absolute;
+    left: -7.0%;
+    top: 20px
+}
+
+#archives_timeline .timeline .spine>a, #archives_timeline .timeline .spine a:visited {
+    display: block;
+    height: 100%
+}
+
+#archives_timeline .right .title .tag {
+    display: inline;
+    margin-left: 7px;
+    font-weight: bold;
+    font-size: 0.75em;
+    line-height: 1.0;
+    color: #fff;
+    background: #84ABD6;
+    padding: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block
+}
+
+#archives_timeline .right .title .tag.featured {
+    background: #D68484
+}
+
+#archives_timeline .right .entry:after, #archives_timeline .right .entry:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+#archives_timeline .right .entry:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 10px;
+    top: 23px;
+    margin-top: -10px
+}
+
+#archives_timeline .right .entry:before {
+    border-color: rgba(238, 238, 238, 0);
+    border-right-color: #bbb;
+    border-width: 11px;
+    top: 23px;
+    margin-top: -11px
+}
+
+#archives_timeline .entry {
+    background: #fff;
+    position: relative;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 2.1;
+    text-decoration: none !important
+}
+
+#archives_timeline .entry.feature {
+    font-size: 1.4em;
+    line-height: 1.5;
+    font-weight: bold
+}
+
+#archives_timeline .entry.feature .tag.featured {
+    font-size: 0.75rem
+}
+
+.stammy-bar {
+    top: 0;
+    bottom: auto;
+    position: fixed;
+    background: red;
+    height: 1px;
+    display: none;
+    width: 0px;
+    left: 0;
+    z-index: 99
+}
+
+#tweet_it_bro {
+    display: none;
+    z-index: 100;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 300px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08)
+}
+
+#tweet_it_bro .close_it_bro {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer
+}
+
+#tweet_it_bro iframe.twitter-share-button {
+    margin-top: 12px
+}
+
+#tweet_it_bro iframe.twitter-follow-button {
+    width: 188px !important
+}
+
+#tweet_it_bro h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 10px 12px 3px;
+    color: #555
+}
+
+#tweet_it_bro p {
+    padding: 4px 12px 0;
+    margin-bottom: 7px;
+    font-size: 14px !important;
+    line-height: 1.4
+}
+
+#tweet_it_bro footer {
+    border-top: 1px solid #ddd;
+    padding: 10px 12px 2px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #f5f5f5
+}
+
+#tweet_it_bro footer img {
+    float: right
+}
+
+#postex section.comments, #post section.comments {
+    margin: 0
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%
+}
+
+#masthead .stammy {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s
+}
+
+#masthead .stammy:hover {
+    -webkit-animation-name: backnforth;
+    -moz-animation-name: backnforth;
+    -o-animation-name: backnforth;
+    animation-name: backnforth;
+    -webkit-backface-visibility: hidden
+}
+
+body {
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    color: #4a4235;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased
+}
+
+* html .clearfix {
+    height: 1%;
+    overflow: visible
+}
+
+*+html .clearfix {
+    min-height: 1%
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0
+}
+
+em {
+    font-style: italic
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "ratio-1", "ratio-2", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    text-rendering: optimizeLegibility
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1em
+}
+
+h4 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    margin: 1.5em 0 0.5em
+}
+
+h5 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em
+}
+
+h6 {
+    font-size: 1.2em
+}
+
+h6+p {
+    margin-top: 1em
+}
+
+strong {
+    font-weight: bold
+}
+
+span.amp {
+    font-family: Baskerville, Palatino, "Book Antiqua", serif;
+    font-style: italic
+}
+
+.focal {
+    font-style: italic;
+    font-family: 'Trebuchet MS', Candara, Georgia, Calibri, Corbel, serif
+}
+
+p {
+    margin: 0 0 1.5em 0
+}
+
+p.larger {
+    font-size: 1.1em
+}
+
+a {
+    color: #4c6296;
+    text-decoration: none;
+    outline: none
+}
+
+a:hover {
+    color: #173061;
+    text-decoration: none
+}
+
+a:visited {
+    color: #6a4c96
+}
+
+a:visited:hover {
+    color: #463263
+}
+
+a img {
+    border: 0
+}
+
+ol li {
+    margin-left: 25px
+}
+
+table {
+    font-size: inherit;
+    font: 100%
+}
+
+blockquote {
+    border-left: 7px solid #dadde4;
+    margin: 0em 0em 1.5em;
+    padding: 0.5em 1.5em;
+    font-size: 0.9em
+}
+
+blockquote ul {
+    margin-bottom: 0 !important
+}
+
+blockquote.pull-right {
+    float: right;
+    line-height: 1.5;
+    padding: 0;
+    width: 40%;
+    border: none;
+    color: #678;
+    font-size: 1.4rem
+}
+
+@media only screen and (max-width: 54.99em) {
+    blockquote.pull-right {
+        margin: 0.5em 0 0.5em 1.5em
+    }
+}
+
+@media only screen and (min-width: 55em) {
+    blockquote.pull-right {
+        margin: 0.5em -20% 0.5em 1.5em
+    }
+}
+
+@media (max-width: 20em){blockquote.pull-right {
+        float: none;
+        margin: 1em 0;
+        width: 100%
+    }
+}
+
+blockquote.huge {
+    max-width: 130%;
+    border: none;
+    color: #678;
+    padding: 0;
+    font-size: 2.1rem;
+    margin: 1.7em -15% 1.7em;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    -moz-hypens: auto
+}
+
+blockquote.huge p {
+    margin: 0
+}
+
+blockquote.huge p:before, blockquote.huge p:after {
+    font-size: 1.3em;
+    line-height: 0
+}
+
+blockquote.huge p:before {
+    content: '\201C'
+}
+
+blockquote.huge p:after {
+    content: '\201D'
+}
+
+blockquote.huge .author {
+    font-size: 1.2rem;
+    display: block
+}
+
+@media only screen and (max-width: 39.4em) {
+    blockquote.huge {
+        max-width: 35.4em;
+        margin: 0 auto 1.5em;
+        font-size: 1.8rem
+    }
+}
+
+@media only screen and (min-width: 39.401em) and (max-width: 52em) {
+    blockquote.huge {
+        margin: 0 -4% 2em;
+        max-width: 107%;
+        font-size: 1.8rem
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    blockquote.huge {
+        font-size: 1.4rem;
+        line-height: 1.5
+    }
+}
+
+.off-right {
+    float: right;
+    margin: 0.4687em -58.87143% 1.875em 1.875em
+}
+
+@media only screen and (max-width: 40em) {
+    .off-right {
+        margin: 0.4687em 0 1.875em 1.875em
+    }
+}
+
+.in-right {
+    margin: 0.5em 0 0.5em 0.5em
+}
+
+hr {
+    height: 1px;
+    display: block;
+    border: none;
+    margin: 40px 0;
+    background: url("http://turbo.paulstamatiou.com/assets/hr.png") no-repeat center 0
+}
+
+hr.article {
+    height: 3px;
+    background-repeat: repeat-y
+}
+
+hr.light {
+    opacity: 0.7
+}
+
+#mastwrap {
+    width: 100%;
+    line-height: 1;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    background: #f3f3f3
+}
+
+#masthead {
+    margin: 0 auto;
+    color: #57626b;
+    width: 43.75em
+}
+
+@media only screen and (max-width: 40em) {
+    #masthead {
+        text-align: center;
+        width: 100%
+    }
+}
+
+#masthead .stammy {
+    display: block;
+    width: 194px;
+    height: 80px;
+    margin: 0.5em 0 0 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    background: url("/assets/img/Whinnen.COM.png") no-repeat 0 0
+}
+
+@media only screen and (min-width: 40.001em) {
+    #masthead .stammy {
+        float: left
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    #masthead .stammy {
+        margin: 0 auto
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #masthead .stammy {
+        background-image: url("/assets/img/bwhinnen_head.jpg");
+        background-size: 80px 80px;
+        -moz-background-size: 80px 80px;
+        -webkit-background-size: 80px 80px;
+        -khtml-background-size: 80px 80px;
+        -o-background-size: 80px 80px;
+        -ms-background-size: 80px 80px
+    }
+}
+
+#masthead .stammy:active {
+    background-position: 0 1px
+}
+
+#masthead hgroup {
+    margin: 0.5em auto 0.5em;
+    line-height: 1.4
+}
+
+@media only screen and (max-width: 30em) {
+    #masthead hgroup {
+        margin-bottom: 0
+    }
+}
+
+@media only screen and (min-width: 40.001em) {
+    #masthead hgroup {
+        float: right;
+        width: 31em
+    }
+}
+
+#masthead hgroup h1 a {
+    font-size: 0.65em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #669ecc
+}
+
+#masthead hgroup h1 a:hover {
+    color: #245f8f
+}
+
+#masthead hgroup h1 {
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    font-size: 1.75em
+}
+
+#masthead hgroup h2 {
+    font-weight: 500;
+    color: #999;
+    font-size: 1em;
+    margin: 0.45em 0 0 0
+}
+
+@media only screen and (max-width: 30em) {
+    #masthead hgroup h2 {
+        font-size: 0.95em
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    #masthead {
+        text-align: left
+    }
+
+    #masthead .stammy {
+        float: left;
+        margin: 0.5em 0.6em 0.5em 1em;
+        width: 48px !important;
+        height: 48px !important;
+        background-size: 48px 48px;
+        -moz-background-size: 48px 48px;
+        -webkit-background-size: 48px 48px;
+        -khtml-background-size: 48px 48px;
+        -o-background-size: 48px 48px;
+        -ms-background-size: 48px 48px
+    }
+
+    #masthead hgroup {
+        margin: 0.55em 0 0 0 !important;
+        float: left
+    }
+
+    #masthead h1 {
+        font-size: 1.5em !important;
+        margin: 0 !important
+    }
+
+    #masthead h1 a {
+        display: block
+    }
+
+    #masthead h2 {
+        display: none
+    }
+}
+
+#cover_wrap {
+    width: 100%;
+    padding: 13px 0;
+    line-height: 1
+}
+
+#cover_wrap #left_nav {
+    float: left;
+    padding-left: 25px
+}
+
+@media (max-width: 20em){#cover_wrap #left_nav {
+        display: none
+    }
+}
+
+@media (max-width: 25em){#cover_wrap #left_nav .rss {
+        display: none
+    }
+}
+
+#cover_wrap #left_nav .home, #cover_wrap #left_nav .rss {
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    -webkit-transition: opacity, 0.2s;
+    -moz-transition: opacity, 0.2s;
+    -ms-transition: opacity, 0.2s;
+    -o-transition: opacity, 0.2s;
+    transition: opacity, 0.2s
+}
+
+#cover_wrap #left_nav .home:hover, #cover_wrap #left_nav .rss:hover {
+    opacity: 1
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover_wrap #left_nav .home, #cover_wrap #left_nav .rss {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px
+    }
+}
+
+#cover_wrap #left_nav .home {
+    width: 24px;
+    height: 24px;
+    background-position: 0 0;
+    margin-right: 25px
+}
+
+#cover_wrap #left_nav .home.fixed {
+    position: fixed;
+    top: 1em;
+    -webkit-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s
+}
+
+#cover_wrap #left_nav .rss {
+    width: 23px;
+    height: 24px;
+    background-position: -54px 2px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover_wrap #left_nav .rss {
+        background-position: -27px 1px
+    }
+}
+
+#cover {
+    width: 385px;
+    margin: 0 auto;
+    text-align: center
+}
+
+@media (max-width: 25em){#cover {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    #cover {
+        margin-bottom: 3px
+    }
+}
+
+#cover #headernav {
+    padding: 0
+}
+
+#cover #headernav li {
+    display: inline-block;
+    margin-right: 25px
+}
+
+#cover #headernav li:nth-child(4) {
+    margin-right: 0 !important
+}
+
+#cover #headernav li .arr {
+    opacity: 0.8;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 3.8em;
+    line-height: 0;
+    position: absolute;
+    top: 20px;
+    color: #a6adbd;
+    -webkit-transition: opacity, 0.1s;
+    -moz-transition: opacity, 0.1s;
+    -ms-transition: opacity, 0.1s;
+    -o-transition: opacity, 0.1s;
+    transition: opacity, 0.1s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+#cover #headernav li .arr:hover {
+    opacity: 1
+}
+
+#cover #headernav li .arr_l {
+    right: 1em
+}
+
+#cover #headernav li .arr_r {
+    right: 0.5em
+}
+
+#cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i,
+#cover #headernav li .search {
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: inline-block
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i,
+    #cover #headernav li .search {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px
+    }
+}
+
+#cover #headernav li a, #cover #headernav li a:visited {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    color: #a3a9b8;
+    font-size: 1.05em;
+    font-weight: 500
+}
+
+#cover #headernav li a:hover {
+    color: #8f95a8
+}
+
+#cover #headernav li a:hover i {
+    opacity: 1
+}
+
+#cover #headernav li .about i {
+    width: 24px;
+    height: 22px;
+    background-position: -100px 0;
+    margin-right: 7px;
+    margin-bottom: -4px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .about i {
+        background-position: -50px 0
+    }
+}
+
+#cover #headernav li .posts i {
+    width: 24px;
+    height: 26px;
+    background-position: -150px 0;
+    margin-right: 7px;
+    margin-bottom: -7px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .posts i {
+        background-position: -75px 0
+    }
+}
+
+#cover #headernav li .photos i {
+    width: 28px;
+    height: 21px;
+    background-position: -200px 0;
+    margin-right: 7px;
+    margin-bottom: -3px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .photos i {
+        background-position: -100px 0
+    }
+}
+
+#cover #headernav li .search {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-position: -256px 0;
+    margin-bottom: -5px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .search {
+        background-position: -128px 0
+    }
+}
+
+#cover #headernav li .search:hover {
+    opacity: 1
+}
+
+@media only screen and (max-width: 40em) {
+    #cover #headernav li .about span, #cover #headernav li .posts span, #cover #headernav li .photos span {
+        display: none
+    }
+}
+
+#cover #searchbar {
+    margin: -6px 0
+}
+
+div.year {
+    margin-bottom: 60px
+}
+
+div.year:last-child {
+    margin-bottom: 0
+}
+
+div.year h2.year {
+    color: #888888;
+    float: left;
+    margin: 0.2em 0 0 -3em;
+    font-size: 250%
+}
+
+div.year h3.month, div.year h2.tag {
+    margin-top: 0
+}
+
+menu, ol, ul {
+    padding: 0
+}
+
+.list-none li {
+    list-style-type: none !important;
+    margin-left: 0 !important
+}
+
+.list-xl li {
+    font-size: 1.2em
+}
+
+.center_mod {
+    width: 38.75em;
+    margin: 0 auto;
+    position: relative
+}
+
+@media only screen and (max-width: 40em) {
+    .center_mod {
+        width: 100%
+    }
+}
+
+.read_more {
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block
+}
+
+.read_more:visited {
+    color: #38c
+}
+
+.read_more:hover {
+    color: #38c
+}
+
+.more_posts, .st-prev, .st-next {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff !important;
+    background-color: #8f95a8;
+    margin-top: 15px;
+    padding: 0.5em 0.75em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    opacity: 0.8;
+    display: inline-block;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15)
+}
+
+@media only screen and (max-width: 30em) {
+    .more_posts, .st-prev, .st-next {
+        margin-left: 10px;
+        padding: 0.75em 1em
+    }
+}
+
+.more_posts i, .st-prev i, .st-next i {
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat;
+    background-position: -34px -50px;
+    margin: 0 0 -3px 1em
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    .more_posts i, .st-prev i, .st-next i {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px;
+        background-position: -17px -25px
+    }
+}
+
+.more_posts:hover, .st-prev:hover, .st-next:hover {
+    opacity: 1
+}
+
+#more_wrap {
+    margin: 0 auto;
+    max-width: 900px
+}
+
+.more_pics {
+    background: #888;
+    padding: 1.35em 0 1.3em;
+    opacity: 0.4;
+    display: block;
+    text-align: center;
+    margin: 2em auto;
+    width: 33.3333%
+}
+
+@media only screen and (max-width: 40em) {
+    .more_pics {
+        width: 100%;
+        margin-top: 0
+    }
+}
+
+.more_pics i {
+    display: inline-block;
+    width: 56px;
+    height: 42px;
+    background: url("http://turbo.paulstamatiou.com/assets/pstamcam.png") no-repeat 0 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    .more_pics i {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstamcam-2x.png");
+        background-size: 112px 84px;
+        -moz-background-size: 112px 84px;
+        -webkit-background-size: 112px 84px;
+        -khtml-background-size: 112px 84px;
+        -o-background-size: 112px 84px;
+        -ms-background-size: 112px 84px
+    }
+}
+
+.more_pics:hover {
+    opacity: 0.8
+}
+
+.more_pics:active {
+    opacity: 1
+}
+
+#postex ul.posts {
+    margin-bottom: 1em
+}
+
+@media (min-width: 1000px){#postex ul.posts.photo-list {
+        margin-left: 4px
+    }
+}
+
+#postex ul.posts.photo-list li {
+    margin: 1em 0;
+    width: 50%;
+    float: left
+}
+
+#postex ul.posts.photo-list li h3 {
+    font-size: 1.3em
+}
+
+#postex ul.posts.photo-list li:last-child {
+    margin-top: 1em
+}
+
+@media (min-width: 1000px){#postex ul.posts.photo-list li {
+        width: 350px;
+        text-align: center
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    #postex ul.posts.photo-list li {
+        width: 100%
+    }
+}
+
+#postex ul.posts li {
+    margin: 2.5em 0
+}
+
+#postex ul.posts li.li-btn a {
+    margin-top: 0
+}
+
+#postex ul.posts li .entry-title h2 {
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-bottom: 5px
+}
+
+#postex ul.posts li .oneliner {
+    margin: 0
+}
+
+#postex ul.posts li:first-child {
+    margin-top: 0
+}
+
+#postex ul.posts li.aside .center {
+    display: none
+}
+
+#postex ul.posts li.aside .entry-title {
+    border-left: 3px solid #d6dde6
+}
+
+#postex ul.posts li.aside p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 0.5em
+}
+
+#postex ul.posts li.aside .entry-title h2 {
+    margin-bottom: 0;
+    margin-left: 0.5em;
+    line-height: 1.3;
+    font-size: 1.2em
+}
+
+#postex ul.posts li.aside .entry-title h2 a:hover {
+    color: #444
+}
+
+.button-active, .more_posts:active, .st-prev:active, .st-next:active,
+#post-content #posts_btn:active, #post-content #share_btn:active,
+#post-content #twttr_btn:active {
+    color: #fff !important;
+    background-color: #727a92;
+    -webkit-box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.2)
+}
+
+div.clear {
+    clear: both
+}
+
+time {
+    display: block
+}
+
+#post-content {
+    text-align: center;
+    position: relative;
+    padding: 0.3em
+}
+
+#post-content #twttr_btn {
+    float: left
+}
+
+#post-content #posts_btn {
+    float: left;
+    margin-left: 20px
+}
+
+#post-content time {
+    float: right;
+    line-height: 2;
+    text-align: right;
+    color: #b0b7bc
+}
+
+#post-content #posts_btn, #post-content #share_btn, #post-content #twttr_btn {
+    background-color: #acb0be;
+    display: inline-block;
+    padding: 4px 9px 4px 8px;
+    text-shadow: 0 1px 0 rgba(114, 124, 148, 0.45);
+    color: #fff;
+    border: 1px solid rgba(114, 124, 148, 0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    -khtml-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-transition: background, 0.2s;
+    -moz-transition: background, 0.2s;
+    -ms-transition: background, 0.2s;
+    -o-transition: background, 0.2s;
+    transition: background, 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+#post-content #posts_btn i, #post-content #share_btn i, #post-content #twttr_btn i {
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 0 -6px 14px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #post-content #posts_btn i, #post-content #share_btn i, #post-content #twttr_btn i {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px
+    }
+}
+
+#post-content #posts_btn:hover, #post-content #share_btn:hover,
+#post-content #twttr_btn:hover {
+    background-color: #8f95a8;
+    border-color: rgba(114, 124, 148, 0.8);
+    text-shadow: 0 1px 0 rgba(114, 124, 148, 0.8)
+}
+
+#post-content #posts_btn i {
+    width: 17px;
+    height: 22px;
+    background-position: -186px -50px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #post-content #posts_btn i {
+        background-position: -93px -25px
+    }
+}
+
+#post-content #twttr_btn {
+    background-color: #55acee;
+    border-color: #2795e9;
+    font-weight: bold
+}
+
+#post-content #twttr_btn:hover {
+    background-color: #1689e0;
+    border-color: #147bc9;
+    text-shadow: 0 1px 0 rgba(114, 124, 148, 0.8)
+}
+
+#post-content #share_btn.selected {
+    background-color: #8f95a8
+}
+
+#post-content #share_btn i {
+    width: 26px;
+    height: 22px;
+    background-position: -130px -50px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #post-content #share_btn i {
+        background-position: -65px -25px
+    }
+}
+
+#post-content #twttr_btn i {
+    width: 26px;
+    height: 24px;
+    background-position: -222px -50px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #post-content #twttr_btn i {
+        background-position: -111px -25px
+    }
+}
+
+#postex .camera-meta {
+    color: #697086;
+    font-weight: 500;
+    font-size: 0.8em;
+    -webkit-transition: opacity, 0.15s;
+    -moz-transition: opacity, 0.15s;
+    -ms-transition: opacity, 0.15s;
+    -o-transition: opacity, 0.15s;
+    transition: opacity, 0.15s;
+    opacity: 0.75
+}
+
+#postex .camera-meta .camera, #postex .camera-meta .postprocess, #postex .camera-meta .gps {
+    text-align: left
+}
+
+#postex .camera-meta .camera i, #postex .camera-meta .postprocess i,
+#postex .camera-meta .gps i {
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #postex .camera-meta .camera i, #postex .camera-meta .postprocess i,
+    #postex .camera-meta .gps i {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px
+    }
+}
+
+#postex .camera-meta .gps {
+    margin: 10px 0 0 0
+}
+
+#postex .camera-meta .camera {
+    margin: 0 0 6px 0
+}
+
+#postex .camera-meta .camera .focal_etc {
+    display: block;
+    margin-left: 2.8em
+}
+
+#postex .camera-meta .camera .focal_etc .focal {
+    font-size: 1em;
+    font-weight: 600
+}
+
+#postex .camera-meta .camera .focal_etc span {
+    font-size: 0.8em
+}
+
+#postex .camera-meta .camera .focal_etc span.slash {
+    font-size: 0.8em;
+    font-weight: 100;
+    padding: 0 5px;
+    opacity: 0.75
+}
+
+#postex .camera-meta .camera i {
+    background-position: 0 -100px;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    margin: 0 6px -4px 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #postex .camera-meta .camera i {
+        background-position: 0px -50px
+    }
+}
+
+#postex .camera-meta.iphone .camera i {
+    background-position: -124px -100px;
+    height: 30px;
+    width: 18px;
+    margin: 0 14px -7px 7px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #postex .camera-meta.iphone .camera i {
+        background-position: -62px -50px
+    }
+}
+
+#postex .camera-meta .postprocess i {
+    background-position: -64px -100px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 7px -7px 1px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #postex .camera-meta .postprocess i {
+        background-position: -32px -50px
+    }
+}
+
+#postex .camera-meta .gps i {
+    background-position: -163px -100px;
+    display: inline-block;
+    width: 18px;
+    height: 28px;
+    margin: 0 11px -7px 6px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #postex .camera-meta .gps i {
+        background-position: -81.5px -50px
+    }
+}
+
+#left_nav li {
+    display: inline-block
+}
+
+#left_nav li a {
+    margin-right: 25px
+}
+
+#left_nav li a:last-child {
+    margin-right: 0
+}
+
+#footer {
+    border-top: 1px solid #e8ebf2;
+    box-shadow: inset 0 1px 0 #fff;
+    -webkit-box-shadow: inset 0 1px 0 #fff;
+    -moz-box-shadow: inset 0 1px 0 #fff;
+    -khtml-box-shadow: inset 0 1px 0 #fff;
+    -o-box-shadow: inset 0 1px 0 #fff;
+    background: #fdfdfd;
+    padding: 15px 30px
+}
+
+@media only screen and (max-width: 30em) {
+    #footer {
+        padding: 5px 15px 10px
+    }
+}
+
+#footer small {
+    font-size: 0.7em;
+    color: #ddd;
+    text-shadow: 0 1px 0 #fff;
+    font-weight: 500
+}
+
+#footer small a {
+    color: #c8ccd4 !important
+}
+
+#footer #nav {
+    float: left
+}
+
+@media only screen and (max-width: 30em) {
+    #footer #nav {
+        float: none;
+        margin: 0 10% 0 0
+    }
+}
+
+#footer #nav li {
+    display: inline-block
+}
+
+@media only screen and (max-width: 30em) {
+    #footer #nav li {
+        display: block;
+        float: left;
+        width: 40%
+    }
+
+    #footer #nav li .email, #footer #nav li .rss {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 40.001em) {
+    #footer #nav li {
+        line-height: 1.3
+    }
+}
+
+#footer #nav li a {
+    margin-right: 16px;
+    font-weight: bold;
+    color: #9198ad;
+    font-size: 12px
+}
+
+@media only screen and (max-width: 30em) {
+    #footer #nav li a {
+        line-height: 2;
+        font-size: 1.2em;
+        margin: 0;
+        color: #8e95ac
+    }
+}
+
+#footer #nav li a:hover {
+    text-decoration: none;
+    border-color: #8f95a8;
+    color: #4c6296
+}
+
+#footer .back_up {
+    float: right;
+    -webkit-transition: background, 0.2s;
+    -moz-transition: background, 0.2s;
+    -ms-transition: background, 0.2s;
+    -o-transition: background, 0.2s;
+    transition: background, 0.2s;
+    padding: 7px 5px;
+    background-color: #dadde4;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px
+}
+
+@media only screen and (max-width: 30em) {
+    #footer .back_up {
+        padding: 8%;
+        position: absolute;
+        right: 15px;
+        top: 12px
+    }
+}
+
+#footer .back_up i {
+    background: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png") no-repeat 0 -50px;
+    width: 15px;
+    height: 10px;
+    display: block
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #footer .back_up i {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px;
+        background-position: 0 -25px
+    }
+}
+
+#footer .back_up:hover {
+    background-color: #8f95a8
+}
+
+#site {
+    font-family: "ratio-1", "ratio-2", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    min-height: 500px;
+    font-size: 110%;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto 0
+}
+
+#site section, #site p, #site .entry-title {
+    font-size: 100%
+}
+
+@media only screen and (max-width: 30em) {
+    #site section, #site p, #site .entry-title {
+        font-size: 95%;
+        line-height: 1.5
+    }
+}
+
+#site .notice {
+    padding: 5px 10px;
+    background: #eceff4;
+    font-size: 0.9em;
+    border-left: 4px solid #ced7e6
+}
+
+#site #footnotes {
+    margin-top: 2.1em;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-top: 0.5em
+}
+
+#site #footnotes p {
+    font-size: 0.85em;
+    color: #594f40;
+    line-height: 1.55
+}
+
+@media only screen and (min-width: 40.001em) {
+    #site #footnotes p {
+        margin: 0 3.5em 0.75em
+    }
+}
+
+#site #footnotes p a:first-child {
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 1.1;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: Georgia;
+    text-decoration: none;
+    float: left
+}
+
+#site #footnotes p:target {
+    background-color: #ffffeb;
+    padding: 3px;
+    margin: -3px 3.35em 0.75em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px
+}
+
+#site #footnotes p:target a:first-child {
+    color: #333
+}
+
+#site abbr {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 600;
+    letter-spacing: 0.1em
+}
+
+#site.sep {
+    background: url("http://turbo.paulstamatiou.com/assets/nav-shadow-blue.png") no-repeat 50% -2px;
+    background-image: -webkit-radial-gradient(50% -2px, 350px 7px, rgba(162, 168, 184, 0.45) -32%, #fff 100%);
+    background-image: -o-radial-gradient(50% -2px, 350px 7px, rgba(162, 168, 184, 0.45) -32%, #fff 100%);
+    background-image: radial-gradient(50% -2px, 350px 7px, rgba(162, 168, 184, 0.45) -32%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-position: center 1px
+}
+
+#site.photo #postex {
+    padding: 0
+}
+
+@media (max-width: 20em){#site.photo #postex .entry-title, #site.photo #postex section {
+        width: 92%
+    }
+
+    #site.photo hr {
+        margin: 20px 0
+    }
+}
+
+#photo_footer {
+    text-align: center;
+    margin: 2em auto 2em;
+    color: #bdc2ce;
+    font-size: 0.9em
+}
+
+#photo_footer a {
+    color: #9fa7b9;
+    font-weight: 400
+}
+
+#photo_footer a:visited {
+    color: #bdc2ce
+}
+
+#photo_footer a:hover {
+    color: #8f95a8
+}
+
+#post, #postex {
+    padding: 40px 0 0;
+    margin: 0 auto
+}
+
+@media only screen and (max-width: 30em) {
+    #post, #postex {
+        padding-top: 10px
+    }
+}
+
+#post .entry-title, #postex .entry-title {
+    margin: 15px auto
+}
+
+#post .entry-title h1, #post .entry-title h2, #postex .entry-title h1,
+#postex .entry-title h2 {
+    color: #2c251d;
+    font-size: 2.2em;
+    font-weight: 700
+}
+
+@media only screen and (max-width: 30em) {
+    #post .entry-title h1, #post .entry-title h2, #postex .entry-title h1,
+    #postex .entry-title h2 {
+        font-size: 1.7em !important;
+        margin-bottom: 0.25em
+    }
+}
+
+#post .entry-title h3, #postex .entry-title h3 {
+    font-weight: 500;
+    color: #4a4235;
+    line-height: 1.1;
+    margin-top: -8px
+}
+
+@media only screen and (max-width: 30em) {
+    #post .entry-title h3, #postex .entry-title h3 {
+        margin-top: -6px;
+        font-size: 1.2em
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    #post .aside .entry-title h2, #postex .aside .entry-title h2 {
+        font-size: 1.1em !important
+    }
+}
+
+#post h1, #post h2, #post h3, #post h4, #post h5, #post h6, #postex h1, #postex h2,
+#postex h3, #postex h4, #postex h5, #postex h6 {
+    color: #2c251d;
+    line-height: 1.1
+}
+
+#post .subtitle, #postex .subtitle {
+    font-weight: 400;
+    color: #4a4235
+}
+
+#post ul:not(.list-xl) li>a, #post p a, #postex ul:not(.list-xl) li>a,
+#postex p a {
+    font-weight: 600;
+    text-decoration: underline
+}
+
+#post p a:active, #postex p a:active {
+    color: #f28f1b !important
+}
+
+#post ul, #postex ul {
+    margin-bottom: 20px
+}
+
+#post ul.no-circles li, #postex ul.no-circles li {
+    list-style-type: none;
+    margin-left: 15px
+}
+
+#post ul.no-circles ul li, #postex ul.no-circles ul li {
+    list-style-type: none
+}
+
+#post ul li, #postex ul li {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 10px
+}
+
+#post ul li:last-child, #postex ul li:last-child {
+    margin-bottom: 0
+}
+
+#post img.img-right, #postex img.img-right {
+    margin: 10px 0 5px 10px
+}
+
+#post p.qa .question, #postex p.qa .question {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.35;
+    font-size: 20px;
+    font-weight: 200;
+    color: #555
+}
+
+#post p.qa b, #postex p.qa b {
+    margin-top: 5px;
+    display: inline-block;
+    margin-right: 10px
+}
+
+#post p.qa b:nth-child(even), #postex p.qa b:nth-child(even) {
+    color: #288000
+}
+
+#post p.qa b:nth-child(odd), #postex p.qa b:nth-child(odd) {
+    color: #6A2A00
+}
+
+#post .center, #postex .center {
+    text-align: center
+}
+
+#post .center small, #postex .center small {
+    font-size: 13px;
+    color: #444;
+    line-height: 14px !important
+}
+
+#post div.center, #postex div.center {
+    margin: 1.5em 0
+}
+
+#post img.bordered, #postex img.bordered {
+    border: 1px solid #aaa
+}
+
+#post .updated, #postex .updated {
+    background: #fffeeb;
+    border: 1px solid #aaa;
+    border-width: 1px 0;
+    padding: 10px;
+    margin: 20px 10px
+}
+
+#post .updated h5, #postex .updated h5 {
+    margin: 6px 0
+}
+
+#post .highlight, #postex .highlight {
+    position: relative;
+    margin: 1.5em 0
+}
+
+#post .highlight .expand_code, #postex .highlight .expand_code {
+    background: #8f95a8;
+    opacity: 0.8;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s;
+    position: absolute;
+    top: 34.5%;
+    right: 0;
+    width: 45%;
+    padding: 5% 0 4%;
+    left: 27.5%;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: 700;
+    font: 18px Consolas, "Andale Mono", Monaco, Courier, "Courier New", Verdana, sans-serif;
+    border: 1px solid #777c8c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    -khtml-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px
+}
+
+#post .highlight .expand_code:hover, #postex .highlight .expand_code:hover {
+    opacity: 1
+}
+
+#post .highlight .expand_code:after, #post .highlight .expand_code:before,
+#postex .highlight .expand_code:after, #postex .highlight .expand_code:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+#post .highlight .expand_code:after, #postex .highlight .expand_code:after {
+    border-color: rgba(143, 149, 168, 0);
+    border-top-color: #8f95a8;
+    border-width: 16px;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+    margin-left: -32px
+}
+
+#post .highlight .expand_code:before, #postex .highlight .expand_code:before {
+    border-color: rgba(119, 124, 140, 0);
+    border-top-color: #777c8c;
+    border-width: 17px;
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    margin-left: -33px
+}
+
+#post .highlight pre, #postex .highlight pre {
+    width: auto;
+    margin: 0
+}
+
+#post pre, #post code, #postex pre, #postex code {
+    font: 13px Consolas, "Andale Mono", Monaco, Courier, "Courier New", Verdana, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased
+}
+
+#post pre::-webkit-scrollbar, #postex pre::-webkit-scrollbar {
+    height: 18px;
+    background-color: #fafafa;
+    border-top: 1px solid #d1d8e3
+}
+
+#post pre::-webkit-scrollbar-thumb:horizontal, #postex pre::-webkit-scrollbar-thumb:horizontal {
+    background-color: #dadde4
+}
+
+#post pre, #postex pre {
+    background-color: #fff;
+    border: 1px solid #d1d8e3;
+    padding: 0.35em;
+    width: 97%;
+    margin: 20px 0;
+    overflow: auto;
+    overflow-y: hidden
+}
+
+@media only screen and (min-width: 40.001em) {
+    #post pre:after, #postex pre:after {
+        position: absolute;
+        content: "CODE";
+        font-size: 100%;
+        font-weight: 300;
+        color: #e2e2e2;
+        top: 8px;
+        left: -28px;
+        letter-spacing: 0.2ex;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        transform: rotate(-90deg)
+    }
+}
+
+#post pre code, #postex pre code {
+    border: none;
+    padding: 0;
+    position: relative
+}
+
+#post code, #postex code {
+    border: 1px solid #ddd;
+    font-size: 95%;
+    padding: 0 0.2em;
+    display: block
+}
+
+#post code.inline, #postex code.inline {
+    display: inline;
+    padding: 0;
+    font-size: 0.95em;
+    color: #d14;
+    background: none;
+    border: none
+}
+
+#post code.kb, #postex code.kb {
+    border-width: 2px;
+    border-color: #dedede #bbb #bbb #dedede;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background: #eeeeee
+}
+
+#post sup, #post sub, #postex sup, #postex sub {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative
+}
+
+#post sup, #postex sup {
+    bottom: 1ex;
+    font-size: 0.95em
+}
+
+#post sup a, #postex sup a {
+    font-weight: normal;
+    text-decoration: none
+}
+
+#post sub, #postex sub {
+    top: 0.5ex
+}
+
+#post pre.clean, #postex pre.clean {
+    font-size: 95%;
+    background: #fff;
+    color: #333;
+    border: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased
+}
+
+#post pre.clean:hover, #postex pre.clean:hover {
+    width: 100%
+}
+
+#post pre.terminal, #postex pre.terminal {
+    border: 2px solid #000;
+    background-color: #444444;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #17ff00;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased
+}
+
+#post pre.terminal code, #postex pre.terminal code {
+    background-color: #333333
+}
+
+#post {
+    width: 35.4em
+}
+
+@media only screen and (max-width: 40em) {
+    #post {
+        width: 90%
+    }
+
+    #post .center img {
+        max-width: 100%;
+        height: auto
+    }
+}
+
+#post .post-meta, #postex .postex-meta {
+    width: 100%;
+    border-top: 1px solid rgba(130, 152, 166, 0.2);
+    border-bottom: 1px solid rgba(130, 152, 166, 0.2);
+    margin: 5em auto 0;
+    background: rgba(100, 100, 100, 0.04)
+}
+
+@media only screen and (max-width: 40em) {
+    #post .post-meta #twttr_btn, #post .post-meta #posts_btn, #post .post-meta time,
+    #postex .postex-meta #twttr_btn, #postex .postex-meta #posts_btn, #postex .postex-meta time {
+        display: block;
+        margin: 15px auto 0;
+        width: 96%;
+        text-align: center
+    }
+}
+
+#post .post-meta {
+    border: 4px solid rgba(130, 152, 166, 0.1);
+    padding: 1em;
+    width: 89.5%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px
+}
+
+#postex {
+    width: 100%
+}
+
+#postex section>figure {
+    margin: 1.5em 0
+}
+
+#postex figure {
+    margin: 1.5em 0;
+    text-align: center
+}
+
+@media only screen and (min-width: 40.001em) {
+    #postex figure {
+        margin: 5em 0
+    }
+}
+
+#postex figure.no-top-margin {
+    margin-top: 0
+}
+
+#postex figure.in-photo-list {
+    margin: 0
+}
+
+#postex figure.in-photo-list.lazyload {
+    background: url("http://turbo.paulstamatiou.com/assets/loader.gif") no-repeat 50% 50%
+}
+
+#postex figure.home-img-feature {
+    margin: 1.5em 0 0;
+    line-height: 0
+}
+
+#postex figure.home-img-feature img {
+    margin: 0 0 0 0;
+    max-width: 700px
+}
+
+#postex figure figcaption {
+    font-size: 0.85em
+}
+
+@media only screen and (max-width: 40em) {
+    #postex figure figcaption {
+        width: 92%;
+        margin: 0 auto
+    }
+}
+
+#postex figure figcaption.wrap {
+    width: 63%;
+    margin: 0 auto
+}
+
+#postex section, #postex .entry-title, #postex #post-content {
+    width: 35.4em;
+    margin: 15px auto
+}
+
+@media only screen and (max-width: 38.9em) {
+    #postex section, #postex .entry-title, #postex #post-content {
+        width: 92%;
+        margin: 0 auto
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    #postex .entry-title {
+        margin: 0.5em auto 0;
+        width: 92%
+    }
+}
+
+#postex section section {
+    font-size: 100%
+}
+
+#postex section.wider {
+    width: 100%;
+    margin: 30px auto
+}
+
+#postex figure img, #postex .center img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto !important;
+    -ms-interpolation-mode: bicubic
+}
+
+#postex .auto img {
+    max-width: 100%;
+    width: auto
+}
+
+#postex .center.auto img {
+    max-width: 100%;
+    width: auto
+}
+
+#postex .center.mw7 img {
+    max-width: 700px
+}
+
+#postex .center.mw8 img {
+    max-width: 800px
+}
+
+#postex .center.mw9 img {
+    max-width: 900px
+}
+
+#postex .center.mw10 img {
+    max-width: 1000px
+}
+
+#postex .center.mw11 img {
+    max-width: 1100px
+}
+
+#postex .center.mw12 img {
+    max-width: 1200px
+}
+
+#postex .center.mw13 img {
+    max-width: 1300px
+}
+
+#postex .center.mw14 img {
+    max-width: 1400px
+}
+
+#postex figure.feature-image {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    text-align: center;
+    line-height: 0
+}
+
+#postex figure.feature-image img {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto !important;
+    -ms-interpolation-mode: bicubic
+}
+
+@media only screen and (max-width: 58em) {
+    #postex figure.feature-image {
+        margin-top: 0em !important
+    }
+
+    #postex figure.feature-image img {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-radius: 0px
+    }
+}
+
+body#photo_blog #postex .entry-title, body#photo_blog #postex section {
+    width: 32em
+}
+
+@media only screen and (max-width: 40em) {
+    body#photo_blog #postex .entry-title, body#photo_blog #postex section {
+        width: 92%
+    }
+}
+
+body#photo_blog #postex .entry-title {
+    margin: 0 auto;
+    line-height: 1
+}
+
+@media only screen and (max-width: 30em) {
+    body#photo_blog #postex .entry-title h1 {
+        float: none
+    }
+
+    body#photo_blog #postex nav {
+        float: none;
+        display: block;
+        margin: 0.5em 0 0 0
+    }
+}
+
+body#photo_blog #postex nav .home {
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat;
+    opacity: 0.65;
+    display: inline-block;
+    -webkit-transition: opacity, 0.15s;
+    -moz-transition: opacity, 0.15s;
+    -ms-transition: opacity, 0.15s;
+    -o-transition: opacity, 0.15s;
+    transition: opacity, 0.15s;
+    width: 24px;
+    height: 24px;
+    background-position: 0 0;
+    margin-right: 10px
+}
+
+body#photo_blog #postex nav .home:hover {
+    opacity: 1
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    body#photo_blog #postex nav .home {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px
+    }
+}
+
+body#photo_blog #postex nav .photos {
+    width: 28px;
+    height: 21px;
+    background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2.png");
+    background-repeat: no-repeat;
+    background-position: -200px 0;
+    margin: 0 7px -10px 0;
+    opacity: 0.5;
+    -webkit-transition: opacity, 0.15s;
+    -moz-transition: opacity, 0.15s;
+    -ms-transition: opacity, 0.15s;
+    -o-transition: opacity, 0.15s;
+    transition: opacity, 0.15s;
+    display: inline-block
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    body#photo_blog #postex nav .photos {
+        background-image: url("http://turbo.paulstamatiou.com/assets/pstam-sprite-v2-@2x.png");
+        background-size: 250px 225px;
+        -moz-background-size: 250px 225px;
+        -webkit-background-size: 250px 225px;
+        -khtml-background-size: 250px 225px;
+        -o-background-size: 250px 225px;
+        -ms-background-size: 250px 225px;
+        background-position: -100px 0
+    }
+}
+
+body#photo_blog #postex nav .photos:hover {
+    opacity: 0.7
+}
+
+body#photo_blog #postex nav .arr {
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 2.65em;
+    line-height: 0;
+    color: #a6adbd;
+    -webkit-transition: opacity, 0.1s;
+    -moz-transition: opacity, 0.1s;
+    -ms-transition: opacity, 0.1s;
+    -o-transition: opacity, 0.1s;
+    transition: opacity, 0.1s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+body#photo_blog #postex nav .arr:hover {
+    opacity: 1
+}
+
+body#photo_blog #postex nav .arr.disabled {
+    opacity: 0.4
+}
+
+body#photo_blog #postex nav .arr.disabled:hover {
+    opacity: 0.4;
+    cursor: default
+}
+
+body#photo_blog #postex section {
+    margin: 10px auto
+}
+
+body#photo_blog #postex section p {
+    font-size: 1rem
+}
+
+body#photo_blog #content h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0px
+}
+
+body#photo_blog time {
+    color: #9ab;
+    margin-top: 0.2em;
+    font-size: 1rem
+}
+
+body#photo_blog time span {
+    display: inline-block;
+    margin-right: 6px
+}
+
+section.comments {
+    margin: 0 auto !important
+}
+
+#disqus_thread {
+    margin-top: 3em;
+    text-align: center;
+    margin-bottom: 3em
+}
+
+#disqus_load {
+    font-size: 2em;
+    font-weight: bold;
+    color: #678
+}
+
+#disqus_load:hover {
+    color: #444
+}
+
+.float_right {
+    float: right
+}
+
+.float_left {
+    float: left
+}
+
+.ir {
+    display: block;
+    border: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr
+}
+
+.photo-thumbs-list {
+    width: 900px;
+    margin: 0 auto
+}
+
+@media only screen and (max-width: 900px) {
+    .photo-thumbs-list {
+        width: 100%;
+        margin: 0 auto
+    }
+}
+
+.photo-thumbs-list figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em 0.5em 0.5em;
+    text-align: left;
+    text-shadow: 0 1px 0 #000;
+    font-size: 1.1em !important;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    color: #fff !important;
+    overflow: hidden;
+    white-space: pre;
+    line-height: 1.2;
+    opacity: 0;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0 );
+    -webkit-transition: opacity, 0.1s;
+    -moz-transition: opacity, 0.1s;
+    -ms-transition: opacity, 0.1s;
+    -o-transition: opacity, 0.1s;
+    transition: opacity, 0.1s;
+    -webkit-transform: translateZ(0)
+}
+
+.photo-thumbs-list li {
+    float: left;
+    margin: 0 !important;
+    line-height: 0;
+    width: 33.3333%;
+    position: relative
+}
+
+.photo-thumbs-list li img {
+    width: 100%;
+    height: auto !important;
+    -webkit-transition: opacity, 0.15s;
+    -moz-transition: opacity, 0.15s;
+    -ms-transition: opacity, 0.15s;
+    -o-transition: opacity, 0.15s;
+    transition: opacity, 0.15s
+}
+
+.photo-thumbs-list li img:hover {
+    opacity: 1
+}
+
+.photo-thumbs-list li a:hover figcaption {
+    opacity: 1
+}
+
+@media only screen and (max-width: 30em) {
+    .photo-thumbs-list li {
+        width: 50%
+    }
+
+    .photo-thumbs-list li a figcaption {
+        opacity: 1
+    }
+
+    .photo-thumbs-list li:last-child {
+        display: none
+    }
+}
+
+
