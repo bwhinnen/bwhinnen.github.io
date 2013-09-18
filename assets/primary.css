@@ -396,11 +396,11 @@ table {
     }
 
     33% {
-        -webkit-transform: rotate(30deg)
+        -webkit-transform: rotate(10deg)
     }
 
     67% {
-        -webkit-transform: rotate(-30deg)
+        -webkit-transform: rotate(-10deg)
     }
 }
 
@@ -410,11 +410,11 @@ table {
     }
 
     33% {
-        -moz-transform: rotate(30deg)
+        -moz-transform: rotate(10deg)
     }
 
     67% {
-        -moz-transform: rotate(-30deg)
+        -moz-transform: rotate(-10deg)
     }
 }
 
@@ -424,11 +424,11 @@ table {
     }
 
     33% {
-        -o-transform: rotate(30deg)
+        -o-transform: rotate(10deg)
     }
 
     67% {
-        -o-transform: rotate(-30deg)
+        -o-transform: rotate(-10deg)
     }
 }
 
@@ -438,11 +438,11 @@ table {
     }
 
     33% {
-        transform: rotate(30deg)
+        transform: rotate(10deg)
     }
 
     67% {
-        transform: rotate(-30deg)
+        transform: rotate(-10deg)
     }
 }
 
