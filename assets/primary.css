@@ -1,3 +1,11 @@
+/*
+ * This CSS file was taken from Paul Stamatiou @Stammy, http://paulstamatiou.com.
+ *
+ * The original title was "screen-refresh-v7.css" and has been changed.
+ * Some items have been changed to suit my own website and have been commented where
+ * changed. All thanks goes to Paul for the original CSS file.
+ */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
 q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
@@ -1530,7 +1538,7 @@ hr.light {
 #masthead {
     margin: 0 auto;
     color: #57626b;
-    width: 38.75em
+    width: 43.75em
 }
 
 @media only screen and (max-width: 40em) {
@@ -1542,7 +1550,7 @@ hr.light {
 
 #masthead .stammy {
     display: block;
-    width: 80px;
+    width: 194px;
     height: 80px;
     margin: 0.5em 0 0 0;
     -webkit-border-radius: 6px;
@@ -1550,7 +1558,7 @@ hr.light {
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
     border-radius: 6px;
-    background: url("/assets/img/bwhinnen_head.jpg") no-repeat 0 0
+    background: url("/assets/img/Whinnen.COM.png") no-repeat 0 0
 }
 
 @media only screen and (min-width: 40.001em) {

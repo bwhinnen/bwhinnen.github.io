@@ -1,0 +1,34 @@
+---
+layout: post
+title: Take control of your remotes
+summary: Replacing a dedicated IR receiver and remote with a simple IR device like the Flirc and using a generic remote makes life so much easier.
+oneliner: Flirc is a great little IR receiver that acts as a HID keyboard a MUST HAVE!
+excerpt: Recently I've struggled a bit with Braden's HTPC and its remote setup. For some reason the Dell branded RC6 IR receiver ...
+categories:
+- Geeky Goodness
+tags:
+- Braden
+- Flirc
+- Geeky Toys
+- OpenELEC
+- XBMC
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  cyberchimps_slider_image: ''
+  slider_hidetitle: '1'
+  slider_custom_thumb: ''
+---
+<p><section></p>Recently I've struggled a bit with Braden's HTPC and its remote setup. For some reason the Dell branded RC6 IR receiver and remote would not wake up his HTPC reliably resulting in him having to reach over the TV to turn on the HTPC himself. This to me is highly annoying as I like to be able to get settled and press a button, so to an eight year old I am sure it was equally annoying, especially one as technically minded as him.</p></p>
+
+<p>Recently the <a title="OpenELEC" href="http://openelec.tv" target="_blank">OpenELEC</a> forum in conjunction with <a title="The Pi Hut" href="http://thepihut.com" target="_blank">The Pi Hut</a> and <a title="Flirc" href="http://flirc.tv" target="_blank">Flirc</a> had a competition (well it is still going on at the time of penning this note) to win a flirc device. I was one of the lucky ones to win one. I must of course say a big thank you to each of the team members involved from the three places, the prize is not only greatly appreciated but is immensely useful!</p>
+
+<p>What is a flirc device? Simply it is a lovely, and I must say pretty sexy looking, USB compatible IR receiver that presents itself as a HID device to the OS. There is a simple programming application that can be run on OS X, Linux and of course Windows which allows it to capture any IR signal from any remote regardless of what proprietary codes it uses and then allocate these to a variety of functions. As I use XBMC I chose to use the full keyboard option as I could then have many different buttons to control the plethora of options that XBMC uses. The cool thing about the flirc is that you program it and it remembers the settings and you can then move it to any device with a USB port that supports HID functions with no further management or changes required to that end device.</p>
+
+<p>Pretty cool! It meant that I could program it up and then move it onto the OpenELEC system and not have to do anything but use the remote, this is especially important as OpenELEC and XBMC itself has no way of changing the way the keyboard or remote works without delving down into the config files by hand via the base operating system, yes that is right no pretty GUI for those technically challenged people out there.</p>
+
+<p>Of course I did have to modify the keyboard.xml file slightly as I wanted certain functionality to continue over from the old RC6 setup. One was the power button, to put the device to sleep, in this case I simply mapped the power button on the remote to the function 4 (F4) key and then setup the keyboard config to do a XBMC.Suspend() on receipt of that key press. The other main change was that the |&lt; and &gt;| buttons would do a skip in the video play mode, I wanted them to act like the remote and actually skip to the next item in the playlist (for music video clips especially), this was also a simple change on the keyboard configuration changing the , and . keys used by default to SkipPrevious and SkipNext.</p>
+
+<p>Overall the flirc is an excellent device and well worth it. Even if I had to buy one outright I certainly would now as it is just as cheap as a RC6 setup from eBay, but with infinitely more uses and functionality!</p></section>

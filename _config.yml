@@ -4,6 +4,6 @@ permalink: /:year/:month/:title.html
 multiviews: true
 sass: true
 haml: true
-baseurl: 
+url: http://whinnen.com
 post_defaults:
   layout: post

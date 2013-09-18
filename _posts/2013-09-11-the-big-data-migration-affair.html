@@ -1,0 +1,47 @@
+---
+layout: post
+title: The Big Data Migration Affair
+summary: Running on a VPS is all well and good when you need full customisation and access, but using simple tools to achieve the same is even better. Bring in Google!
+oneliner: Migrating from a VPS to Google Apps for Business and Google App Engine.
+excerpt: I’ve run on a VSP now for a number of years, basically around 6 or 7 of them and have had a great deal of fun and learning in the process ...
+categories:
+- Random
+tags:
+- DNS
+- Google
+- VPS
+- Wordpress
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  cyberchimps_slider_image: ''
+  slider_hidetitle: '1'
+  slider_custom_thumb: ''
+---
+<p><section><p>I’ve run on a VSP now for a number of years, basically around 6 or 7 of them and have had a great deal of fun and learning in the process. There was a necessity based on running a photographic website for a little start-up company I had that fell through due to changing priorities as well as being able to get push based email out to various iDevices. Now with rising costs and really the fact that the only things I use the VPS for are email serving a Wordpress site and http based file storage the costs far outweighed the needs.</p></p>
+
+<p>I began to setup Google Apps about a year ago, but never really took it any further. This time I did some more investigation and it turns out that full exchange (well ActiveSync) functionality is available to Google Apps for Businesses customers, the cost was $50 per user per calendar year. Not too bad overall, this means three accounts, one for each member of the family.</p>
+
+<p>I could also host my files on Google Sites which also gave me much more storage and bandwidth space than the previous VPS did as well as more redundancy being Google. The photographic website was being closed so a basic landing page was the only thing required. The Wordpress site posed more of a problem as Google Sites does not allow anything of the sort, yes I could have used Blogger but I wanted to keep the same look and feel.</p>
+
+<p>Google announced earlier this year that the Google Cloud Apps was going to start supporting php development, that meant that suddenly Wordpress was about to become available. The only catch, this was going to cost some money as both the Cloud SQL and Cloud Storage were billed on a usage basis. Projected costs are around $0.36 a day for Cloud SQL and not much for the Cloud Storage as I really don’t need much. Rough estimates run to under $150 a year. This combined with the Google Apps for Business still runs at less than the current VPS solution.</p>
+
+<p>However, there were a few gotchas along the way.</p>
+
+<p style="padding-left: 30px;">1. You can only create an alias name for a Google Site from the primary domain, I have three domains in total and really wanted two of those to be landing pages on Google Sites.</p>
+
+<p style="padding-left: 30px;">Solution: Get creative. I used a free hosting site that allowed me to use my domain name against an IP address, this allowed me to put a simple .htaccess with a permanent forward (301) in to point to the new Google Site alias. It did require access and changes to my DNS settings but after those changes it worked perfectly.</p>
+
+<p style="padding-left: 30px;">2. Google has no DNS hosting.</p>
+
+<p style="padding-left: 30px;">Solution: Most of the companies who register the domains for you will offer this as a free service. For me Melbourne IT does it and I had to transfer one domain over in order to get the features I needed, got a great deal on a 5 year registration for the domain too!</p>
+
+<p style="padding-left: 30px;">3. Google Cloud Apps will require billing.</p>
+
+<p style="padding-left: 30px;">Solution: Do it, it really is not all that expensive in the grand scheme of things, especially for the redundancy and scalability involved. While you can opt for daily rates there are also per use rates that can work out cheaper depending on how often your site is accessed. I went for the daily rate first to get all the teething and to allow the site to settle down.</p>
+
+<p>Overall the process was pretty simple, the key areas are to make sure you know your ‘net presence and make sure you have backups of everything. Manage things in a staged approach and run a pilot, Google Apps makes this quite easy to do and they even have a one month trial on Google Apps for Business you can use towards the end of the pilot to make sure everything works as expected.</p>
+
+<p>Getting my Wordpress site to Google Cloud Apps was a little harder but following an online guide and knowing how to use mysql helped a great deal. I will do up another article in the future that shows what I’ve done to get that working with minimal issues.</p></section>

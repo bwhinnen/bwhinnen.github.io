@@ -1,0 +1,33 @@
+---
+layout: master
+---
+
+  <article id="postex" class="is-post" role="main">
+  <aside id="post-content" class="clearfix">
+    <time class="date" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+  </aside>
+
+  <header class="entry-title">
+    <h1>{{ page.title }}</h1>
+    <h3>{{ page.oneliner }}</h3>
+  </header>
+
+  {{ content }}
+
+  <footer class="postex-meta">
+    <aside id="post-content" class="clearfix">
+      <a href="https://twitter.com/intent/tweet?text=Not%20a%20bad%20post%20&quot;{{ page.title }}&quot;&amp;url={{ site.url }}{{ page.url }}&amp;via=bwhinnen"  target="_blank" id="twttr_btn">Enjoyed? Tweet <i></i></a>
+      <time class="date" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+    </aside>
+  </footer>
+  	
+  <div id="tweet_it_bro" class="animated-long">
+    <a href="javascript:void(0)" id="tweet_compose_close" class="close_it_bro"><img src="/assets/img/x.png"></a>
+    <h4>Enjoyed? Tweet it.</h4>
+    <p>"{{ page.title }}" by @bwhinnen<br/>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="Not a bad post &quot;{{ page.title }}&quot;" data-via="bwhinnen" data-size="large" data-count="none">Tweet</a><br/></p>
+    <footer><a href="https://twitter.com/bwhinnen" class="twitter-follow-button" data-show-count="true" data-size="large" data-show-screen-name="false">Follow</a> <img src="/assets/img/bwhinnen_small.jpg"></footer>
+  </div>
+  </section>
+</article>
+

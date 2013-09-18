@@ -1,4 +1,13 @@
 /*! pstam-blog - v1.0 - 2013-09-02 */
+/*
+ * The original header remains the same above. From Paul Stamatiou, @Stammy,
+ * http://paulstamatiou.com.
+ *
+ * Original file name "pstambuild-v9.js"
+ *
+ * Any changes will be referenced by comments below. Original copyright to Paul.
+ */
+
 (function(e, t) {
     function n() {}
     function r(e, t) {
