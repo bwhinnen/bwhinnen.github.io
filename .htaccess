@@ -1,6 +1,9 @@
 Options +MultiViews
 
 ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # Disable auto-adding slashes to directories without them, since this happens
 # after mod_rewrite and exposes the rewritten internal URL, e.g. turning
