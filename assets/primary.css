@@ -1611,11 +1611,13 @@ hr.light {
     font-size: 0.65em;
     font-weight: 500;
     cursor: pointer;
-    color: #669ecc
+/*    color: #669ecc */
+    color: #333333
 }
 
 #masthead hgroup h1 a:hover {
-    color: #245f8f
+/*    color: #245f8f */
+    color: #0088CC
 }
 
 #masthead hgroup h1 {
