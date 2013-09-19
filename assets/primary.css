@@ -1367,22 +1367,26 @@ p.larger {
 }
 
 a {
-    color: #4c6296;
+/*    color: #4c6296; */
+    color: #008bc7;
     text-decoration: none;
     outline: none
 }
 
 a:hover {
-    color: #173061;
+/*    color: #173061; */
+    color: #333333;
     text-decoration: none
 }
 
 a:visited {
-    color: #6a4c96
+/*    color: #6a4c96 */
+    color: #008bc7
 }
 
 a:visited:hover {
-    color: #463263
+/*    color: #463263 */
+    color: #333333
 }
 
 a img {
