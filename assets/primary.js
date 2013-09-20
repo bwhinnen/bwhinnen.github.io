@@ -195,7 +195,7 @@
     e.addEventListener("orientationchange", h, !1), e.addEventListener("devicemotion", d, !1)
 }(this), this.Stammy = {}, $(function() {
     var e, t, n, r, i, s, o, u;
-    navigator.userAgent.match(/(iPhone|iPod|iPad)/i) && head.js("http://turbo.paulstamatiou.com/assets/fastclick.min.js", function() {
+    navigator.userAgent.match(/(iPhone|iPod|iPad)/i) && head.js("/assets/fastclick.min.js", function() {
         return window.addEventListener("load", function() {
             return new FastClick(document.body)
         }, !1)
@@ -256,7 +256,7 @@
         var e, t, n, r;
         return n = $("#st-search-input"), r = $("<div/>", {
             id: "st-results-container"
-        }).prependTo("#site"), t = $("#searchbar").fadeIn(200), e = $("#headernav li").hide(), head.js("http://turbo.paulstamatiou.com/assets/pstamsearch-v2.js", function() {
+        }).prependTo("#site"), t = $("#searchbar").fadeIn(200), e = $("#headernav li").hide(), head.js("/assets/search.js", function() {
             return n.swiftypeSearch({
                 resultContainingElement: "#st-results-container",
                 engineKey: "gRm246AMPjhYZctCaoch",
