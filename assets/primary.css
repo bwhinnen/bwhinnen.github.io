@@ -1857,12 +1857,12 @@ hr.light {
     #cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i,
     #cover #headernav li .search {
         background-image: url("/assets/img/main-sprite.png");
-        background-size: 250px 225px;
+/*        background-size: 250px 225px;
         -moz-background-size: 250px 225px;
         -webkit-background-size: 250px 225px;
         -khtml-background-size: 250px 225px;
         -o-background-size: 250px 225px;
-        -ms-background-size: 250px 225px
+        -ms-background-size: 250px 225px */
     }
 }
 
@@ -2059,13 +2059,13 @@ menu, ol, ul {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
     .more_posts i, .st-prev i, .st-next i {
         background-image: url("/assets/img/main-sprite.png");
-        background-size: 250px 225px;
+/*        background-size: 250px 225px;
         -moz-background-size: 250px 225px;
         -webkit-background-size: 250px 225px;
         -khtml-background-size: 250px 225px;
         -o-background-size: 250px 225px;
         -ms-background-size: 250px 225px;
-        background-position: -17px -25px
+        background-position: -17px -25px*/
     }
 }
 
@@ -2609,13 +2609,13 @@ time {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
     #footer .back_up i {
         background-image: url("/assets/img/main-sprite.png");
-        background-size: 250px 225px;
+/*        background-size: 250px 225px;
         -moz-background-size: 250px 225px;
         -webkit-background-size: 250px 225px;
         -khtml-background-size: 250px 225px;
         -o-background-size: 250px 225px;
         -ms-background-size: 250px 225px;
-        background-position: 0 -25px
+        background-position: 0 -25px*/
     }
 }
 
