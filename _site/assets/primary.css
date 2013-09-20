@@ -1895,6 +1895,10 @@ hr.light {
     }
 }
 
+#cover #headernav li .rss span {
+  display: none
+}
+
 #cover #headernav .rss i {
     width: 23px;
     height: 24px;
@@ -1955,7 +1959,7 @@ hr.light {
 }
 
 @media only screen and (max-width: 40em) {
-    #cover #headernav li .about span, #cover #headernav li .posts span, #cover #headernav li .photos span {
+    #cover #headernav li .about span, #cover #headernav li .posts span, #cover #headernav li .photos span ,#cover #headernav li .rss span {
         display: none
     }
 }
