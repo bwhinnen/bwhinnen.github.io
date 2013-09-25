@@ -1,47 +1,23 @@
 ---
 layout: master
-title: Mostly the ramblings of a mad man!
+title: Post listing
 excerpt: Whinnen.COM is a blog about random stuff n'at.
 ---
 <div id="postex">
   <ul class="posts post_listing list-none">
-    {% for post in paginator.posts %}
+    {% for post in site.posts %}
       <li>
         <header class="entry-title">
           <h2>
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
           </h2>
-          <aside id="post-content" class="clearfix">
-              <time class="date" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-          </aside>
+          <p class="oneliner">{{ post.oneliner }}</p>
         </header>
-        <div class="content">
-          {{ post.content }}
-        </div>
       </li>
     {% endfor %}
   </ul>
-
-  <section>
-    <div class="clearfix">
-      <nav id="cover">
-        <ul id="headernav" class="list-none">
-          {% if paginator.previous_page %}
-            {% if paginator.previous_page >= 1 %}
-              <li><a href="{{ paginator.previous_page_path }}" title="Previous" class="previous"><i></i> <span>Previous</span></a></li>
-            {% endif %}
-          {% else %}
-            <li><i></i> <span></span></li>
-          {% endif %}
-          {% if paginator.next_page %}
-              <li><a href="{{ paginator.next_page_path }}" title="Next" class="next"><span>Next</span> <i></i></a></li>
-          {% else %}
-            <li><span></span> <i></i></li>
-          {% endif %}
-        </ul>
-      </nav>
-    </div>
-  </section>
+  <hr/>
+</div>
 
 <script type="text/javascript">
   ;(function($){$.fn.unveil=function(threshold){var $w=$(window),th=threshold||0,retina=window.devicePixelRatio>1,attrib=retina?"data-src-retina":"data-src",images=this,loaded,inview,source;this.one("unveil",function(){source=this.getAttribute(attrib);source=source||this.getAttribute("data-src");if(source)this.setAttribute("src",source);});function unveil(){inview=images.filter(function(){var $e=$(this),wt=$w.scrollTop(),wb=wt+$w.height(),et=$e.offset().top,eb=et+$e.height();return eb>=wt-th&&et<=wb+th;});loaded=inview.trigger("unveil");images=images.not(loaded);}$w.scroll(unveil);$w.resize(unveil);unveil();return this;};})(jQuery);

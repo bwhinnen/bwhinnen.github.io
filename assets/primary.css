@@ -1391,14 +1391,12 @@ p.larger {
 }
 
 a {
-/*    color: #4c6296; */
     color: #008bc7;
     text-decoration: none;
     outline: none
 }
 
 a:hover {
-/*    color: #173061; */
     color: #333333;
     text-decoration: none
 }
@@ -1845,7 +1843,7 @@ hr.light {
     right: 0.5em
 }
 
-#cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i, #cover #headernav li .rss i,
+#cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i, #cover #headernav li .rss i, #cover #headernav li .previous i, #cover #headernav li .next i,
 #cover #headernav li .search {
     background-image: url("/assets/img/main-sprite.png");
     background-repeat: no-repeat;
@@ -1854,7 +1852,7 @@ hr.light {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
-    #cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i, #cover #headernav li .rss i,
+    #cover #headernav li .photos i, #cover #headernav li .posts i, #cover #headernav li .about i, #cover #headernav li .rss i, #cover #headernav li .previous i, #cover #headernav li .next i,
     #cover #headernav li .search {
         background-image: url("/assets/img/main-sprite.png");
 /*        background-size: 250px 225px;
@@ -1881,6 +1879,35 @@ hr.light {
     opacity: 0.4
 }
 
+#cover #headernav li .previous i {
+    width: 17px;
+    height: 22px;
+    background-position: -105px -2px;
+    margin-right: 7px;
+    margin-bottom: -4px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .about i {
+        background-position: -105px -2px
+    }
+}
+
+#cover #headernav li .next i {
+    width: 17px;
+    height: 22px;
+    background-position: -86px -2px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: -4px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    #cover #headernav li .about i {
+        background-position: -86px -2px
+    }
+}
+
 #cover #headernav li .about i {
     width: 24px;
     height: 22px;
@@ -1893,6 +1920,10 @@ hr.light {
     #cover #headernav li .about i {
         background-position: -3px -26px
     }
+}
+
+#cover #headernav a:hover, #cover #headernav a {
+  text-decoration: none
 }
 
 #cover #headernav li .rss span {
@@ -2570,7 +2601,6 @@ time {
 #footer #nav li a:hover {
     text-decoration: none;
     border-color: #8f95a8;
-/*    color: #4c6296 */
     color: #008bc7
 }
 

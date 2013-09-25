@@ -5,5 +5,7 @@ multiviews: true
 sass: true
 haml: true
 url: http://whinnen.com
+paginate: 5
+paginate_path: "page/:num"
 post_defaults:
   layout: post

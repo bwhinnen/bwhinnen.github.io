@@ -61,7 +61,7 @@
           <nav id="cover">
             <ul id="headernav" class="list-none">
               <li><a href="http://whinnen.com/about.html" title="About" class="about"><i></i> <span>About</span></a></li>
-              <li><a href="http://whinnen.com/posts" title="Posts" class="posts"><i></i> <span>Posts</span></a></li>
+              <li><a href="http://whinnen.com/posts.html" title="Posts" class="posts"><i></i> <span>Posts</span></a></li>
               <li><a href="http://whinnen.com/posts.xml" title="Subscribe via RSS Feed" class="rss"><i></i> <span>RSS Feed<span></a></li>
             </ul>
           </nav>
@@ -79,8 +79,22 @@
           <h2>
             <a href="/2013/09/darn-you-nhl-and-your-crappy-schedule-changes.html" title="Darn you NHL and your crappy schedule changes!">Darn you NHL and your crappy schedule changes!</a>
           </h2>
-          <p class="oneliner">NHL changed the schedule and the Penguins will not play at home when we are there.</p>
+          <aside id="post-content" class="clearfix">
+              <time class="date" datetime="2013-09-14 00:00:00 +1000">14 Sep 2013</time>
+          </aside>
         </header>
+        <div class="content">
+          <p><section><p>As you are all aware we are heading off on a trip to Pittsburgh for Christmas. We checked the last 6, SIX years of NHL schedules before deciding on dates and the Penguins were always home over the Christmas / New Year period.</p></p>
+
+<p><strong>Well thank you NHL</strong>, but with the devision realignment the schedules all changed! So that means for the entire time we are in Pittsburgh the Pens are not at home! Thankfully they are playing a game in nearby Ohio and then in New Jersey so we at least get to do a bit of a road trip to watch some games but we don't get to see them in CONSOL, which is what we really wanted.</p>
+
+<p>The irony/bad luck is that we arrive into JFK on the 21st of December, the same day the Pens play at home, but getting from JFK to Pittsburgh via car before the puck drops at midday is just not going to happen.</p>
+
+<p>We aren't going to let this get us down though as we are going to thoroughly enjoy our time in Pittsburgh and see as much as we can. We are going to be searching Mount Lebanon and Cecil Township for potential places to live in the future, although as nice as Cecil looks I think Mount Lebanon will win due to the closeness to other amenities (such as ice rinks) and of course just a short ride to Pittsburgh itself.</p>
+
+<p>The count down is now under 100 days and I can tell you things are starting to get exciting! Not only that, but the NHL season start is just around the corner so we'll have plenty to keep us occupied as the time counts down!</p></section>
+
+        </div>
       </li>
     
       <li>
@@ -88,8 +102,38 @@
           <h2>
             <a href="/2013/09/the-big-data-migration-affair.html" title="The Big Data Migration Affair">The Big Data Migration Affair</a>
           </h2>
-          <p class="oneliner">Migrating from a VPS to Google Apps for Business and Google App Engine.</p>
+          <aside id="post-content" class="clearfix">
+              <time class="date" datetime="2013-09-11 00:00:00 +1000">11 Sep 2013</time>
+          </aside>
         </header>
+        <div class="content">
+          <p><section><p>I’ve run on a VSP now for a number of years, basically around 6 or 7 of them and have had a great deal of fun and learning in the process. There was a necessity based on running a photographic website for a little start-up company I had that fell through due to changing priorities as well as being able to get push based email out to various iDevices. Now with rising costs and really the fact that the only things I use the VPS for are email serving a Wordpress site and http based file storage the costs far outweighed the needs.</p></p>
+
+<p>I began to setup Google Apps about a year ago, but never really took it any further. This time I did some more investigation and it turns out that full exchange (well ActiveSync) functionality is available to Google Apps for Businesses customers, the cost was $50 per user per calendar year. Not too bad overall, this means three accounts, one for each member of the family.</p>
+
+<p>I could also host my files on Google Sites which also gave me much more storage and bandwidth space than the previous VPS did as well as more redundancy being Google. The photographic website was being closed so a basic landing page was the only thing required. The Wordpress site posed more of a problem as Google Sites does not allow anything of the sort, yes I could have used Blogger but I wanted to keep the same look and feel.</p>
+
+<p>Google announced earlier this year that the Google Cloud Apps was going to start supporting php development, that meant that suddenly Wordpress was about to become available. The only catch, this was going to cost some money as both the Cloud SQL and Cloud Storage were billed on a usage basis. Projected costs are around $0.36 a day for Cloud SQL and not much for the Cloud Storage as I really don’t need much. Rough estimates run to under $150 a year. This combined with the Google Apps for Business still runs at less than the current VPS solution.</p>
+
+<p>However, there were a few gotchas along the way.</p>
+
+<p style="padding-left: 30px;">1. You can only create an alias name for a Google Site from the primary domain, I have three domains in total and really wanted two of those to be landing pages on Google Sites.</p>
+
+<p style="padding-left: 30px;">Solution: Get creative. I used a free hosting site that allowed me to use my domain name against an IP address, this allowed me to put a simple .htaccess with a permanent forward (301) in to point to the new Google Site alias. It did require access and changes to my DNS settings but after those changes it worked perfectly.</p>
+
+<p style="padding-left: 30px;">2. Google has no DNS hosting.</p>
+
+<p style="padding-left: 30px;">Solution: Most of the companies who register the domains for you will offer this as a free service. For me Melbourne IT does it and I had to transfer one domain over in order to get the features I needed, got a great deal on a 5 year registration for the domain too!</p>
+
+<p style="padding-left: 30px;">3. Google Cloud Apps will require billing.</p>
+
+<p style="padding-left: 30px;">Solution: Do it, it really is not all that expensive in the grand scheme of things, especially for the redundancy and scalability involved. While you can opt for daily rates there are also per use rates that can work out cheaper depending on how often your site is accessed. I went for the daily rate first to get all the teething and to allow the site to settle down.</p>
+
+<p>Overall the process was pretty simple, the key areas are to make sure you know your ‘net presence and make sure you have backups of everything. Manage things in a staged approach and run a pilot, Google Apps makes this quite easy to do and they even have a one month trial on Google Apps for Business you can use towards the end of the pilot to make sure everything works as expected.</p>
+
+<p>Getting my Wordpress site to Google Cloud Apps was a little harder but following an online guide and knowing how to use mysql helped a great deal. I will do up another article in the future that shows what I’ve done to get that working with minimal issues.</p></section>
+
+        </div>
       </li>
     
       <li>
@@ -97,8 +141,24 @@
           <h2>
             <a href="/2013/07/take-control-of-your-remotes.html" title="Take control of your remotes">Take control of your remotes</a>
           </h2>
-          <p class="oneliner">Flirc is a great little IR receiver that acts as a HID keyboard a MUST HAVE!</p>
+          <aside id="post-content" class="clearfix">
+              <time class="date" datetime="2013-07-29 00:00:00 +1000">29 Jul 2013</time>
+          </aside>
         </header>
+        <div class="content">
+          <p><section></p>Recently I've struggled a bit with Braden's HTPC and its remote setup. For some reason the Dell branded RC6 IR receiver and remote would not wake up his HTPC reliably resulting in him having to reach over the TV to turn on the HTPC himself. This to me is highly annoying as I like to be able to get settled and press a button, so to an eight year old I am sure it was equally annoying, especially one as technically minded as him.</p></p>
+
+<p>Recently the <a title="OpenELEC" href="http://openelec.tv" target="_blank">OpenELEC</a> forum in conjunction with <a title="The Pi Hut" href="http://thepihut.com" target="_blank">The Pi Hut</a> and <a title="Flirc" href="http://flirc.tv" target="_blank">Flirc</a> had a competition (well it is still going on at the time of penning this note) to win a flirc device. I was one of the lucky ones to win one. I must of course say a big thank you to each of the team members involved from the three places, the prize is not only greatly appreciated but is immensely useful!</p>
+
+<p>What is a flirc device? Simply it is a lovely, and I must say pretty sexy looking, USB compatible IR receiver that presents itself as a HID device to the OS. There is a simple programming application that can be run on OS X, Linux and of course Windows which allows it to capture any IR signal from any remote regardless of what proprietary codes it uses and then allocate these to a variety of functions. As I use XBMC I chose to use the full keyboard option as I could then have many different buttons to control the plethora of options that XBMC uses. The cool thing about the flirc is that you program it and it remembers the settings and you can then move it to any device with a USB port that supports HID functions with no further management or changes required to that end device.</p>
+
+<p>Pretty cool! It meant that I could program it up and then move it onto the OpenELEC system and not have to do anything but use the remote, this is especially important as OpenELEC and XBMC itself has no way of changing the way the keyboard or remote works without delving down into the config files by hand via the base operating system, yes that is right no pretty GUI for those technically challenged people out there.</p>
+
+<p>Of course I did have to modify the keyboard.xml file slightly as I wanted certain functionality to continue over from the old RC6 setup. One was the power button, to put the device to sleep, in this case I simply mapped the power button on the remote to the function 4 (F4) key and then setup the keyboard config to do a XBMC.Suspend() on receipt of that key press. The other main change was that the |&lt; and &gt;| buttons would do a skip in the video play mode, I wanted them to act like the remote and actually skip to the next item in the playlist (for music video clips especially), this was also a simple change on the keyboard configuration changing the , and . keys used by default to SkipPrevious and SkipNext.</p>
+
+<p>Overall the flirc is an excellent device and well worth it. Even if I had to buy one outright I certainly would now as it is just as cheap as a RC6 setup from eBay, but with infinitely more uses and functionality!</p></section>
+
+        </div>
       </li>
     
       <li>
@@ -106,8 +166,28 @@
           <h2>
             <a href="/2013/07/cutting-the-cable.html" title="Cutting the cable">Cutting the cable</a>
           </h2>
-          <p class="oneliner">Getting rid of cable TV is a blast.</p>
+          <aside id="post-content" class="clearfix">
+              <time class="date" datetime="2013-07-12 00:00:00 +1000">12 Jul 2013</time>
+          </aside>
         </header>
+        <div class="content">
+          <p><section><p>I (and I guess we) have had cable TV for a number of years, who am I kidding, we had it before moving to Brisbane, and that was almost 10 years ago now. As of yesterday I finally got around to cutting the cable fully. We dropped off of the $100+ Foxtel package in 2011 as we weren't really watching it and were disappointed with the amount (well lack of) NHL and MLB coverage that it had to warrant the sports channels. It really did make more sense to upgrade the internet to a 500GB package in order to take advantage of the NHL and MLB apps on the AppleTV than to be limited to the paltry three to four games a week, often of teams we weren't interested in.</p></p>
+
+<p>I tried to cancel back then but got talked into keeping the IQ2 box and paying $10 a month to keep the free to air channels. This made sense as we didn't have any aerial to be able to get free to air over the actual air. And the $10 a month wasn't all that bad in reality. Fast forward to 2013, and I can count the number of times that we've had the IQ2 box turned on to watch free to air TV on, well, one finger. Yes a thorough waste of $10 a month over the last 18months or so.</p>
+
+<p>We've had a media PC or HTPC as they are called for a number of years now as well, from the days of us having a CRT TV still to be exact. It used to run Windows Media Centre and MediaBrowser on Vista and then Windows 7 before I finally discovered and configured up XBMC. From there I moved to a wonderful system called OpenELEC which is a simple very cut down Linux distribution that ONLY runs XBMC. A very small footprint that boots very quickly and with the release of XBMC 12 (Frodo) supports full HD video and audio formats which is fantastic and had everything needed.</p>
+
+<p>As XBMC Frodo fully supports PVR capabilities I have often thought of toying with Live TV but not having an aerial has held me back. Some research while I was bored showed that we had direct line of sight to the transmission tower, just a mere 19.2km away. Here I thought the tower was on the other side of the hill we live on, but no there it is toying with me. I could of course spend several hundred (around $300) to have an external aerial installed and all the cabling done, but I'm a cheapskate and only need one location wired in. I started looking at internal aerials and what they could achieve, it seems that a familiar "cheap" brand, Crest made an internal 42dB aerial with amplifier and Office Works had it on clearance for $80. Nice! Then I needed a TV tuner, well I had this old Dell laptop laying about that was doing nothing (we are pretty much an Apple household now), so I looked at cheap (this was only going to be a POC you understand) USB tuner. Office Works comes to the rescue again, with a USB 2.0 single tuner from Leadtek that I know works with both OpenELEC and MythTV.</p>
+
+<p>I then downloaded mythbuntu (I'm lazy and didn't want to have to install ubuntu and then get all the relevant packages to create a MythTV backend server), installed it on the laptop and started configuring. It took me a couple of hours but I had things tuned in and kind of running, then started on the EPG data (essential for recording and nice to see what is on TV) before mucking about with the front end. A long story short I had TV on the various HTPCs around the house by the evening, I was pretty chuffed, Vicki was kind of ho-hum, but hey what floats my boat right?</p>
+
+<p>The next morning I noted that all of the Channel 7 stations were, well, crap, so I decided to move the aerial up into the ceiling space, that was fun, but in the end I had it moved, the laptop moved to a better position mounted on the wall (I use VNC to control it) and used an existing hole in the wall to feed the aerial and power cables through. Wonderful I thought, yes right, the Channel 7 stations were still horrific! I then did some searching for fine tuning capabilities and so forth and found many people having issues with Channel 7. Solutions included fine tuning, new cables, and re-scanning for the station. I chose the later, especially now the aerial was in the right spot, pointed in the right direction and had no big metal garage doors in the line of sight!</p>
+
+<p>That was the correct decision it turns out, all stations were lovely and reception was great. Then came cleaning up the stations presented to the HTPC and downloading the channel icons, the later not essential, but looks good :)<p>
+
+<p>Once that was all done I called Foxtel and cancelled my account fully, not before they once again tried to talk me into staying with great discounted rates! No, No, NO! I just wanted out. We don't watch free to air TV very much, well at all, but having it there for visitors is always handy, especially the 'rents and older generations who like to watch the News and other Current Affairs type programs. All of our media has been made available digitally on a NAS, so we have all our DVD's, BluRays and CD's online all the time and thus don't really need to watch TV as we can easily wait to buy the relevant title and then re-encode for use with XBMC.</p></section>
+
+        </div>
       </li>
     
       <li>
@@ -115,85 +195,40 @@
           <h2>
             <a href="/2013/07/vacation-time-an-update.html" title="Vacation time ... an update">Vacation time ... an update</a>
           </h2>
-          <p class="oneliner">Pittsburgh for a white Christmas rather than spooky Halloween.</p>
+          <aside id="post-content" class="clearfix">
+              <time class="date" datetime="2013-07-04 00:00:00 +1000">04 Jul 2013</time>
+          </aside>
         </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2013/07/what-glitters-is-not-always-gold.html" title="What glitters is not always gold">What glitters is not always gold</a>
-          </h2>
-          <p class="oneliner">Three golden rules that will banish depression. I have to see this!</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2013/06/really-i-should-do-this-more-often.html" title="Really I should do this more often">Really I should do this more often</a>
-          </h2>
-          <p class="oneliner">I should update, even if I have nothing mind-blowing to say.</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2012/10/out-of-date-instructions-argh.html" title="Out of date instructions = ARGH">Out of date instructions = ARGH</a>
-          </h2>
-          <p class="oneliner">When instructions are out of date, more work is involved.</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2012/10/upcoming-vacations.html" title="Upcoming Vacations">Upcoming Vacations</a>
-          </h2>
-          <p class="oneliner">The next vacation is not what you thought it would be!</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2012/10/must-do-this-more-often.html" title="Must do this more often">Must do this more often</a>
-          </h2>
-          <p class="oneliner">Posting shouldn't be work, but it does feel like it sometimes.</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2012/07/shh-it-is-an-update-post.html" title="Shh, it is an update post!">Shh, it is an update post!</a>
-          </h2>
-          <p class="oneliner">Updates on Family, Hockey and Ice Skating.</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2012/05/hockey_nat.html" title="Hockey n'at">Hockey n'at</a>
-          </h2>
-          <p class="oneliner">This is all about the Hockey (is there anything better?).</p>
-        </header>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2012/05/slack.html" title="Slack!">Slack!</a>
-          </h2>
-          <p class="oneliner">Sickness, it really saps your will to do anything.</p>
-        </header>
+        <div class="content">
+          <p><section><p>I posted a while back that we would be going to Pittsburgh for Halloween. Well after consideration we decided that taking Braden out of school for a couple of weeks was probably not the best idea so I put a suggestion to Vicki.</p></p>
+
+<p>Christmas! Yes a potential white Christmas in Pittsburgh. Probably one of the better ideas I've had recently. It was settled pretty quickly and I can say that now we've booked flights, accommodation and the hire car we need.</p>
+
+<p>The trip will be more than just Pittsburgh, we will be flying from Brisbane to Honolulu then to New York via Hawaiian Airlines, picking up the car and driving across PA to Pittsburgh, I'm excited and a little apprehensive about the drive given we will not know the weather conditions until we get there and of course the 10 hour red-eye flight from Honolulu to New York. We will be in Pittsburgh for around eight days and hope to catch a few hockey games as well as practices for the Penguins. That is a bonus to the trip, we are using it to decide if we really do want to move there and if so where we could live. We've been given Mount Lebanon as a potential place by an ex-burgher and it is one of the areas we will be researching.</p>
+
+<p>The trip will also include a couple of days out where we drive to see Niagra Falls on the way to Toronto, Vicki really wants to go to Canada this time and we are going to take the opportunity to see the Hockey Hall of Fame and maybe catch a hockey game in Toronto as well (maybe).</p>
+
+<p>The way home will include a few dye in New York City itself followed by a flight back to Hawaii to relax and recuperate before the flight home. All up we are spending three weeks away and we are really looking forward to the break and also seeing more of the United States of America and especially meeting the people of Pittsburgh.</p></section>
+
+        </div>
       </li>
     
   </ul>
-  <hr/>
-</div>
+
+  <section>
+    <div class="clearfix">
+      <nav id="cover">
+        <ul id="headernav" class="list-none">
+          
+            <li><i></i> <span></span></li>
+          
+          
+              <li><a href="/page/2" title="Next" class="next"><span>Next</span> <i></i></a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </section>
 
 <script type="text/javascript">
   ;(function($){$.fn.unveil=function(threshold){var $w=$(window),th=threshold||0,retina=window.devicePixelRatio>1,attrib=retina?"data-src-retina":"data-src",images=this,loaded,inview,source;this.one("unveil",function(){source=this.getAttribute(attrib);source=source||this.getAttribute("data-src");if(source)this.setAttribute("src",source);});function unveil(){inview=images.filter(function(){var $e=$(this),wt=$w.scrollTop(),wb=wt+$w.height(),et=$e.offset().top,eb=et+$e.height();return eb>=wt-th&&et<=wb+th;});loaded=inview.trigger("unveil");images=images.not(loaded);}$w.scroll(unveil);$w.resize(unveil);unveil();return this;};})(jQuery);
@@ -208,7 +243,7 @@
         <ul id="nav" class="list-none">
           <li><a href="http://whinnen.com" title="Home">Home</a></li>
           <li><a href="http://whinnen.com/about.html" title="About">About</a></li>
-          <li><a href="http://whinnen.com/posts" title="Posts">Posts</a></li>
+          <li><a href="http://whinnen.com/posts".html title="Posts">Posts</a></li>
           <li><a href="http://whinnen.com/contact" class="email" title="Contact">Contact</a></li>
           <li><a href="http://whinnen.com/posts.xml" class="rss" title="Subscribe via RSS Feed">RSS</a></li>
           <li><a href="http://twitter.com/bwhinnen">@bwhinnen</a></li>
