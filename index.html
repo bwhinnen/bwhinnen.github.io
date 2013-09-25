@@ -28,13 +28,13 @@ excerpt: Whinnen.COM is a blog about random stuff n'at.
         <ul id="headernav" class="list-none">
           {% if paginator.previous_page %}
             {% if paginator.previous_page >= 1 %}
-              <li><a href="{{ paginator.previous_page_path }}" title="Previous" class="previous"><i></i> <span>Previous</span></a></li>
+              <li><a href="{{ paginator.previous_page_path }}/index.html" title="Previous" class="previous"><i></i> <span>Previous</span></a></li>
             {% endif %}
           {% else %}
             <li><i></i> <span></span></li>
           {% endif %}
           {% if paginator.next_page %}
-              <li><a href="{{ paginator.next_page_path }}" title="Next" class="next"><span>Next</span> <i></i></a></li>
+              <li><a href="{{ paginator.next_page_path }}/index.html" title="Next" class="next"><span>Next</span> <i></i></a></li>
           {% else %}
             <li><span></span> <i></i></li>
           {% endif %}
