@@ -1,0 +1,37 @@
+---
+layout: master
+---
+<article id="postex" class="is-post" role="main">
+  <section>
+    <p />
+    <header class="entry-title">
+      <h2>Category Archives: {{ page.category }}</h2>
+    </header>
+    <p />
+    <ul class="posts post_listing list-none">
+      {% for post in site.posts %}
+        {% for category in post.categories %}
+          {% if category == page.category %}
+            <li class="category">
+              <header class="entry-title">
+                <h2>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </h2>
+                <p class="oneliner">{{ post.oneliner }}</p>
+              </header>
+              <category id="category" class="clearfix">
+                <div class="center_mod">
+                  <ul id="nav" class="list-none category">
+                    {% for category in post.categories %}
+                      <li class="category"><a href="/category/{{ category }}" title="{{ category }}" class="list-none">{{ category }}</a> </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </category>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </section>
+</article>

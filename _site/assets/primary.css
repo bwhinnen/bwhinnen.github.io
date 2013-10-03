@@ -11,7 +11,7 @@ pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
 q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
 dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
 thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
+category, tag, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
 mark, audio, video {
     border: 0;
     font-size: 100%;
@@ -21,7 +21,7 @@ mark, audio, video {
     padding: 0
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup,
+article, aside, details, figcaption, figure, category, tag, footer, header, hgroup,
 menu, nav, section {
     display: block
 }
@@ -2023,6 +2023,16 @@ menu, ol, ul {
     padding: 0
 }
 
+#category, .category li {
+    display: inline-block;
+    margin-right: 5px
+}
+
+aside category {
+    line-height: 2;
+    float: left
+}
+
 .list-none li {
     list-style-type: none !important;
     margin-left: 0 !important
@@ -2194,8 +2204,12 @@ menu, ol, ul {
     }
 }
 
-#postex ul.posts li {
+#postex ul.posts li, #postex ul.posts li.tag {
     margin: 2.5em 0
+}
+
+#postex ul.posts li.category {
+    margin: 0 !important
 }
 
 #postex ul.posts li.li-btn a {
@@ -2276,11 +2290,10 @@ time {
     margin-left: 20px
 }
 
-#post-content time {
+#post-content time not(li.category) {
     float: right;
     line-height: 2;
     text-align: right;
-    color: #b0b7bc
 }
 
 #post-content #posts_btn, #post-content #share_btn, #post-content #twttr_btn {
@@ -2521,6 +2534,10 @@ time {
     margin-right: 0
 }
 
+#tag, #category {
+    background: #fdfdfd;
+}
+
 #footer {
     border-top: 1px solid #e8ebf2;
     box-shadow: inset 0 1px 0 #fff;
@@ -2538,34 +2555,58 @@ time {
     }
 }
 
-#footer small {
+#footer small, #tag small, #category small {
     font-size: 0.7em;
     color: #ddd;
     text-shadow: 0 1px 0 #fff;
     font-weight: 500
 }
 
-#footer small a {
+#footer small a, #tag small a, #category small a {
     color: #c8ccd4 !important
 }
 
-#footer #nav {
+#tag ul, #category ul {
+    margin-bottom: 0 !important
+}
+
+#category li.category:first-child:after {
+    content: ': '
+}
+
+#category li.category:after {
+    content: ', '
+}
+
+#category li.category:last-child:after {
+    content: ''
+}
+
+#postex ul .category {
+    margin-bottom:0 !important
+}
+
+#footer #nav, #tag #nav {
     float: left
 }
 
 @media only screen and (max-width: 30em) {
-    #footer #nav {
+    #footer #nav, #tag #nav {
         float: none;
         margin: 0 10% 0 0
     }
 }
 
-#footer #nav li {
+#footer #nav li, #tag #nav li {
     display: inline-block
 }
 
+#tag #nav li, #category #nav #li {
+    margin: 0
+}
+
 @media only screen and (max-width: 30em) {
-    #footer #nav li {
+    #footer #nav li, #tag #nav li {
         display: block;
         float: left;
         width: 40%
@@ -2582,6 +2623,19 @@ time {
     }
 }
 
+#category #nav li a {
+    color: #9198ad;
+    text-decoration: none
+}
+
+#tag #nav li a {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #9198ad;
+    font-size: 12px;
+    text-decoration: none
+}
+
 #footer #nav li a {
     margin-right: 16px;
     font-weight: bold;
@@ -2590,7 +2644,7 @@ time {
 }
 
 @media only screen and (max-width: 30em) {
-    #footer #nav li a {
+    #footer #nav li a, #tag #nav li a {
         line-height: 2;
         font-size: 1.2em;
         margin: 0;
@@ -2598,7 +2652,7 @@ time {
     }
 }
 
-#footer #nav li a:hover {
+#footer #nav li a:hover, #tag #nav li a:hover, #category #nav li a:hover {
     text-decoration: none;
     border-color: #8f95a8;
     color: #008bc7
@@ -2801,7 +2855,7 @@ time {
 #post .entry-title h1, #post .entry-title h2, #postex .entry-title h1,
 #postex .entry-title h2 {
     color: #2c251d;
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-weight: 700
 }
 

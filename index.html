@@ -12,12 +12,35 @@ excerpt: Whinnen.COM is a blog about random stuff n'at.
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
           </h2>
           <aside id="post-content" class="clearfix">
-              <time class="date" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+            <category id="category" class="small">
+              <ul id="nav" class="list-none category">
+                <li class="category">Posted in</li>
+                {% for category in post.categories %}
+                  <li class="category"><a href="/category/{{ category }}" title="{{ category }}" class="list-none">{{ category }}</a></li>
+                {% endfor %}
+              </ul>
+            </category>
+            <category id="category" class="float_right small">
+              <ul id="nav" class="list-none category">
+                <li class="category"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></li>
+              </ul>
+            </category>
           </aside>
         </header>
         <div class="content">
           {{ post.content }}
         </div>
+        <section>
+        <tag id="tag" class="clearfix">
+          <div class="center_mod">
+            <ul id="nav" class="list-none tag">
+              {% for tag in post.tags %}
+                <li><a href="/tag/{{ tag }}" title="{{ tag }}" class="list-none">{{ tag }}</a> </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </tag>
+        </section>
       </li>
     {% endfor %}
   </ul>
@@ -28,13 +51,13 @@ excerpt: Whinnen.COM is a blog about random stuff n'at.
         <ul id="headernav" class="list-none">
           {% if paginator.previous_page %}
             {% if paginator.previous_page >= 1 %}
-              <li><a href="{{ paginator.previous_page_path }}/index.html" title="Previous" class="previous"><i></i> <span>Previous</span></a></li>
+              <li><a href="{{ paginator.previous_page_path }}" title="Previous" class="previous"><i></i> <span>Previous</span></a></li>
             {% endif %}
           {% else %}
             <li><i></i> <span></span></li>
           {% endif %}
           {% if paginator.next_page %}
-              <li><a href="{{ paginator.next_page_path }}/index.html" title="Next" class="next"><span>Next</span> <i></i></a></li>
+              <li><a href="{{ paginator.next_page_path }}" title="Next" class="next"><span>Next</span> <i></i></a></li>
           {% else %}
             <li><span></span> <i></i></li>
           {% endif %}

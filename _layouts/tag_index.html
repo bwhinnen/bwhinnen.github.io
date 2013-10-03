@@ -1,0 +1,37 @@
+---
+layout: master
+---
+<article id="postex" class="is-post" role="main">
+  <section>
+    <p />
+    <header class="entry-title">
+      <h2>Tag Archives: {{ page.tag }}</h2>
+    </header>
+    <p />
+    <ul class="posts post_listing list-none">
+      {% for post in site.posts %}
+        {% for tag in post.tags %}
+          {% if tag == page.tag %}
+            <li class="tag">
+              <header class="entry-title">
+                <h2>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </h2>
+                <p class="oneliner">{{ post.oneliner }}</p>
+              </header>
+              <tag id="tag" class="clearfix">
+                <div class="center_mod">
+                  <ul id="nav" class="list-none tag">
+                    {% for tag in post.tags %}
+                      <li><a href="/tag/{{ tag }}" title="{{ tag }}" class="list-none">{{ tag }}</a> </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </tag>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </section>
+</article>

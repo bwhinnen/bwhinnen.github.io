@@ -3,17 +3,39 @@ layout: master
 ---
 
 <article id="postex" class="is-post" role="main">
-  <aside id="post-content" class="clearfix">
-    <time class="date" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-  </aside>
-
   <header class="entry-title">
     <h1>{{ page.title }}</h1>
+    <aside id="post-content" class="clearfix">
+      <category id="category" class="small">
+        <ul id="nav" class="list-none category">
+          <li class="category">Posted in</li>
+          {% for category in page.categories %}
+            <li class="category"><a href="/category/{{ category }}" title="{{ category }}" class="list-none">{{ category }}</a></li>
+          {% endfor %}
+        </ul>
+      </category>
+      <category id="category" class="float_right small">
+        <ul id="nav" class="list-none category">
+          <li class="category"><time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time></li>
+        </ul>
+      </category>
+    </aside>
     <h3>{{ page.oneliner }}</h3>
   </header>
 
   {{ content }}
 
+  <section>
+  <tag id="tag" class="clearfix">
+    <div class="center_mod">
+      <ul id="nav" class="list-none tag">
+        {% for tag in page.tags %}
+          <li><a href="/tag/{{ tag }}" title="{{ tag }}" class="list-none">{{ tag }}</a> </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </tag>
+  </section>
 
   <section class="comments">
     <div id="disqus_thread"></div>
