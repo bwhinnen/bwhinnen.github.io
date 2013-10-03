@@ -37,9 +37,9 @@
     <meta name="twitter:site" content="@bwhinnen">
     <meta name="twitter:creator" content="@bwhinnen">
     {% if page.url == "/index.html" %}
-    <meta name="twitter:url" content="{{site.url }}">
+    <meta name="twitter:url" content="{{ site.url }}">
     {% else %}
-    <meta name="twitter:url" content="{{site.url }}{{ page.url }}">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
     {% endif %}
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.excerpt }}">
@@ -79,7 +79,7 @@
     <footer id="footer" class="clearfix">
       <div class="center_mod">
         <ul id="nav" class="list-none">
-          <li><a href="http://whinnen.com" title="Home">Home</a></li>
+          <li><a href="/" title="Home">Home</a></li>
           <li><a href="/about.html" title="About">About</a></li>
           <li><a href="/posts.html".html title="Posts">Posts</a></li>
           <li><a href="/contact.html" class="email" title="Contact">Contact</a></li>

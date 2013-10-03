@@ -2208,7 +2208,7 @@ aside category {
     margin: 2.5em 0
 }
 
-#postex ul.posts li.category {
+#postex ul.posts li.category, #postex ul.posts li.cat {
     margin: 0 !important
 }
 
@@ -2574,11 +2574,11 @@ time {
     content: ': '
 }
 
-#category li.category:after {
+#category li.category:after, #category li.cat:after {
     content: ', '
 }
 
-#category li.category:last-child:after {
+#category li.category:last-child:after, #category li.cat:last-child:after {
     content: ''
 }
 

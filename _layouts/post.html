@@ -10,7 +10,7 @@ layout: master
         <ul id="nav" class="list-none category">
           <li class="category">Posted in</li>
           {% for category in page.categories %}
-            <li class="category"><a href="/category/{{ category }}" title="{{ category }}" class="list-none">{{ category }}</a></li>
+            <li class="category"><a href="/category/{{ category }}/index.html" title="{{ category }}" class="list-none">{{ category }}</a></li>
           {% endfor %}
         </ul>
       </category>
@@ -30,7 +30,7 @@ layout: master
     <div class="center_mod">
       <ul id="nav" class="list-none tag">
         {% for tag in page.tags %}
-          <li><a href="/tag/{{ tag }}" title="{{ tag }}" class="list-none">{{ tag }}</a> </li>
+          <li><a href="/tag/{{ tag }}" title="{{ tag }}/index.html" class="list-none">{{ tag }}</a> </li>
         {% endfor %}
       </ul>
     </div>
