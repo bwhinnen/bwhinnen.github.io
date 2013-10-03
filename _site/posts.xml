@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	
+	<title type="text" xml:lang="en">Whinnen.COM</title>
+	<link href="http://www.whinnen.com/"/>
+        <link type="application/atom+xml" href="http://www.whinnen.com/post.xml" rel="self"/>
+ 	<link type="text" href="http://whinnen.com" rel="alternate"/>
+	<updated>2013-10-03T16:10:43+10:00</updated>
+	<id>http://whinnen.com/</id>
+	<author>
+		<name>Brett Whinnen</name>
+                <email>brett@whinnen.com</email>
+	</author>
+	<rights>Copyright (c) 2010-2013, Brett Whinnen; all rights reserved.</rights>
+	
+	
+	<entry>
+		<id>http://whinnen.com/2013/09/darn-you-nhl-and-your-crappy-schedule-changes</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/09/darn-you-nhl-and-your-crappy-schedule-changes.html"/>
+		<title>Darn you NHL and your crappy schedule changes!</title>
+		<published>2013-09-14T00:00:00+10:00</published>
+		<updated>2013-09-14T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;As you are all aware we are heading off on a trip to Pittsburgh for Christmas. We checked the last 6, SIX years of NHL schedules before deciding on dates and the Penguins were always home over the Christmas / New Year period.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Well thank you NHL&lt;/strong&gt;, but with the devision realignment the schedules all changed! So that means for the entire time we are in Pittsburgh the Pens are not at home! Thankfully they are playing a game in nearby Ohio and then in New Jersey so we at least get to do a bit of a road trip to watch some games but we don&#39;t get to see them in CONSOL, which is what we really wanted.&lt;/p&gt;
+
+&lt;p&gt;The irony/bad luck is that we arrive into JFK on the 21st of December, the same day the Pens play at home, but getting from JFK to Pittsburgh via car before the puck drops at midday is just not going to happen.&lt;/p&gt;
+
+&lt;p&gt;We aren&#39;t going to let this get us down though as we are going to thoroughly enjoy our time in Pittsburgh and see as much as we can. We are going to be searching Mount Lebanon and Cecil Township for potential places to live in the future, although as nice as Cecil looks I think Mount Lebanon will win due to the closeness to other amenities (such as ice rinks) and of course just a short ride to Pittsburgh itself.&lt;/p&gt;
+
+&lt;p&gt;The count down is now under 100 days and I can tell you things are starting to get exciting! Not only that, but the NHL season start is just around the corner so we&#39;ll have plenty to keep us occupied as the time counts down!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/09/darn-you-nhl-and-your-crappy-schedule-changes.html&quot; title=&quot;Darn you NHL and your crappy schedule changes!&quot;&gt;Darn you NHL and your crappy schedule changes!&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2013/09/the-big-data-migration-affair</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/09/the-big-data-migration-affair.html"/>
+		<title>The Big Data Migration Affair</title>
+		<published>2013-09-11T00:00:00+10:00</published>
+		<updated>2013-09-11T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;I’ve run on a VSP now for a number of years, basically around 6 or 7 of them and have had a great deal of fun and learning in the process. There was a necessity based on running a photographic website for a little start-up company I had that fell through due to changing priorities as well as being able to get push based email out to various iDevices. Now with rising costs and really the fact that the only things I use the VPS for are email serving a Wordpress site and http based file storage the costs far outweighed the needs.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I began to setup Google Apps about a year ago, but never really took it any further. This time I did some more investigation and it turns out that full exchange (well ActiveSync) functionality is available to Google Apps for Businesses customers, the cost was $50 per user per calendar year. Not too bad overall, this means three accounts, one for each member of the family.&lt;/p&gt;
+
+&lt;p&gt;I could also host my files on Google Sites which also gave me much more storage and bandwidth space than the previous VPS did as well as more redundancy being Google. The photographic website was being closed so a basic landing page was the only thing required. The Wordpress site posed more of a problem as Google Sites does not allow anything of the sort, yes I could have used Blogger but I wanted to keep the same look and feel.&lt;/p&gt;
+
+&lt;p&gt;Google announced earlier this year that the Google Cloud Apps was going to start supporting php development, that meant that suddenly Wordpress was about to become available. The only catch, this was going to cost some money as both the Cloud SQL and Cloud Storage were billed on a usage basis. Projected costs are around $0.36 a day for Cloud SQL and not much for the Cloud Storage as I really don’t need much. Rough estimates run to under $150 a year. This combined with the Google Apps for Business still runs at less than the current VPS solution.&lt;/p&gt;
+
+&lt;p&gt;However, there were a few gotchas along the way.&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;1. You can only create an alias name for a Google Site from the primary domain, I have three domains in total and really wanted two of those to be landing pages on Google Sites.&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;Solution: Get creative. I used a free hosting site that allowed me to use my domain name against an IP address, this allowed me to put a simple .htaccess with a permanent forward (301) in to point to the new Google Site alias. It did require access and changes to my DNS settings but after those changes it worked perfectly.&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;2. Google has no DNS hosting.&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;Solution: Most of the companies who register the domains for you will offer this as a free service. For me Melbourne IT does it and I had to transfer one domain over in order to get the features I needed, got a great deal on a 5 year registration for the domain too!&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;3. Google Cloud Apps will require billing.&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;Solution: Do it, it really is not all that expensive in the grand scheme of things, especially for the redundancy and scalability involved. While you can opt for daily rates there are also per use rates that can work out cheaper depending on how often your site is accessed. I went for the daily rate first to get all the teething and to allow the site to settle down.&lt;/p&gt;
+
+&lt;p&gt;Overall the process was pretty simple, the key areas are to make sure you know your ‘net presence and make sure you have backups of everything. Manage things in a staged approach and run a pilot, Google Apps makes this quite easy to do and they even have a one month trial on Google Apps for Business you can use towards the end of the pilot to make sure everything works as expected.&lt;/p&gt;
+
+&lt;p&gt;Getting my Wordpress site to Google Cloud Apps was a little harder but following an online guide and knowing how to use mysql helped a great deal. I will do up another article in the future that shows what I’ve done to get that working with minimal issues.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/09/the-big-data-migration-affair.html&quot; title=&quot;The Big Data Migration Affair&quot;&gt;The Big Data Migration Affair&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2013/07/take-control-of-your-remotes</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/take-control-of-your-remotes.html"/>
+		<title>Take control of your remotes</title>
+		<published>2013-07-29T00:00:00+10:00</published>
+		<updated>2013-07-29T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;/p&gt;Recently I&#39;ve struggled a bit with Braden&#39;s HTPC and its remote setup. For some reason the Dell branded RC6 IR receiver and remote would not wake up his HTPC reliably resulting in him having to reach over the TV to turn on the HTPC himself. This to me is highly annoying as I like to be able to get settled and press a button, so to an eight year old I am sure it was equally annoying, especially one as technically minded as him.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently the &lt;a title=&quot;OpenELEC&quot; href=&quot;http://openelec.tv&quot; target=&quot;_blank&quot;&gt;OpenELEC&lt;/a&gt; forum in conjunction with &lt;a title=&quot;The Pi Hut&quot; href=&quot;http://thepihut.com&quot; target=&quot;_blank&quot;&gt;The Pi Hut&lt;/a&gt; and &lt;a title=&quot;Flirc&quot; href=&quot;http://flirc.tv&quot; target=&quot;_blank&quot;&gt;Flirc&lt;/a&gt; had a competition (well it is still going on at the time of penning this note) to win a flirc device. I was one of the lucky ones to win one. I must of course say a big thank you to each of the team members involved from the three places, the prize is not only greatly appreciated but is immensely useful!&lt;/p&gt;
+
+&lt;p&gt;What is a flirc device? Simply it is a lovely, and I must say pretty sexy looking, USB compatible IR receiver that presents itself as a HID device to the OS. There is a simple programming application that can be run on OS X, Linux and of course Windows which allows it to capture any IR signal from any remote regardless of what proprietary codes it uses and then allocate these to a variety of functions. As I use XBMC I chose to use the full keyboard option as I could then have many different buttons to control the plethora of options that XBMC uses. The cool thing about the flirc is that you program it and it remembers the settings and you can then move it to any device with a USB port that supports HID functions with no further management or changes required to that end device.&lt;/p&gt;
+
+&lt;p&gt;Pretty cool! It meant that I could program it up and then move it onto the OpenELEC system and not have to do anything but use the remote, this is especially important as OpenELEC and XBMC itself has no way of changing the way the keyboard or remote works without delving down into the config files by hand via the base operating system, yes that is right no pretty GUI for those technically challenged people out there.&lt;/p&gt;
+
+&lt;p&gt;Of course I did have to modify the keyboard.xml file slightly as I wanted certain functionality to continue over from the old RC6 setup. One was the power button, to put the device to sleep, in this case I simply mapped the power button on the remote to the function 4 (F4) key and then setup the keyboard config to do a XBMC.Suspend() on receipt of that key press. The other main change was that the |&amp;lt; and &amp;gt;| buttons would do a skip in the video play mode, I wanted them to act like the remote and actually skip to the next item in the playlist (for music video clips especially), this was also a simple change on the keyboard configuration changing the , and . keys used by default to SkipPrevious and SkipNext.&lt;/p&gt;
+
+&lt;p&gt;Overall the flirc is an excellent device and well worth it. Even if I had to buy one outright I certainly would now as it is just as cheap as a RC6 setup from eBay, but with infinitely more uses and functionality!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/07/take-control-of-your-remotes.html&quot; title=&quot;Take control of your remotes&quot;&gt;Take control of your remotes&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2013/07/cutting-the-cable</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/cutting-the-cable.html"/>
+		<title>Cutting the cable</title>
+		<published>2013-07-12T00:00:00+10:00</published>
+		<updated>2013-07-12T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;I (and I guess we) have had cable TV for a number of years, who am I kidding, we had it before moving to Brisbane, and that was almost 10 years ago now. As of yesterday I finally got around to cutting the cable fully. We dropped off of the $100+ Foxtel package in 2011 as we weren&#39;t really watching it and were disappointed with the amount (well lack of) NHL and MLB coverage that it had to warrant the sports channels. It really did make more sense to upgrade the internet to a 500GB package in order to take advantage of the NHL and MLB apps on the AppleTV than to be limited to the paltry three to four games a week, often of teams we weren&#39;t interested in.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I tried to cancel back then but got talked into keeping the IQ2 box and paying $10 a month to keep the free to air channels. This made sense as we didn&#39;t have any aerial to be able to get free to air over the actual air. And the $10 a month wasn&#39;t all that bad in reality. Fast forward to 2013, and I can count the number of times that we&#39;ve had the IQ2 box turned on to watch free to air TV on, well, one finger. Yes a thorough waste of $10 a month over the last 18months or so.&lt;/p&gt;
+
+&lt;p&gt;We&#39;ve had a media PC or HTPC as they are called for a number of years now as well, from the days of us having a CRT TV still to be exact. It used to run Windows Media Centre and MediaBrowser on Vista and then Windows 7 before I finally discovered and configured up XBMC. From there I moved to a wonderful system called OpenELEC which is a simple very cut down Linux distribution that ONLY runs XBMC. A very small footprint that boots very quickly and with the release of XBMC 12 (Frodo) supports full HD video and audio formats which is fantastic and had everything needed.&lt;/p&gt;
+
+&lt;p&gt;As XBMC Frodo fully supports PVR capabilities I have often thought of toying with Live TV but not having an aerial has held me back. Some research while I was bored showed that we had direct line of sight to the transmission tower, just a mere 19.2km away. Here I thought the tower was on the other side of the hill we live on, but no there it is toying with me. I could of course spend several hundred (around $300) to have an external aerial installed and all the cabling done, but I&#39;m a cheapskate and only need one location wired in. I started looking at internal aerials and what they could achieve, it seems that a familiar &quot;cheap&quot; brand, Crest made an internal 42dB aerial with amplifier and Office Works had it on clearance for $80. Nice! Then I needed a TV tuner, well I had this old Dell laptop laying about that was doing nothing (we are pretty much an Apple household now), so I looked at cheap (this was only going to be a POC you understand) USB tuner. Office Works comes to the rescue again, with a USB 2.0 single tuner from Leadtek that I know works with both OpenELEC and MythTV.&lt;/p&gt;
+
+&lt;p&gt;I then downloaded mythbuntu (I&#39;m lazy and didn&#39;t want to have to install ubuntu and then get all the relevant packages to create a MythTV backend server), installed it on the laptop and started configuring. It took me a couple of hours but I had things tuned in and kind of running, then started on the EPG data (essential for recording and nice to see what is on TV) before mucking about with the front end. A long story short I had TV on the various HTPCs around the house by the evening, I was pretty chuffed, Vicki was kind of ho-hum, but hey what floats my boat right?&lt;/p&gt;
+
+&lt;p&gt;The next morning I noted that all of the Channel 7 stations were, well, crap, so I decided to move the aerial up into the ceiling space, that was fun, but in the end I had it moved, the laptop moved to a better position mounted on the wall (I use VNC to control it) and used an existing hole in the wall to feed the aerial and power cables through. Wonderful I thought, yes right, the Channel 7 stations were still horrific! I then did some searching for fine tuning capabilities and so forth and found many people having issues with Channel 7. Solutions included fine tuning, new cables, and re-scanning for the station. I chose the later, especially now the aerial was in the right spot, pointed in the right direction and had no big metal garage doors in the line of sight!&lt;/p&gt;
+
+&lt;p&gt;That was the correct decision it turns out, all stations were lovely and reception was great. Then came cleaning up the stations presented to the HTPC and downloading the channel icons, the later not essential, but looks good :)&lt;p&gt;
+
+&lt;p&gt;Once that was all done I called Foxtel and cancelled my account fully, not before they once again tried to talk me into staying with great discounted rates! No, No, NO! I just wanted out. We don&#39;t watch free to air TV very much, well at all, but having it there for visitors is always handy, especially the &#39;rents and older generations who like to watch the News and other Current Affairs type programs. All of our media has been made available digitally on a NAS, so we have all our DVD&#39;s, BluRays and CD&#39;s online all the time and thus don&#39;t really need to watch TV as we can easily wait to buy the relevant title and then re-encode for use with XBMC.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/07/cutting-the-cable.html&quot; title=&quot;Cutting the cable&quot;&gt;Cutting the cable&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2013/07/vacation-time-an-update</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/vacation-time-an-update.html"/>
+		<title>Vacation time ... an update</title>
+		<published>2013-07-04T00:00:00+10:00</published>
+		<updated>2013-07-04T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;I posted a while back that we would be going to Pittsburgh for Halloween. Well after consideration we decided that taking Braden out of school for a couple of weeks was probably not the best idea so I put a suggestion to Vicki.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Christmas! Yes a potential white Christmas in Pittsburgh. Probably one of the better ideas I&#39;ve had recently. It was settled pretty quickly and I can say that now we&#39;ve booked flights, accommodation and the hire car we need.&lt;/p&gt;
+
+&lt;p&gt;The trip will be more than just Pittsburgh, we will be flying from Brisbane to Honolulu then to New York via Hawaiian Airlines, picking up the car and driving across PA to Pittsburgh, I&#39;m excited and a little apprehensive about the drive given we will not know the weather conditions until we get there and of course the 10 hour red-eye flight from Honolulu to New York. We will be in Pittsburgh for around eight days and hope to catch a few hockey games as well as practices for the Penguins. That is a bonus to the trip, we are using it to decide if we really do want to move there and if so where we could live. We&#39;ve been given Mount Lebanon as a potential place by an ex-burgher and it is one of the areas we will be researching.&lt;/p&gt;
+
+&lt;p&gt;The trip will also include a couple of days out where we drive to see Niagra Falls on the way to Toronto, Vicki really wants to go to Canada this time and we are going to take the opportunity to see the Hockey Hall of Fame and maybe catch a hockey game in Toronto as well (maybe).&lt;/p&gt;
+
+&lt;p&gt;The way home will include a few dye in New York City itself followed by a flight back to Hawaii to relax and recuperate before the flight home. All up we are spending three weeks away and we are really looking forward to the break and also seeing more of the United States of America and especially meeting the people of Pittsburgh.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/07/vacation-time-an-update.html&quot; title=&quot;Vacation time ... an update&quot;&gt;Vacation time ... an update&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2013/07/what-glitters-is-not-always-gold</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/what-glitters-is-not-always-gold.html"/>
+		<title>What glitters is not always gold</title>
+		<published>2013-07-03T00:00:00+10:00</published>
+		<updated>2013-07-03T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;/p&gt;Did you know that according to several studies and so-called boffins that you should be happy if you meet three certain criteria. Article link can be found here on the &lt;a href=&quot;http://www.heraldsun.com.au/lifestyle/health-fitness/deakin-university-surveys-reveal-golden-triangle-of-happiness/story-fni0dgux-1226672800578&quot; target=&quot;_blank&quot;&gt;Herald Sun&lt;/a&gt; website. Yes I am talking about the so-called &quot;golden triangle of happiness&quot;. Let me just simply state that there is no such thing as a &quot;golden triangle of happiness&quot;, anyone who believes this really has no understanding of the depth and breadth of mental illnesses such as depression with all it pertains. In a so-called &lt;em&gt;enlightened&lt;/em&gt; society to have this touted in a &lt;em&gt;Lifestyle&lt;/em&gt; section of a major media outlet is a travesty and undermines the excellent work done by so many health workers and organisations around the country and indeed the world.&lt;/p&gt;
+
+&lt;p&gt;Anyone who has suffered from a mental illness knows that it does not differentiate, it does not care who you are, what you have or how &lt;em&gt;happy&lt;/em&gt; you should be. For many it is a dark and lonely battle that is fought on many fronts, alone because of opinions like this and the stigma associated with them. People are often too scared to confide in others for fear of what they will say, how they will react and more often than not comments such as &quot;You are exaggerating, just snap out of it&quot; or &quot;It is just a phase, everyone gets down from time to time&quot; and of course the old &quot;You have the best life, family, friends, money, a job, you want for nothing, you have no reason or right to be un-happy!&quot;. Starting to sound familiar? Of course it is, especially from the vast majority people out there have not suffered from depression and as such do not understand what you are going through or have been through but believe they do based on pre-conceived ideology. Some people do of course understand, and these people are to be cherished!&lt;/p&gt;
+
+&lt;p&gt;How can I say this? Quite simply my life has been many ups and downs, much the same as everyone else, well so I thought. I was one of those people who thought to myself, &quot;just snap out of it, you have no reason to be like this&quot;, but I could not, really it was just denial on my part. I&#39;ve spent many years in a state of overwhelming turmoil, that is the easiest way to describe it in few words without spending an eternity trying to explain the variances of feelings. There are very few people that know this about me, and even less that had a clue that there was something wrong. That does not mean they are not observant, it simply means that like so many with depression I hid it extremely well. People would see mood swings, but never the full extent of how I was feeling internally, they would put it down to having a bad day or week. So yes I can to some extent, say that I do understand what people go through with depression as it is something I am currently going through, something that I want to change and have finally called out for help with.&lt;/p&gt;
+
+&lt;p&gt;The article really does not help anyone, it does not help those suffering from depression, nor does it help those close to those suffering or the general population who already have pre-conceived ideas. All it does is put mental health issues back into the darks days of medicine, when there was little understanding of the issues let alone the causes. I&#39;ve seen many different reactions from people that I know when I&#39;ve told them I am suffering from depression and that I am now on medication to help me get to a place where I can at least sort some things out and the underlining message in this article really solidifies some of those &lt;del&gt;poor&lt;/del&gt; uneducated attitudes.&lt;/p&gt;
+
+&lt;p&gt;Really the article in general takes the whole plethora of mental health issues and glosses them over with three simple rules that will make ones life &lt;em&gt;happy&lt;/em&gt;. It is a slap in the face to anyone who suffers from depression whether or not they meet those three criteria. Honestly who thought that publicising such findings in the way they did would be a good idea; it will not suddenly make those suffering change, it will not make things &lt;em&gt;all better&lt;/em&gt; just knowing that they &lt;em&gt;should&lt;/em&gt; be happy according to someones interpretations of findings made in 29 surveys over 12 years. If only life were that easy. I like so many people meet all three criteria and still suffer from depression and now things have just been made that much more difficult with peers when they realise that I really have no reason to be depressed at all.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/07/what-glitters-is-not-always-gold.html&quot; title=&quot;What glitters is not always gold&quot;&gt;What glitters is not always gold&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2013/06/really-i-should-do-this-more-often</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/06/really-i-should-do-this-more-often.html"/>
+		<title>Really I should do this more often</title>
+		<published>2013-06-28T00:00:00+10:00</published>
+		<updated>2013-06-28T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;I really should. I find that I try and find something really meaningful to write about, something mind-blowingly awesome, but of course never find anything. What I should be doing is just writing things that happen, after all this is what I wanted to do with the blog rather than trying to be all &#39;clever&#39; and &#39;sophisticated&#39;!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;So what I will be trying to write things that are happening around here and in my and our lives. It won&#39;t be prize winning prose but at least it will be honest and real.&lt;/p&gt;
+
+&lt;p&gt;Today is Friday, I&#39;m taking a mental health day, yes I do need it, but to top things off the poor boy had an episode last night with some vomiting, well three counts of vomiting on his way to the bathroom. One in his bedroom, one in the family room and one at the entrance to the bathroom. All at around 1:00am this morning. Poor little tacker, he was thrown in the shower while we cleaned up. I must admit that is my most hated job in the world, cleaning up after someone that has been sick is never fun.&lt;/p&gt;
+
+&lt;p&gt;He has been up all night, and is still awake at 11:00am, but as of 7:00am he has stopped vomiting, which is a relief, but is now running a wondrous 38.9ºC temperature. But he is now taking fluids and medicine as well as eating a few Arnott&#39;s Milk Arrowroot biscuits and is actually quite lucid for someone who is running a fever and has a distinct lack of sleep.&lt;/p&gt;
+
+&lt;p&gt;Vicki had to go into the office this morning for a few hours to do the banking as her boss was away, which I am sure was a real chore on just a few paltry hours sleep. We are now all just relaxing at home doing very little for the rest of the day as the boy recovers and we keep a close eye on him.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/06/really-i-should-do-this-more-often.html&quot; title=&quot;Really I should do this more often&quot;&gt;Really I should do this more often&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/10/out-of-date-instructions-argh</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/10/out-of-date-instructions-argh.html"/>
+		<title>Out of date instructions = ARGH</title>
+		<published>2012-10-25T00:00:00+10:00</published>
+		<updated>2012-10-25T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;That is correct people still have out of date instructions for upgrading things. Our website and email services are all hosted on a HyperVM based VPS, it is currently running Debian 5.0 and is restricted to a kernel version of 2.6.18, while on its own this is not a great drama it can be a little restrictive as the kernel and Debian version cannot be updated easily.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;In my infinite wisdom, well in my defence it was required, I decided to update the mail server software (Zarafa) to the current version 7.1 from the 7.05 I was previously running. As always I do my due diligence of reading the release notes, update guide etc. Lucky for me I did and took a full backup of the mail database! Running through the notes it tells you to do certain steps at certain times, and of course being on Debian it uses dpkg to install the locally held packages you receive as part of the Zarafa distribution. Well this is usually all well and good, doing the installs and following the notes is generally not an issue, they have been in the past very good.&lt;/p&gt;
+
+&lt;p&gt;This time, they have split up certain functionality into other modules, one of which needs a new package to be installed which is NOT referenced in the upgrade guide anywhere. Of course me being me I googled it and found that I needed to add a certain source to my sources.list file. Well that was mistake number one! The source I added just happened to be the new Debian distribution &quot;sid&quot;, I didn&#39;t realise this until WAY too late, after updating umpteen packages and suddenly finding that I needed to have a newer kernel installed to support libc6, oops!&lt;/p&gt;
+
+&lt;p&gt;So some quick investigation shows that I can get a new VPS with my current hosting company and it will support a) custom kernels, b) Debian 6.0 and future releases and c) it is faster, and more well appointed. The catch, it costs an extra $50 a year, big whoopie, and I have to migrate everything and set it back up. I go through the trouble of setting it up and use the same sources.list I used previously, with the exception of Debian 6.0 sources instead of Debian 5.0 sources, but of course I hadn&#39;t clicked that the &quot;sid&quot; source was a new distribution/version yet. So go through most of the setup and then realise that I&#39;ve screwed the pooch. Start again, this time knowing what I&#39;ve done wrong.&lt;/p&gt;
+
+&lt;p&gt;Now installing Zarafa 7.1 I find I still need that same package, but where will I get it? ... Oh come on, seriously, it was included in the distribution all along? So did I go through all this trouble for naught? Well yes and no. Yes because I did extra work I didn&#39;t need to do and spent money I really didn&#39;t need to, and things would have kept running away for a while. No because I did need to update to a later version of Debian as 5.0 is pretty much unsupported and I need to keep on top of security patches etc and of course the new VPS is quite speedy in comparison!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/10/out-of-date-instructions-argh.html&quot; title=&quot;Out of date instructions = ARGH&quot;&gt;Out of date instructions = ARGH&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/10/upcoming-vacations</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/10/upcoming-vacations.html"/>
+		<title>Upcoming Vacations</title>
+		<published>2012-10-18T00:00:00+10:00</published>
+		<updated>2012-10-18T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;After our last vacation to Hawaii we were all set to continue the yearly tradition (as it has become) and head back there again next year for our annual vacation.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;As usual when we talk about things Vicki and I always come up with new ideas and of course we (by this I mean Vicki) raised an option of visiting the USA during Halloween, that is around October 31st. Which of course is right in the middle of a school term and at the end of month for Vicki&#39;s new job. As Braden is only in Grade 2 next year we thought that as long as we take some work with us he can keep mostly up to date with what is going on, after all homework is not all that time consuming or difficult. Vicki checked with her new work and they are flexible so the dates are mostly set.&lt;/p&gt;
+
+&lt;p&gt;However, the location was not. With every good intention of returning to Hawaii in mind other events have since changed the destination for some very valid reasons. You see we have each applied for entry into the Diversity Visa Lottery, or more commonly known as the Green Card lottery that the US Department of State holds each year. The results of this lottery will be available in May 2013 with entry into the United States in 2014. With this in mind and of course our initial decision to move to Pittsburgh, PA we decided it would probably be a good idea to visit and scout around the area to see if we actually like it and could see ourselves settling there for the long term.&lt;/p&gt;
+
+&lt;p&gt;Instead of a pretty relaxing vacation to Hawaii we are now looking at something a little more hectic with a trip to Pittsburgh. Of course getting there is the first issue, wanting to limit the number of flights we need to take is a priority, it seems that BNE to PIT is not the easiest of routes. We can go BNE - SYD - SFO - PIT or BNE - LAX - DFW - PIT or BNE - LAX - SFO - PIT and so forth, what we&#39;d really like to do is BNE - SFO - PIT as this gives us an option to spend a day or two in San Francisco which we&#39;ve only visited for the day previously.&lt;/p&gt;
+
+&lt;p&gt;But flights aside, the things to do in Pittsburgh are suddenly increasing, there is of course NHL game(s) to attend, assuming the lockout is over and done with by then! Then of course there should be NFL games on as well, seeings as Braden took a shine to NFL when we were in Hawaii. There will be no MLB on at that time though, unless of course the Buccos surprise every one and make the post season, come on it is possible, they had a great run this year, but couldn&#39;t keep up the pace. A visit to Southpointe to see the Penguins practice will be awesome almost as much as watching them play. Then of course we cannot forget all the looking around, eating and Halloween, although on the last item we do need to find somewhere &quot;family&quot; friendly where we can take Braden trick-or-treating.&lt;/p&gt;
+
+&lt;p&gt;To say I am excited about this next vacation is an understatement, I am super excited and have even petitioned some people on Twitter I follow for recommendations!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/10/upcoming-vacations.html&quot; title=&quot;Upcoming Vacations&quot;&gt;Upcoming Vacations&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/10/must-do-this-more-often</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/10/must-do-this-more-often.html"/>
+		<title>Must do this more often</title>
+		<published>2012-10-16T00:00:00+10:00</published>
+		<updated>2012-10-16T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;But it feels like work sometimes. Having to think of a subject rather than just rambling on about nothing at all does seem a little tedious at times. Perhaps I am not cut out to be a blogger, probably why I am an I.T. Geek instead, although calling me a geek is a little bit of a misconception as I am a little above that pay-grade!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;However I am digressing! When I re-vamped this blog I had all the good intentions of writing about things everyday, when in reality instead of picking subjects with substance (or not) I should have been concentrating on what the family was up to and writing things about us ... now that makes much more sense.&lt;/p&gt;
+
+&lt;p&gt;So what to write about from a family perspective for my first post back after such a long time away, yes, yes I know not as long as last time!&lt;/p&gt;
+
+&lt;p&gt;What have we done? Nothing? No, not really. Where have we been? Every where, well again, not really ...&lt;/p&gt;
+
+&lt;p&gt;Since July we&#39;ve been the usual family trying to make life as enjoyable as possible, nothing out of the ordinary there really. Braden started playing ice hockey at the Gold Coast rink in the KRL, no not that mob-run (allegedly) league in Russia, but the Kids Recreational League. It is made up of three teams who play two weeks in a row and then have a bye, they have enough players to make two lines, one of older/bigger kids and the other of younger/smaller kids. The skill levels vary a great deal from those that can&#39;t really skate to those that have played at a state level. It is well run and Braden is really learning to play well, when it is not &quot;too tired&quot; that is.&lt;/p&gt;
+
+&lt;p&gt;So far he has only had one assist, not bad considering he doesn&#39;t really get into the action too much and likes to hang back, but he has also had a third and first star of the game. The third star was an encouragement award, but the first star was deserved. He played his best game ever that weekend, he was in on the plays, up and down the ice, making a supreme effort, happily staying on the ice and just doing a really good job overall. To say we were proud is an understatement.&lt;/p&gt;
+
+&lt;p&gt;Vicki and I have not been as active as we should be, but fingers crossed that will be changing soon with the startup of the development league, or C-grade. Where games will be run as a training/scrimmage session to allow us to get to know the positions, the rules and what is expected of us on the ice. This is to get us ready to move to B-grade for the next regular season, mainly because there were some &quot;issues&quot; with the season just completed, where new players were &quot;inserted&quot; into pre-existing teams and the outcome was not what I call friendly at all. The new league starts up in just over a week so we need to get signed up and ready to go, pretty excited about it actually!&lt;/p&gt;
+
+&lt;figure class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/img/img_0113.jpg&quot; alt=&quot; Whinnen&#39;s waiting for the Pink Line&quot;/&gt;
+&lt;figcaption&gt;Waiting for the Pink Line bus to go to Ala Moana.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Our life has not just been ice hockey, we&#39;ve just recently come back from a vacation to the Hawaiian Islands, and this time I can really say that as we didn&#39;t just spend time on Oahu, we went to Hawai&#39;i itself as well (also know as the Big Island) and spent a week there. Besides the abysmal attempt at customer service by both QANTAS and Jetstar airlines we made it there and back safely, in the end. Suffice it to say we will NEVER book a flight through one airline where some legs may be by another carrier, it just ends up with far too much finger pointing and a complete lack of professionalism on either parties behalf.&lt;/p&gt;
+
+&lt;p&gt;The vacation though was excellent, we had the best time and returned with many great memories, and photos. I will have to figure out if I can link to a shared photo stream or if I have to add photos here individually, only time will tell. I will write more detailed posts on some of the things that we did while on both islands as it is far too much for a single post (not to mention giving me subject matter that will span weeks instead of days ... oops I shouldn&#39;t readily admit that should I?).&lt;/p&gt;
+
+&lt;figure class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/img/img_0129.jpg&quot; alt=&quot;Great view of Waikiki Beach&quot;/&gt;
+&lt;figcaption&gt;The view from the hotel room was spectacular.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;As with all vacations it is always sad to have to come home, this time especially as Vicki didn&#39;t have a job to come back to after being &quot;let go&quot; due to financial re-structuring at her last job. It was a shame as she loved the company, the staff and the job, although I think the hardest part was leaving her friends behind who have more work to do to fill the gaps. On the bright side though she did find a new job in record time and the hours are now &quot;school hours&quot; which means she starts at 8:30am and finishes at 3:00pm daily, which means I do not have to pick up Braden every afternoon from school, although I could if I wanted to and will in situations where Vicki has to work back.&lt;/p&gt;
+
+&lt;p&gt;One thing the vacation has done is re-affirmed our desire to move to the United States of America, to that end we&#39;ve both entered the Diversity Lottery (Green Card Lottery) for entry in 2014 as a fall back in case I cannot organise something else. The wonderful, yes sarcasm, thing is that we put our entry into the lottery in October but do not find out until May, and then have to wait for the next round of steps before getting the card in 2014. Patience is not really one of my virtues to be entirely honest!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/10/must-do-this-more-often.html&quot; title=&quot;Must do this more often&quot;&gt;Must do this more often&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/07/shh-it-is-an-update-post</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/07/shh-it-is-an-update-post.html"/>
+		<title>Shh, it is an update post!</title>
+		<published>2012-07-18T00:00:00+10:00</published>
+		<updated>2012-07-18T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;What is going on here? Brett suddenly posting again? Yes! I&#39;ve been lazy far too long now, I blame a distinct lack of motivation and pressure of trying to think of a new subject everyday. To me that smacks of a lack of commitment more than anything but I&#39;ll stick with my lazy excuse.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;So the Devils made the Stanley Cup playoffs, they lost unfortunately, I would have loved to see them win, and given Parise&#39;s move to Minnesota it would have been a great ending to his Devils career. I also think that Brodeur would have retired if they won the cup, mind you I am happy to see both him and Johan back in the line up for next year.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m still a little shocked that Staal decided that he wanted to move, I can&#39;t blame him when looking at it from a perspective of the number of top line players the Pens have and of course the chance to play with his brother and all, but come on I really liked the dynamics of the Pens last season. Mind you I cannot wait for the new season to see just how they go, mind you I still think they should have traded Martin rather than Michalek, but who am I?&lt;/p&gt;
+
+&lt;p&gt;The Red Sox have been playing luke warm, more colder than hot. The Pirates on the other hand have been playing amazingly, it must be the awesomeness of Zoltan!&lt;/p&gt;
+
+&lt;p&gt;We&#39;ve been doing pretty much the same around here, ice skating, ice hockey and all. Both Vicki and Braden have celebrated their birthdays in the last week. Vicki was sick for hers which meant we didn&#39;t do a great deal, but Braden and I still took her out to dinner to celebrate. Braden spent the day at the ice rink,no party, just a nice cake amongst friends and family, he was quite chuffed when he got to kiss Steph (his &#39;older&#39; girlfriend) on the cheek.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/07/shh-it-is-an-update-post.html&quot; title=&quot;Shh, it is an update post!&quot;&gt;Shh, it is an update post!&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/hockey_nat</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/hockey_nat.html"/>
+		<title>Hockey n'at</title>
+		<published>2012-05-26T00:00:00+10:00</published>
+		<updated>2012-05-26T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;And all kinds! We had another training session on Thursday night just gone. It really is a great deal of fun and I am starting to feel better skating around with a stick now, which is good. This was my second training session and Vicki&#39;s third as she got to train with the women&#39;s team last weekend. She is still a much better skater than me, and probably will be for a long time, but I tend to be a bit better at the things that require strength, such as jumping etc, and that is not surprising, but it is only a matter of time before her skills take over  on that, so give me my short lived something better than her! Not that it makes all that much difference in the long term though, as long as we all have fun.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Braden also joined us for most of the training session as the juniors were doing some advanced work and there was no one else his age or skill level there. I think he got a little bored with us, but still did what he was told which is always good, I made one of the last things we did a game for him which helped.&lt;/p&gt;
+
+&lt;p&gt;I can&#39;t speak for Vicki but having all the gear on is giving me some confidence, I am doing things that I would not normally do without it on, that is a good thing as it is also translating across to skating without gear. Why? Because I realise I can do it without falling over and then continue to do it without the gear, which only advances my skating further. As an example this morning was skate school and I was much more confident with my outside edge drills and feel a little more in control of what I am doing, especially when the edge starts to slip because I am not placing enough weight on the edge.&lt;/p&gt;
+
+&lt;p&gt;Today has been a great day for relaxing at home, we&#39;ve watched the last three games of the Devils versus Rangers Eastern Conference Finals even though we already know the scores and outcome. It has been good watching, although seeing in person just how often the Devils lost a commanding lead was a little scary.&lt;/p&gt;
+
+&lt;p&gt;Tomorrow will be a day of just relaxing skating, although I&#39;ll be trying to improve some newly learnt skills and really should be doing more backwards and transition practice. We will see, I am also in two minds on wearing my shin pads / hockey pants combination on the ice, but think I might just use these sessions for basic training and fun to ensure that I still keep the enjoyment of just skating around.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/hockey_nat.html&quot; title=&quot;Hockey n'at&quot;&gt;Hockey n'at&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/slack</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/slack.html"/>
+		<title>Slack!</title>
+		<published>2012-05-24T00:00:00+10:00</published>
+		<updated>2012-05-24T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;That I am. My excuse is that I&#39;ve been sick and not feeling like doing much at all. A &quot;friend&quot; referred to it as the Man Flu, I tell you it was not said version of the flu, it was the full blown thing, not that it incapacitated me but I was feeling rather weary and had a distinct lack of motivation and energy.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I am still not at 100%, heck I&#39;m not really at 70%, but I will still be heading to hockey practice tonight as I want to get out and who knows some exercise in really cold conditions might be good for me?!?! Yeah I know silly, but I don&#39;t want to miss practice! Speaking of which with Vicki&#39;s mum down here last weekend and me being sick early this week I&#39;ve not been on the ice since Saturday morning and am really missing it and know I will feel a bit wobblier than usual when I get on tonight. But it is all for a good cause.&lt;/p&gt;
+
+&lt;p&gt;Yesterday I went into the office to work, of course there was an ulterior motive, I wanted to drop into Skatebiz to try on a size 9 skate in the Easton line up, which I did. Unfortunately they were as pre-thought, too small. Only just though, I&#39;d say I would get away with a 1/4 size up from that, but not to worry, I have a set of 9.5D Easton EQ50&#39;s on order, yes the very same skates that I am sure Vicki will kill be for buying, but I don&#39;t care! Mind you I think it will be at least four weeks before they get here ... Of course I am getting a pretty good deal on them too so I am not overly concerned, my trusty EQ10&#39;s will do until then.&lt;/p&gt;
+
+&lt;p&gt;I am also a little disillusioned with the Speech Pathologist that Braden sees on a weekly basis. She did a report up detailing where he is up to so we can look to get some further assistance in the class room. The report was nothing out of the ordinary, but she put a comment on the bottom to call if we want to discuss, well I did, and I did call, only to leave a voice message. Which I did clearly, I also rang form my mobile phone which does not hide the number. That was a week ago now, and she still has not called back, I am not the happiest camper out there at the moment, not in the slightest. Given her report I would have thought that she would be working on more than just &#39;s&#39; or &#39;r&#39; pronunciation and start working on structure and the correct use of words, but no, she still insists on this rubbish while a good thing does not help Braden to communicate! A lisp or a &#39;w&#39; sound to some letters does not cause problems with communication like not being able to fully express himself!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/slack.html&quot; title=&quot;Slack!&quot;&gt;Slack!&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/bradens-8th-practice</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/bradens-8th-practice.html"/>
+		<title>Braden's 8th Practice</title>
+		<published>2012-05-24T00:00:00+10:00</published>
+		<updated>2012-05-24T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;/p&gt;See I told you we&#39;d skip some :)&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;This is his eighth practice, but at Acacia Ridge this time, on their brand new ice. The practice was also run by the Southern Stars and was a pretty good practice I must say. One and a half hours long, and even though he took some time getting up I know he thoroughly enjoyed himself!&lt;/p&gt;
+
+&lt;p&gt;Unfortunately You Tube has decided that the music is copyrighted so we cannot show you the video until we redo the music track on it.&lt;/p&gt;
+
+&lt;p&gt;This one is to &lt;em&gt;Sunshine &lt;/em&gt;by&lt;em&gt; David Guetta &lt;/em&gt;and&lt;em&gt; Avicii&lt;/em&gt;.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/bradens-8th-practice.html&quot; title=&quot;Braden's 8th Practice&quot;&gt;Braden's 8th Practice&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/bradens-6th-practice</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/bradens-6th-practice.html"/>
+		<title>Braden's 6th Practice</title>
+		<published>2012-05-24T00:00:00+10:00</published>
+		<updated>2012-05-24T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;It has taken Vicki a while but here it is, complete with &quot;tanty&quot; and &lt;em&gt;Sorry for Party Rocking&lt;/em&gt; by &lt;em&gt;LMFAO&lt;/em&gt;! Keep an eye out for the next instalment!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/z5Bz_r4JAYE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;We will only be recording Braden&#39;s training sessions from Sunday mornings in future as we are now on the ice with him on Thursday nights!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/bradens-6th-practice.html&quot; title=&quot;Braden's 6th Practice&quot;&gt;Braden's 6th Practice&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/sickness-raising-its-ugly-head</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/sickness-raising-its-ugly-head.html"/>
+		<title>Sickness, raising its ugly head</title>
+		<published>2012-05-20T00:00:00+10:00</published>
+		<updated>2012-05-20T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;We&#39;ve had Vicki&#39;s mum down here for the weekend and it seems like it never stopped. Funnily enough, we didn&#39;t stop, Friday was just a night catching up, Saturday was skate school in the morning, followed by shopping at Chermside and some lunch and an hour or so relaxation at home before heading back out. Vicki got a message about women&#39;s hockey training that was to occur on Saturday night and we all convinced her that she should go, so she did.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I think she was a little shocked at how the training was run as it was a pretty full on warm up with the &quot;Browns&quot; who are an open age team with the near top echelon of players in Queensland (well some of them anyway). She had a great time though and made a few new friends as well I believe, which is always a good thing when doing something you enjoy.&lt;/p&gt;
+
+&lt;p&gt;This morning was then a very early start having junior hockey practice for Braden at Acacia Ridge Iceworld, which is now re-opened, FINALLY. They had one and a half hours on the ice this morning from 7:30am, the boy does have an upper respiratory infection that seems to be a little persistent, and a relatively busy weekend but still was a trooper trying his hardest out there and still had a great time, seeing his huge smile while he is doing things is just awesome!&lt;/p&gt;
+
+&lt;p&gt;But one problem with this hectic weekend we have all started to get sick, Braden with his persistent cough, and Vicki feeling run down and I&#39;ve got the same as Braden, hoping it clears up quickly as I want to get out to hockey practice again, yes it was that much fun! So hopefully I&#39;ll be able to make an appointment to see the doctor tomorrow and make sure I nip this in the bud as soon as possible.&lt;/p&gt;&lt;section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/sickness-raising-its-ugly-head.html&quot; title=&quot;Sickness, raising its ugly head&quot;&gt;Sickness, raising its ugly head&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/tired</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/tired.html"/>
+		<title>Tired ...</title>
+		<published>2012-05-18T00:00:00+10:00</published>
+		<updated>2012-05-18T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Yes I should of posted yesterday, but we did not get home until almost 10pm after hockey practice and then by the time I&#39;d finished hanging up the hockey gear to air out overnight and a shower it was 11pm! So suffice it to say I didn&#39;t have any time to post last night after hockey and today, what a day , it was shocking to say the least, busy, busy and then busy, just in case you didn&#39;t figure it out today was a busy day!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Back to hockey practice, in a word, AWESOME! We had such a great time and the hour really did go far too quickly, I think we spent almost as much time getting ready when you consider I had to dress Braden and then myself as well as undress us both after training finished. I&#39;ve said it to friends, I have never felt so uncoordinated in my life, well with the exception of trying to ball-room dance just prior to getting married to Vicki. But I digress, it is hard enough to skate, then to add the hockey gear adds a little more difficulty, but trying to control a stick, and a puck while moving!! Holy crap that was difficult. I think I need some practice in just skating with a stick to get used to the movements and where the stick should be at each stage of the stride.&lt;/p&gt;
+
+&lt;p&gt;I think I worked harder than I have for a while in that training session, you are in 8 - 10 degree air, on a frozen pool of water and yet I still had sweat dripping from my face and nose! It was so difficult to do what was asked of us, but I tried to do everything and did as well as I could, I was having such a great time that I didn&#39;t even think about it, well much. Even wearing all that gear I was still a little apprehensive about forwards to backwards transitions but the stick did help to balance when I messed up.&lt;/p&gt;
+
+&lt;p&gt;Vicki seemed in her element, but I think she had some issues controlling her stick as well. At least she said did, and I think she did pretty well all things considering. I do know she had a few troubles with how to angle the stick on turns, but she got the hang of it towards the end. I think that was the easy bit for me, turns seemed to be quite easy, but the rest wasn&#39;t so easy, I think it was the opposite for Vicki.&lt;/p&gt;
+
+&lt;p&gt;I cannot wait for next Thursday though, to do it all again!&lt;/p&gt;
+
+&lt;p&gt;Of course Braden was his usual forgetful self at the end of the session. Which is nothing bad, honestly, it was 9pm and he&#39;d spent the last hour racing around so he was tired. He packed his own bag just prior to leaving, and of course left a few things ... Lets see, he left his cup, his pants, that was the first time. Then he came back for his shin pads and one of his gloves ... well I thought we had everything until we got home. Somewhere along the way he lost his mouthguard. For some reason typing that gives me déjà vu, it reminds me of a dream I had, or should I say recall.&lt;/p&gt;
+
+&lt;p&gt;So this morning before work I had to go and get him a new one this morning, with every intention of getting him a nice Shock Doctor gel nano that Id seen when looking for something for me. I then saw something a little smaller on the shelf below, and thought that would be much better than the one he had. We ended up boiling it and sizing it for him tonight and wow, what a great fit. So much better than the other one he had, I think he will like this one much better, lets just hope it lasts a little longer!&lt;/p&gt;
+
+&lt;p&gt;He is a very happy camper at the moment though, although he is in bed, his Grandma is here for the weekend, and of course he rarely sees her, so it is great for both him and his Grandma! I know he will want to show off to her when she watches him ice skate tomorrow and then again for hockey practice on Sunday morning.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/tired.html&quot; title=&quot;Tired ...&quot;&gt;Tired ...&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/the-feisty-fiesta</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/the-feisty-fiesta.html"/>
+		<title>The Feisty Fiesta</title>
+		<published>2012-05-16T00:00:00+10:00</published>
+		<updated>2012-05-16T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Who knew? Not me, and definitely not Vicki. Three hockey bags full of equipment, three sticks, one adult length, one intermediate, and one junior as well as plenty of room for all of us three. I thought I&#39;d fit it in there, but was amazed at just how much room there is in such a small little car. Of course if we were a bigger family it never would do and we&#39;d have to get the roof rack Vicki was thinking.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I am very glad that everything fits in the car as I didn&#39;t want to have to buy more stuff just to get to and from hockey, nor did I want to have to drive two cars as it would cost us a fortune in tolls!&lt;/p&gt;
+
+&lt;p&gt;Tomorrow is the day Vicki and I take to the ice for the first time in full hockey equipment, it is going to be rather interesting and I for one will probably get little sleep tonight just thinking about it.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/the-feisty-fiesta.html&quot; title=&quot;The Feisty Fiesta&quot;&gt;The Feisty Fiesta&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/wrecked</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/wrecked.html"/>
+		<title>Wrecked</title>
+		<published>2012-05-15T00:00:00+10:00</published>
+		<updated>2012-05-15T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;And it is only Tuesday.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Strange I know, but for some reason I&#39;ve not been sleeping well of late, I think my brain is just still too active, thinking and thinking. It happens when work is busy and I have a few &#39;interesting&#39; cases, unfortunately I&#39;m one of those people that keep thinking about things as I tend to have a few &lt;em&gt;lightbulb&lt;/em&gt; moments out of work hours.&lt;/p&gt;
+
+&lt;p&gt;The other thing keeping me up last night was making sure I woke up early enough to go and fill up my car with petrol/gas and get ready to take Braden to school and head into the office. Yes there was an ulterior motive, I went into town to pick up the helmets for Vicki and myself and also get all of our skates sharpened. It was great to have a chat to Kirk, although he was very busy unfortunately as he was down a couple of guys today. I hope his day raced by though. Vicki has a shiny new black Easton helmet with a full face cage and I have a mostly shiny new white Easton helmet with a visor. I just couldn&#39;t live with the full cage as the padded chin strap kept digging into my adams apple. They are all sized up correctly now and we are ready to start training on Thursday. Although we still need to learn how to get dressed properly.&lt;/p&gt;
+
+&lt;p&gt;There really isn&#39;t any other news of worth at the moment, we are all pretty quiet at home and even skipped the cheap skate night tonight as we are all feeling rather tired and a little run down.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/wrecked.html&quot; title=&quot;Wrecked&quot;&gt;Wrecked&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
+		<id>http://whinnen.com/2012/05/counting-down</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/counting-down.html"/>
+		<title>Counting down</title>
+		<published>2012-05-14T00:00:00+10:00</published>
+		<updated>2012-05-14T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Too many things this week!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;First one is the count down to donning the hockey gear and getting on the ice to learn how to play ice hockey. This is going to be a most interesting experience! I&#39;ve already expressed some apprehension as sometimes I feel like all left feet when on the ice, but I think this will ultimately make me a much better skater. Then again, speaking to the development coach (Matt) yesterday gave me a little insight to some of the things we will be doing. One such thing was to skate on one leg, and then bend that leg and straighten etc, this is to improve a) leg strength and b) balance. I thought to myself , gee I can&#39;t even do that while standing in sneakers, how am I going to do that on the ice, on skates! I tried it, and you know what, I could actually do it, on both legs I was quite shocked, but I tell you it does put some strain on your quads, but in a good way. So yesterday was spent trying a few things out, mucking around and then the best bit, getting the remainder of the hockey equipment to borrow for both Vicki and I. It was good to have everything, although the only pants they really had in my size were bright red and extremely heavy. I opted for a pair a little smaller to get me by, but I tell you what if I had of worn the other pants I think I&#39;d be able to stand in front of a nuclear blast and not feel a thing on my thighs!&lt;/p&gt;
+
+&lt;p&gt;Tomorrow will be the day I go into Skatebiz and pick up our helmets, looking forward to that bit. I&#39;ll also be taking four pairs of skates in for sharpening, yes you heard me right: four! No we&#39;ve not got a new member to the family or skating family, Vicki couldn&#39;t pass up a deal yesterday, a pair of near new Graf skates for $80, skates that retail for $200. They are in pretty good condition and Vicki will use them as her ice hockey skates as they are one size (Euro sizing) smaller than her current ones and fit that little bit snugger. I still want to get some new skates, but really cannot justify the $500+ for a new pair of skates that will last me a long time, now if I could sell my old ones I&#39;d seriously think about it, mind you Vicki would kill me, seriously kill me, as in dead, I&#39;m sure she&#39;d stab me in the middle of the night with those $500 skates! So they can wait for a while, or I&#39;ll use my own money to buy them instead of dipping into the ice hockey funding.&lt;/p&gt;
+
+&lt;p&gt;Yesterday the Rangers and the Caps played game seven of their series, and the Rangers came out on top, not even an overtime game at that! That means that the Devils will now play the Rangers for the Conference finals, and the winner will head to the Stanley Cup finals. I am rooting for the Devils on this one, and really hope they keep up the level headedness they have shown during the last games against the Flyers. The Eastern Conference finals start today, and the first game between the Kings and the Coyotes is underway, I am not looking at the scores as I would like to watch the game without knowing the score (just for once). Everybody is saying the Kings are on fire, and are going to blitz the Coyotes, I think the Kings have peaked while the other teams have been on a downward spiral, but the Coyotes have also picked up their game as well. For me I want the Coyotes to advance and to knock the Kings off of their pedestal. We shall soon see in the next four to seven games who will come out on top.&lt;/p&gt;
+
+&lt;p&gt;Yesterday was also Mother&#39;s Day across the world, Braden and I let Vicki decide what she wanted to do and of course she picked ice skating, which neither of us mind at all. I gave Braden some money on Friday to visit the Mother&#39;s Day stall at school so he could pick out a present for Vicki. He ended up choosing a nice little jar of Vanilla Bath Salts, I am not sure how he realised she loved Vanilla, but he did well and Vicki was very happy with it. Braden and I got her a Devils jersey for Mother&#39;s Day, although it was supposed to be for her Birthday! It was customised with her favourite player, Zach Parise, and she absolutely loves it, she wore it skating yesterday and was very proud of it.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/counting-down.html&quot; title=&quot;Counting down&quot;&gt;Counting down&lt;/a&gt;</content>
+	</entry>
+	
+
+</feed>
