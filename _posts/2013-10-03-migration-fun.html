@@ -1,0 +1,133 @@
+---
+layout: post
+title: Migration fun!
+oneliner: It has been a long road but I've finally got most of the blog onto GAE.
+summary: Being cost conscious I decided that using GAE for a simple blog with mostly static content was not the best of plans, insert Github, Jekyll and DryDrop.
+excerpt: Well after doing all the sums and coming to the realisation that in reality the website for Whinnen.COM is simply a set of static pages ...
+categories:
+- Geeky Goodness
+- Random
+tags:
+- Geeky Toys
+- Wordpress
+- Google
+- DryDrop
+- Github
+- Jekyll
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  cyberchimps_slider_image: ''
+  slider_hidetitle: '1'
+  slider_custom_thumb: ''
+---
+<p><section><p>Well after doing all the sums and coming to the realisation that in reality the website for Whinnen.COM is simply a set of static pages it was not really worth using all the power of Wordpress. So I started a search for some other way to use GAE (Google App Engine) to serve up simple static pages of html.</p></p>
+
+<p>I have to say that there are some pretty clever folks out there. I first found some information about a little project called <a href="http://jekyllrb.com" title="jekyll">jekyll</a> that will use a plain text file (or markdown if you prefer) into a website using templates and some other goodness. Jekyll is based on rubygems so it is pretty much available for everythin. It also ties in very nicely with <a href="https://github.com" title="GitHub, inc">GitHub, Inc</a> and even allows you to use a GitHub based url to serve up your pages.</p>
+
+<p>Obviously that is not quite what I want as I really would like Google to be the final resting place for our online presence. Some further searching using a simple search term of</p>
+
+<p class="notice">jekyll google app engine</p>
+
+<p>Came up with a ready made python application called <a href="http://drydrop.binaryage.com" title="DryDrop by binaryage">DryDrop</a> which allows you to autmatically update or cache pages from GitHub onto GAE simply by updating your GitHub repository. There were also some interesting pages to read on what people had done to achieve this.</p>
+
+<p>Whilst playing around with it I soon realised that I would have to delve into css again, this is not really an issue but did prove to be interesting and I may post more on that later. One thing that is severely lacking in jekyll is the ability to have tags or categories displayed easily. After all using the liquid markup it is easy to put them into a post, but required some additional plugins to actually do anything with them.</p>
+
+<p>I found a simple tag plugin from <a href="http://charliepark.org/tags-in-jekyll/" title="Tags In Jekyll">Charlie Park</a> that I adapted to also incorporate categories as well. Now this is not a "cloud" type of arrangement but simply gives me the ability to a) display the tags and categories on a post and b) actually have a page that lists all the posts that are in either the tag or category.</p>
+
+<div class="highlight">
+  <pre>
+    <code class="scss">
+#
+# This is orginally by Charlie Park via http://charliepark.org/tags-in-jekyll/
+#
+module Jekyll
+  class TagIndex < Page
+    def initialize(site, base, dir, tag)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = 'index.html'
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.data['tag'] = tag
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Posts Tagged &ldquo;'
+      tag_title_suffix = site.config['tag_title_suffix'] || '&rdquo;'
+      self.data['title'] = "#{tag_title_prefix}#{tag}#{tag_title_suffix}"
+    end
+  end
+  class TagGenerator < Generator
+    safe true
+    def generate(site)
+      if site.layouts.key? 'tag_index'
+        dir = site.config['tag_dir'] || 'tag'
+        site.tags.keys.each do |tag|
+          write_tag_index(site, File.join(dir, tag), tag)
+        end
+      end
+    end
+    def write_tag_index(site, dir, tag)
+      index = TagIndex.new(site, site.source, dir, tag)
+      index.render(site.layouts, site.site_payload)
+      index.write(site.dest)
+      site.pages << index
+    end
+  end
+end
+    </code>
+  </pre>
+</div>
+
+<p>To make this fit in with my basic pages I used the following as my <i>_layouts/tag_index.html</i>. This gives me the ability to show a page that matches fully in with my primary archves style page.</p>
+
+<div class="highlight">
+  <pre>
+    <code class="scss">
+---
+layout: master
+---
+&lt;article id=&quot;postex&quot; class=&quot;is-post&quot; role=&quot;main&quot;&gt;
+&lt;section&gt;
+    &lt;p /&gt;
+    &lt;header class=&quot;entry-title&quot;&gt;
+      &lt;h2&gt;Tag Archives: &#123;&#123; page.tag &#125;&#125;&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;p /&gt;
+    &lt;ul class=&quot;posts post_listing list-none&quot;&gt;
+      &#123;% for post in site.posts %&#125;
+        &#123;% for tag in post.tags %&#125;
+          &#123;% if tag == page.tag %&#125;
+            &lt;li class=&quot;tag&quot;&gt;
+              &lt;header class=&quot;entry-title&quot;&gt;
+                &lt;h2&gt;
+                  &lt;a href=&quot;&#123;&#123; post.url &#125;&#125;&quot; title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;&#123;&#123; post.title &#125;&#125;&lt;/a&gt;
+                &lt;/h2&gt;
+                &lt;p class=&quot;oneliner&quot;&gt;&#123;&#123; post.oneliner &#125;&#125;&lt;/p&gt;
+              &lt;/header&gt;
+              &lt;tag id=&quot;tag&quot; class=&quot;clearfix&quot;&gt;
+                &lt;div class=&quot;center_mod&quot;&gt;
+                  &lt;ul id=&quot;nav&quot; class=&quot;list-none tag&quot;&gt;
+                    &#123;% for tag in post.tags %&#125;
+                  &lt;ul id=&quot;nav&quot; class=&quot;list-none tag&quot;&gt;
+                    &#123;% for tag in post.tags %&#125;
+                      &lt;li&gt;&lt;a href=&quot;/tag/&#123;&#123; tag &#125;&#125;/index.html&quot; title=&quot;&#123;&#123; tag &#125;&#125;&quot; class=&quot;list-none&quot;&gt;&#123;&#123; tag &#125;&#125;&lt;/a&gt; &lt;/li&gt;
+                    &#123;% endfor %&#125;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/tag&gt;
+            &lt;/li&gt;
+          &#123;% endif %&#125;
+        &#123;% endfor %&#125;
+      &#123;% endfor %&#125;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+&lt;/article&gt;
+    </code>
+  </pre>
+</div>
+
+<p>One thing that using GAE and GitHub is that it gives me great speeds, there are no database reads, pages are cached and as long as I configure GAE to always have one instance available I get great responses at all times. Of course using git means that I also have a hsitory of all the changes, enforced version control!</p>
+
+<p>Overall this saves me around $130 - $180 a year for just a database and some cloud storage that quite honestly I don't use. It also gives me the ability to get my hands dirty again with coding, which I really do need.</p></section>

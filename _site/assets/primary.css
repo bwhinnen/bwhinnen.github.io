@@ -2534,10 +2534,6 @@ time {
     margin-right: 0
 }
 
-#tag, #category {
-    background: #fdfdfd;
-}
-
 #footer {
     border-top: 1px solid #e8ebf2;
     box-shadow: inset 0 1px 0 #fff;

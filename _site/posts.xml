@@ -5,7 +5,7 @@
 	<link href="http://www.whinnen.com/"/>
         <link type="application/atom+xml" href="http://www.whinnen.com/post.xml" rel="self"/>
  	<link type="text" href="http://whinnen.com" rel="alternate"/>
-	<updated>2013-10-03T17:02:01+10:00</updated>
+	<updated>2013-10-03T21:33:08+10:00</updated>
 	<id>http://whinnen.com/</id>
 	<author>
 		<name>Brett Whinnen</name>
@@ -13,6 +13,127 @@
 	</author>
 	<rights>Copyright (c) 2010-2013, Brett Whinnen; all rights reserved.</rights>
 	
+	
+	<entry>
+		<id>http://whinnen.com/2013/10/migration-fun</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/10/migration-fun.html"/>
+		<title>Migration fun!</title>
+		<published>2013-10-03T00:00:00+10:00</published>
+		<updated>2013-10-03T00:00:00+10:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Well after doing all the sums and coming to the realisation that in reality the website for Whinnen.COM is simply a set of static pages it was not really worth using all the power of Wordpress. So I started a search for some other way to use GAE (Google App Engine) to serve up simple static pages of html.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I have to say that there are some pretty clever folks out there. I first found some information about a little project called &lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;jekyll&quot;&gt;jekyll&lt;/a&gt; that will use a plain text file (or markdown if you prefer) into a website using templates and some other goodness. Jekyll is based on rubygems so it is pretty much available for everythin. It also ties in very nicely with &lt;a href=&quot;https://github.com&quot; title=&quot;GitHub, inc&quot;&gt;GitHub, Inc&lt;/a&gt; and even allows you to use a GitHub based url to serve up your pages.&lt;/p&gt;
+
+&lt;p&gt;Obviously that is not quite what I want as I really would like Google to be the final resting place for our online presence. Some further searching using a simple search term of&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;jekyll google app engine&lt;/p&gt;
+
+&lt;p&gt;Came up with a ready made python application called &lt;a href=&quot;http://drydrop.binaryage.com&quot; title=&quot;DryDrop by binaryage&quot;&gt;DryDrop&lt;/a&gt; which allows you to autmatically update or cache pages from GitHub onto GAE simply by updating your GitHub repository. There were also some interesting pages to read on what people had done to achieve this.&lt;/p&gt;
+
+&lt;p&gt;Whilst playing around with it I soon realised that I would have to delve into css again, this is not really an issue but did prove to be interesting and I may post more on that later. One thing that is severely lacking in jekyll is the ability to have tags or categories displayed easily. After all using the liquid markup it is easy to put them into a post, but required some additional plugins to actually do anything with them.&lt;/p&gt;
+
+&lt;p&gt;I found a simple tag plugin from &lt;a href=&quot;http://charliepark.org/tags-in-jekyll/&quot; title=&quot;Tags In Jekyll&quot;&gt;Charlie Park&lt;/a&gt; that I adapted to also incorporate categories as well. Now this is not a &quot;cloud&quot; type of arrangement but simply gives me the ability to a) display the tags and categories on a post and b) actually have a page that lists all the posts that are in either the tag or category.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+  &lt;pre&gt;
+    &lt;code class=&quot;scss&quot;&gt;
+#
+# This is orginally by Charlie Park via http://charliepark.org/tags-in-jekyll/
+#
+module Jekyll
+  class TagIndex &lt; Page
+    def initialize(site, base, dir, tag)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = &#39;index.html&#39;
+      self.process(@name)
+      self.read_yaml(File.join(base, &#39;_layouts&#39;), &#39;tag_index.html&#39;)
+      self.data[&#39;tag&#39;] = tag
+      tag_title_prefix = site.config[&#39;tag_title_prefix&#39;] || &#39;Posts Tagged &amp;ldquo;&#39;
+      tag_title_suffix = site.config[&#39;tag_title_suffix&#39;] || &#39;&amp;rdquo;&#39;
+      self.data[&#39;title&#39;] = &quot;#{tag_title_prefix}#{tag}#{tag_title_suffix}&quot;
+    end
+  end
+  class TagGenerator &lt; Generator
+    safe true
+    def generate(site)
+      if site.layouts.key? &#39;tag_index&#39;
+        dir = site.config[&#39;tag_dir&#39;] || &#39;tag&#39;
+        site.tags.keys.each do |tag|
+          write_tag_index(site, File.join(dir, tag), tag)
+        end
+      end
+    end
+    def write_tag_index(site, dir, tag)
+      index = TagIndex.new(site, site.source, dir, tag)
+      index.render(site.layouts, site.site_payload)
+      index.write(site.dest)
+      site.pages &lt;&lt; index
+    end
+  end
+end
+    &lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To make this fit in with my basic pages I used the following as my &lt;i&gt;_layouts/tag_index.html&lt;/i&gt;. This gives me the ability to show a page that matches fully in with my primary archves style page.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+  &lt;pre&gt;
+    &lt;code class=&quot;scss&quot;&gt;
+---
+layout: master
+---
+&amp;lt;article id=&amp;quot;postex&amp;quot; class=&amp;quot;is-post&amp;quot; role=&amp;quot;main&amp;quot;&amp;gt;
+&amp;lt;section&amp;gt;
+    &amp;lt;p /&amp;gt;
+    &amp;lt;header class=&amp;quot;entry-title&amp;quot;&amp;gt;
+      &amp;lt;h2&amp;gt;Tag Archives: &amp;#123;&amp;#123; page.tag &amp;#125;&amp;#125;&amp;lt;/h2&amp;gt;
+    &amp;lt;/header&amp;gt;
+    &amp;lt;p /&amp;gt;
+    &amp;lt;ul class=&amp;quot;posts post_listing list-none&amp;quot;&amp;gt;
+      &amp;#123;% for post in site.posts %&amp;#125;
+        &amp;#123;% for tag in post.tags %&amp;#125;
+          &amp;#123;% if tag == page.tag %&amp;#125;
+            &amp;lt;li class=&amp;quot;tag&amp;quot;&amp;gt;
+              &amp;lt;header class=&amp;quot;entry-title&amp;quot;&amp;gt;
+                &amp;lt;h2&amp;gt;
+                  &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; post.url &amp;#125;&amp;#125;&amp;quot; title=&amp;quot;&amp;#123;&amp;#123; post.title &amp;#125;&amp;#125;&amp;quot;&amp;gt;&amp;#123;&amp;#123; post.title &amp;#125;&amp;#125;&amp;lt;/a&amp;gt;
+                &amp;lt;/h2&amp;gt;
+                &amp;lt;p class=&amp;quot;oneliner&amp;quot;&amp;gt;&amp;#123;&amp;#123; post.oneliner &amp;#125;&amp;#125;&amp;lt;/p&amp;gt;
+              &amp;lt;/header&amp;gt;
+              &amp;lt;tag id=&amp;quot;tag&amp;quot; class=&amp;quot;clearfix&amp;quot;&amp;gt;
+                &amp;lt;div class=&amp;quot;center_mod&amp;quot;&amp;gt;
+                  &amp;lt;ul id=&amp;quot;nav&amp;quot; class=&amp;quot;list-none tag&amp;quot;&amp;gt;
+                    &amp;#123;% for tag in post.tags %&amp;#125;
+                  &amp;lt;ul id=&amp;quot;nav&amp;quot; class=&amp;quot;list-none tag&amp;quot;&amp;gt;
+                    &amp;#123;% for tag in post.tags %&amp;#125;
+                      &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/tag/&amp;#123;&amp;#123; tag &amp;#125;&amp;#125;/index.html&amp;quot; title=&amp;quot;&amp;#123;&amp;#123; tag &amp;#125;&amp;#125;&amp;quot; class=&amp;quot;list-none&amp;quot;&amp;gt;&amp;#123;&amp;#123; tag &amp;#125;&amp;#125;&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+                    &amp;#123;% endfor %&amp;#125;
+                  &amp;lt;/ul&amp;gt;
+                &amp;lt;/div&amp;gt;
+              &amp;lt;/tag&amp;gt;
+            &amp;lt;/li&amp;gt;
+          &amp;#123;% endif %&amp;#125;
+        &amp;#123;% endfor %&amp;#125;
+      &amp;#123;% endfor %&amp;#125;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/section&amp;gt;
+&amp;lt;/article&amp;gt;
+    &lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One thing that using GAE and GitHub is that it gives me great speeds, there are no database reads, pages are cached and as long as I configure GAE to always have one instance available I get great responses at all times. Of course using git means that I also have a hsitory of all the changes, enforced version control!&lt;/p&gt;
+
+&lt;p&gt;Overall this saves me around $130 - $180 a year for just a database and some cloud storage that quite honestly I don&#39;t use. It also gives me the ability to get my hands dirty again with coding, which I really do need.&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2013/10/migration-fun.html&quot; title=&quot;Migration fun!&quot;&gt;Migration fun!&lt;/a&gt;</content>
+	</entry>
 	
 	<entry>
 		<id>http://whinnen.com/2013/09/darn-you-nhl-and-your-crappy-schedule-changes</id>
@@ -464,28 +585,6 @@
 
 &lt;p&gt;There really isn&#39;t any other news of worth at the moment, we are all pretty quiet at home and even skipped the cheap skate night tonight as we are all feeling rather tired and a little run down.&lt;/p&gt;&lt;/section&gt;
 &lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/wrecked.html&quot; title=&quot;Wrecked&quot;&gt;Wrecked&lt;/a&gt;</content>
-	</entry>
-	
-	<entry>
-		<id>http://whinnen.com/2012/05/counting-down</id>
-		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/counting-down.html"/>
-		<title>Counting down</title>
-		<published>2012-05-14T00:00:00+10:00</published>
-		<updated>2012-05-14T00:00:00+10:00</updated>
-                <author>
-                        <name>Brett Whinnen</name>
-                        <email>brett@whinnen.com</email>
-                </author>
-		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Too many things this week!&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;First one is the count down to donning the hockey gear and getting on the ice to learn how to play ice hockey. This is going to be a most interesting experience! I&#39;ve already expressed some apprehension as sometimes I feel like all left feet when on the ice, but I think this will ultimately make me a much better skater. Then again, speaking to the development coach (Matt) yesterday gave me a little insight to some of the things we will be doing. One such thing was to skate on one leg, and then bend that leg and straighten etc, this is to improve a) leg strength and b) balance. I thought to myself , gee I can&#39;t even do that while standing in sneakers, how am I going to do that on the ice, on skates! I tried it, and you know what, I could actually do it, on both legs I was quite shocked, but I tell you it does put some strain on your quads, but in a good way. So yesterday was spent trying a few things out, mucking around and then the best bit, getting the remainder of the hockey equipment to borrow for both Vicki and I. It was good to have everything, although the only pants they really had in my size were bright red and extremely heavy. I opted for a pair a little smaller to get me by, but I tell you what if I had of worn the other pants I think I&#39;d be able to stand in front of a nuclear blast and not feel a thing on my thighs!&lt;/p&gt;
-
-&lt;p&gt;Tomorrow will be the day I go into Skatebiz and pick up our helmets, looking forward to that bit. I&#39;ll also be taking four pairs of skates in for sharpening, yes you heard me right: four! No we&#39;ve not got a new member to the family or skating family, Vicki couldn&#39;t pass up a deal yesterday, a pair of near new Graf skates for $80, skates that retail for $200. They are in pretty good condition and Vicki will use them as her ice hockey skates as they are one size (Euro sizing) smaller than her current ones and fit that little bit snugger. I still want to get some new skates, but really cannot justify the $500+ for a new pair of skates that will last me a long time, now if I could sell my old ones I&#39;d seriously think about it, mind you Vicki would kill me, seriously kill me, as in dead, I&#39;m sure she&#39;d stab me in the middle of the night with those $500 skates! So they can wait for a while, or I&#39;ll use my own money to buy them instead of dipping into the ice hockey funding.&lt;/p&gt;
-
-&lt;p&gt;Yesterday the Rangers and the Caps played game seven of their series, and the Rangers came out on top, not even an overtime game at that! That means that the Devils will now play the Rangers for the Conference finals, and the winner will head to the Stanley Cup finals. I am rooting for the Devils on this one, and really hope they keep up the level headedness they have shown during the last games against the Flyers. The Eastern Conference finals start today, and the first game between the Kings and the Coyotes is underway, I am not looking at the scores as I would like to watch the game without knowing the score (just for once). Everybody is saying the Kings are on fire, and are going to blitz the Coyotes, I think the Kings have peaked while the other teams have been on a downward spiral, but the Coyotes have also picked up their game as well. For me I want the Coyotes to advance and to knock the Kings off of their pedestal. We shall soon see in the next four to seven games who will come out on top.&lt;/p&gt;
-
-&lt;p&gt;Yesterday was also Mother&#39;s Day across the world, Braden and I let Vicki decide what she wanted to do and of course she picked ice skating, which neither of us mind at all. I gave Braden some money on Friday to visit the Mother&#39;s Day stall at school so he could pick out a present for Vicki. He ended up choosing a nice little jar of Vanilla Bath Salts, I am not sure how he realised she loved Vanilla, but he did well and Vicki was very happy with it. Braden and I got her a Devils jersey for Mother&#39;s Day, although it was supposed to be for her Birthday! It was customised with her favourite player, Zach Parise, and she absolutely loves it, she wore it skating yesterday and was very proud of it.&lt;/p&gt;&lt;/section&gt;
-&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/counting-down.html&quot; title=&quot;Counting down&quot;&gt;Counting down&lt;/a&gt;</content>
 	</entry>
 	
 

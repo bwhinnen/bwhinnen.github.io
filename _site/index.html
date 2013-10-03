@@ -77,6 +77,163 @@
       <li>
         <header class="entry-title">
           <h2>
+            <a href="/2013/10/migration-fun.html" title="Migration fun!">Migration fun!</a>
+          </h2>
+          <aside id="post-content" class="clearfix">
+            <category id="category" class="small">
+              <ul id="nav" class="list-none category">
+                <li class="category">Posted in</li>
+                
+                  <li class="category"><a href="/category/geeky goodness/index.html" title="geeky goodness" class="list-none">geeky goodness</a></li>
+                
+                  <li class="category"><a href="/category/random/index.html" title="random" class="list-none">random</a></li>
+                
+              </ul>
+            </category>
+            <category id="category" class="float_right small">
+              <ul id="nav" class="list-none category">
+                <li class="category"><time datetime="2013-10-03 00:00:00 +1000">03 Oct 2013</time></li>
+              </ul>
+            </category>
+          </aside>
+        </header>
+        <div class="content">
+          <p><section><p>Well after doing all the sums and coming to the realisation that in reality the website for Whinnen.COM is simply a set of static pages it was not really worth using all the power of Wordpress. So I started a search for some other way to use GAE (Google App Engine) to serve up simple static pages of html.</p></p>
+
+<p>I have to say that there are some pretty clever folks out there. I first found some information about a little project called <a href="http://jekyllrb.com" title="jekyll">jekyll</a> that will use a plain text file (or markdown if you prefer) into a website using templates and some other goodness. Jekyll is based on rubygems so it is pretty much available for everythin. It also ties in very nicely with <a href="https://github.com" title="GitHub, inc">GitHub, Inc</a> and even allows you to use a GitHub based url to serve up your pages.</p>
+
+<p>Obviously that is not quite what I want as I really would like Google to be the final resting place for our online presence. Some further searching using a simple search term of</p>
+
+<p class="notice">jekyll google app engine</p>
+
+<p>Came up with a ready made python application called <a href="http://drydrop.binaryage.com" title="DryDrop by binaryage">DryDrop</a> which allows you to autmatically update or cache pages from GitHub onto GAE simply by updating your GitHub repository. There were also some interesting pages to read on what people had done to achieve this.</p>
+
+<p>Whilst playing around with it I soon realised that I would have to delve into css again, this is not really an issue but did prove to be interesting and I may post more on that later. One thing that is severely lacking in jekyll is the ability to have tags or categories displayed easily. After all using the liquid markup it is easy to put them into a post, but required some additional plugins to actually do anything with them.</p>
+
+<p>I found a simple tag plugin from <a href="http://charliepark.org/tags-in-jekyll/" title="Tags In Jekyll">Charlie Park</a> that I adapted to also incorporate categories as well. Now this is not a "cloud" type of arrangement but simply gives me the ability to a) display the tags and categories on a post and b) actually have a page that lists all the posts that are in either the tag or category.</p>
+
+<div class="highlight">
+  <pre>
+    <code class="scss">
+#
+# This is orginally by Charlie Park via http://charliepark.org/tags-in-jekyll/
+#
+module Jekyll
+  class TagIndex < Page
+    def initialize(site, base, dir, tag)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = 'index.html'
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.data['tag'] = tag
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Posts Tagged &ldquo;'
+      tag_title_suffix = site.config['tag_title_suffix'] || '&rdquo;'
+      self.data['title'] = "#{tag_title_prefix}#{tag}#{tag_title_suffix}"
+    end
+  end
+  class TagGenerator < Generator
+    safe true
+    def generate(site)
+      if site.layouts.key? 'tag_index'
+        dir = site.config['tag_dir'] || 'tag'
+        site.tags.keys.each do |tag|
+          write_tag_index(site, File.join(dir, tag), tag)
+        end
+      end
+    end
+    def write_tag_index(site, dir, tag)
+      index = TagIndex.new(site, site.source, dir, tag)
+      index.render(site.layouts, site.site_payload)
+      index.write(site.dest)
+      site.pages << index
+    end
+  end
+end
+    </code>
+  </pre>
+</div>
+
+<p>To make this fit in with my basic pages I used the following as my <i>_layouts/tag_index.html</i>. This gives me the ability to show a page that matches fully in with my primary archves style page.</p>
+
+<div class="highlight">
+  <pre>
+    <code class="scss">
+---
+layout: master
+---
+&lt;article id=&quot;postex&quot; class=&quot;is-post&quot; role=&quot;main&quot;&gt;
+&lt;section&gt;
+    &lt;p /&gt;
+    &lt;header class=&quot;entry-title&quot;&gt;
+      &lt;h2&gt;Tag Archives: &#123;&#123; page.tag &#125;&#125;&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;p /&gt;
+    &lt;ul class=&quot;posts post_listing list-none&quot;&gt;
+      &#123;% for post in site.posts %&#125;
+        &#123;% for tag in post.tags %&#125;
+          &#123;% if tag == page.tag %&#125;
+            &lt;li class=&quot;tag&quot;&gt;
+              &lt;header class=&quot;entry-title&quot;&gt;
+                &lt;h2&gt;
+                  &lt;a href=&quot;&#123;&#123; post.url &#125;&#125;&quot; title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;&#123;&#123; post.title &#125;&#125;&lt;/a&gt;
+                &lt;/h2&gt;
+                &lt;p class=&quot;oneliner&quot;&gt;&#123;&#123; post.oneliner &#125;&#125;&lt;/p&gt;
+              &lt;/header&gt;
+              &lt;tag id=&quot;tag&quot; class=&quot;clearfix&quot;&gt;
+                &lt;div class=&quot;center_mod&quot;&gt;
+                  &lt;ul id=&quot;nav&quot; class=&quot;list-none tag&quot;&gt;
+                    &#123;% for tag in post.tags %&#125;
+                  &lt;ul id=&quot;nav&quot; class=&quot;list-none tag&quot;&gt;
+                    &#123;% for tag in post.tags %&#125;
+                      &lt;li&gt;&lt;a href=&quot;/tag/&#123;&#123; tag &#125;&#125;/index.html&quot; title=&quot;&#123;&#123; tag &#125;&#125;&quot; class=&quot;list-none&quot;&gt;&#123;&#123; tag &#125;&#125;&lt;/a&gt; &lt;/li&gt;
+                    &#123;% endfor %&#125;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/tag&gt;
+            &lt;/li&gt;
+          &#123;% endif %&#125;
+        &#123;% endfor %&#125;
+      &#123;% endfor %&#125;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+&lt;/article&gt;
+    </code>
+  </pre>
+</div>
+
+<p>One thing that using GAE and GitHub is that it gives me great speeds, there are no database reads, pages are cached and as long as I configure GAE to always have one instance available I get great responses at all times. Of course using git means that I also have a hsitory of all the changes, enforced version control!</p>
+
+<p>Overall this saves me around $130 - $180 a year for just a database and some cloud storage that quite honestly I don't use. It also gives me the ability to get my hands dirty again with coding, which I really do need.</p></section>
+
+        </div>
+        <section>
+        <tag id="tag" class="clearfix">
+          <div class="center_mod">
+            <ul id="nav" class="list-none tag">
+              
+                <li><a href="/tag/Geeky Toys/index.html" title="Geeky Toys" class="list-none">Geeky Toys</a> </li>
+              
+                <li><a href="/tag/Wordpress/index.html" title="Wordpress" class="list-none">Wordpress</a> </li>
+              
+                <li><a href="/tag/Google/index.html" title="Google" class="list-none">Google</a> </li>
+              
+                <li><a href="/tag/DryDrop/index.html" title="DryDrop" class="list-none">DryDrop</a> </li>
+              
+                <li><a href="/tag/Github/index.html" title="Github" class="list-none">Github</a> </li>
+              
+                <li><a href="/tag/Jekyll/index.html" title="Jekyll" class="list-none">Jekyll</a> </li>
+              
+            </ul>
+          </div>
+        </tag>
+        </section>
+      </li>
+    
+      <li>
+        <header class="entry-title">
+          <h2>
             <a href="/2013/09/darn-you-nhl-and-your-crappy-schedule-changes.html" title="Darn you NHL and your crappy schedule changes!">Darn you NHL and your crappy schedule changes!</a>
           </h2>
           <aside id="post-content" class="clearfix">
@@ -301,70 +458,6 @@
                 <li><a href="/tag/OpenELEC/index.html" title="OpenELEC" class="list-none">OpenELEC</a> </li>
               
                 <li><a href="/tag/XBMC/index.html" title="XBMC" class="list-none">XBMC</a> </li>
-              
-            </ul>
-          </div>
-        </tag>
-        </section>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2013/07/vacation-time-an-update.html" title="Vacation time ... an update">Vacation time ... an update</a>
-          </h2>
-          <aside id="post-content" class="clearfix">
-            <category id="category" class="small">
-              <ul id="nav" class="list-none category">
-                <li class="category">Posted in</li>
-                
-                  <li class="category"><a href="/category/family/index.html" title="family" class="list-none">family</a></li>
-                
-                  <li class="category"><a href="/category/vacation/index.html" title="vacation" class="list-none">vacation</a></li>
-                
-              </ul>
-            </category>
-            <category id="category" class="float_right small">
-              <ul id="nav" class="list-none category">
-                <li class="category"><time datetime="2013-07-04 00:00:00 +1000">04 Jul 2013</time></li>
-              </ul>
-            </category>
-          </aside>
-        </header>
-        <div class="content">
-          <p><section><p>I posted a while back that we would be going to Pittsburgh for Halloween. Well after consideration we decided that taking Braden out of school for a couple of weeks was probably not the best idea so I put a suggestion to Vicki.</p></p>
-
-<p>Christmas! Yes a potential white Christmas in Pittsburgh. Probably one of the better ideas I've had recently. It was settled pretty quickly and I can say that now we've booked flights, accommodation and the hire car we need.</p>
-
-<p>The trip will be more than just Pittsburgh, we will be flying from Brisbane to Honolulu then to New York via Hawaiian Airlines, picking up the car and driving across PA to Pittsburgh, I'm excited and a little apprehensive about the drive given we will not know the weather conditions until we get there and of course the 10 hour red-eye flight from Honolulu to New York. We will be in Pittsburgh for around eight days and hope to catch a few hockey games as well as practices for the Penguins. That is a bonus to the trip, we are using it to decide if we really do want to move there and if so where we could live. We've been given Mount Lebanon as a potential place by an ex-burgher and it is one of the areas we will be researching.</p>
-
-<p>The trip will also include a couple of days out where we drive to see Niagra Falls on the way to Toronto, Vicki really wants to go to Canada this time and we are going to take the opportunity to see the Hockey Hall of Fame and maybe catch a hockey game in Toronto as well (maybe).</p>
-
-<p>The way home will include a few dye in New York City itself followed by a flight back to Hawaii to relax and recuperate before the flight home. All up we are spending three weeks away and we are really looking forward to the break and also seeing more of the United States of America and especially meeting the people of Pittsburgh.</p></section>
-
-        </div>
-        <section>
-        <tag id="tag" class="clearfix">
-          <div class="center_mod">
-            <ul id="nav" class="list-none tag">
-              
-                <li><a href="/tag/Braden/index.html" title="Braden" class="list-none">Braden</a> </li>
-              
-                <li><a href="/tag/Brett/index.html" title="Brett" class="list-none">Brett</a> </li>
-              
-                <li><a href="/tag/Hawaii/index.html" title="Hawaii" class="list-none">Hawaii</a> </li>
-              
-                <li><a href="/tag/Hockey/index.html" title="Hockey" class="list-none">Hockey</a> </li>
-              
-                <li><a href="/tag/New York/index.html" title="New York" class="list-none">New York</a> </li>
-              
-                <li><a href="/tag/Pittsburgh/index.html" title="Pittsburgh" class="list-none">Pittsburgh</a> </li>
-              
-                <li><a href="/tag/Pittsburgh Penguins/index.html" title="Pittsburgh Penguins" class="list-none">Pittsburgh Penguins</a> </li>
-              
-                <li><a href="/tag/Toronto/index.html" title="Toronto" class="list-none">Toronto</a> </li>
-              
-                <li><a href="/tag/Vicki/index.html" title="Vicki" class="list-none">Vicki</a> </li>
               
             </ul>
           </div>
