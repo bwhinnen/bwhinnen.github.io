@@ -1,5 +1,5 @@
 markdown: rdiscount
-pygments: false
+highlighter: null
 permalink: /:year/:month/:title.html
 multiviews: true
 sass: true

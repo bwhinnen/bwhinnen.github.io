@@ -5,7 +5,7 @@
 	<link href="http://www.whinnen.com/"/>
         <link type="application/atom+xml" href="http://www.whinnen.com/post.xml" rel="self"/>
  	<link type="text" href="http://whinnen.com" rel="alternate"/>
-	<updated>2013-10-03T21:33:08+10:00</updated>
+	<updated>2014-12-10T19:28:45-08:00</updated>
 	<id>http://whinnen.com/</id>
 	<author>
 		<name>Brett Whinnen</name>
@@ -18,15 +18,15 @@
 		<id>http://whinnen.com/2013/10/migration-fun</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/10/migration-fun.html"/>
 		<title>Migration fun!</title>
-		<published>2013-10-03T00:00:00+10:00</published>
-		<updated>2013-10-03T00:00:00+10:00</updated>
+		<published>2013-10-03T00:00:00-07:00</published>
+		<updated>2013-10-03T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
                 </author>
 		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Well after doing all the sums and coming to the realisation that in reality the website for Whinnen.COM is simply a set of static pages it was not really worth using all the power of Wordpress. So I started a search for some other way to use GAE (Google App Engine) to serve up simple static pages of html.&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;I have to say that there are some pretty clever folks out there. I first found some information about a little project called &lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;jekyll&quot;&gt;jekyll&lt;/a&gt; that will use a plain text file (or markdown if you prefer) into a website using templates and some other goodness. Jekyll is based on rubygems so it is pretty much available for everythin. It also ties in very nicely with &lt;a href=&quot;https://github.com&quot; title=&quot;GitHub, inc&quot;&gt;GitHub, Inc&lt;/a&gt; and even allows you to use a GitHub based url to serve up your pages.&lt;/p&gt;
+&lt;p&gt;I have to say that there are some pretty clever folks out there. I first found some information about a little project called &lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;jekyll&quot;&gt;jekyll&lt;/a&gt; that will use a plain text file (or markdown if you prefer) into a website using templates and some other goodness. Jekyll is based on rubygems so it is pretty much available for everything. It also ties in very nicely with &lt;a href=&quot;https://github.com&quot; title=&quot;GitHub, inc&quot;&gt;GitHub, Inc&lt;/a&gt; and even allows you to use a GitHub based url to serve up your pages.&lt;/p&gt;
 
 &lt;p&gt;Obviously that is not quite what I want as I really would like Google to be the final resting place for our online presence. Some further searching using a simple search term of&lt;/p&gt;
 
@@ -139,8 +139,8 @@ layout: master
 		<id>http://whinnen.com/2013/09/darn-you-nhl-and-your-crappy-schedule-changes</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/09/darn-you-nhl-and-your-crappy-schedule-changes.html"/>
 		<title>Darn you NHL and your crappy schedule changes!</title>
-		<published>2013-09-14T00:00:00+10:00</published>
-		<updated>2013-09-14T00:00:00+10:00</updated>
+		<published>2013-09-14T00:00:00-07:00</published>
+		<updated>2013-09-14T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -161,8 +161,8 @@ layout: master
 		<id>http://whinnen.com/2013/09/the-big-data-migration-affair</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/09/the-big-data-migration-affair.html"/>
 		<title>The Big Data Migration Affair</title>
-		<published>2013-09-11T00:00:00+10:00</published>
-		<updated>2013-09-11T00:00:00+10:00</updated>
+		<published>2013-09-11T00:00:00-07:00</published>
+		<updated>2013-09-11T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -199,8 +199,8 @@ layout: master
 		<id>http://whinnen.com/2013/07/take-control-of-your-remotes</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/take-control-of-your-remotes.html"/>
 		<title>Take control of your remotes</title>
-		<published>2013-07-29T00:00:00+10:00</published>
-		<updated>2013-07-29T00:00:00+10:00</updated>
+		<published>2013-07-29T00:00:00-07:00</published>
+		<updated>2013-07-29T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -223,8 +223,8 @@ layout: master
 		<id>http://whinnen.com/2013/07/cutting-the-cable</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/cutting-the-cable.html"/>
 		<title>Cutting the cable</title>
-		<published>2013-07-12T00:00:00+10:00</published>
-		<updated>2013-07-12T00:00:00+10:00</updated>
+		<published>2013-07-12T00:00:00-07:00</published>
+		<updated>2013-07-12T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -251,8 +251,8 @@ layout: master
 		<id>http://whinnen.com/2013/07/vacation-time-an-update</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/vacation-time-an-update.html"/>
 		<title>Vacation time ... an update</title>
-		<published>2013-07-04T00:00:00+10:00</published>
-		<updated>2013-07-04T00:00:00+10:00</updated>
+		<published>2013-07-04T00:00:00-07:00</published>
+		<updated>2013-07-04T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -273,8 +273,8 @@ layout: master
 		<id>http://whinnen.com/2013/07/what-glitters-is-not-always-gold</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/07/what-glitters-is-not-always-gold.html"/>
 		<title>What glitters is not always gold</title>
-		<published>2013-07-03T00:00:00+10:00</published>
-		<updated>2013-07-03T00:00:00+10:00</updated>
+		<published>2013-07-03T00:00:00-07:00</published>
+		<updated>2013-07-03T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -295,8 +295,8 @@ layout: master
 		<id>http://whinnen.com/2013/06/really-i-should-do-this-more-often</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2013/06/really-i-should-do-this-more-often.html"/>
 		<title>Really I should do this more often</title>
-		<published>2013-06-28T00:00:00+10:00</published>
-		<updated>2013-06-28T00:00:00+10:00</updated>
+		<published>2013-06-28T00:00:00-07:00</published>
+		<updated>2013-06-28T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -317,8 +317,8 @@ layout: master
 		<id>http://whinnen.com/2012/10/out-of-date-instructions-argh</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/10/out-of-date-instructions-argh.html"/>
 		<title>Out of date instructions = ARGH</title>
-		<published>2012-10-25T00:00:00+10:00</published>
-		<updated>2012-10-25T00:00:00+10:00</updated>
+		<published>2012-10-25T00:00:00-07:00</published>
+		<updated>2012-10-25T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -339,8 +339,8 @@ layout: master
 		<id>http://whinnen.com/2012/10/upcoming-vacations</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/10/upcoming-vacations.html"/>
 		<title>Upcoming Vacations</title>
-		<published>2012-10-18T00:00:00+10:00</published>
-		<updated>2012-10-18T00:00:00+10:00</updated>
+		<published>2012-10-18T00:00:00-07:00</published>
+		<updated>2012-10-18T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -363,8 +363,8 @@ layout: master
 		<id>http://whinnen.com/2012/10/must-do-this-more-often</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/10/must-do-this-more-often.html"/>
 		<title>Must do this more often</title>
-		<published>2012-10-16T00:00:00+10:00</published>
-		<updated>2012-10-16T00:00:00+10:00</updated>
+		<published>2012-10-16T00:00:00-07:00</published>
+		<updated>2012-10-16T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -403,8 +403,8 @@ layout: master
 		<id>http://whinnen.com/2012/07/shh-it-is-an-update-post</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/07/shh-it-is-an-update-post.html"/>
 		<title>Shh, it is an update post!</title>
-		<published>2012-07-18T00:00:00+10:00</published>
-		<updated>2012-07-18T00:00:00+10:00</updated>
+		<published>2012-07-18T00:00:00-07:00</published>
+		<updated>2012-07-18T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -425,8 +425,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/hockey_nat</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/hockey_nat.html"/>
 		<title>Hockey n'at</title>
-		<published>2012-05-26T00:00:00+10:00</published>
-		<updated>2012-05-26T00:00:00+10:00</updated>
+		<published>2012-05-26T00:00:00-07:00</published>
+		<updated>2012-05-26T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -447,8 +447,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/slack</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/slack.html"/>
 		<title>Slack!</title>
-		<published>2012-05-24T00:00:00+10:00</published>
-		<updated>2012-05-24T00:00:00+10:00</updated>
+		<published>2012-05-24T00:00:00-07:00</published>
+		<updated>2012-05-24T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -467,8 +467,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/bradens-8th-practice</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/bradens-8th-practice.html"/>
 		<title>Braden's 8th Practice</title>
-		<published>2012-05-24T00:00:00+10:00</published>
-		<updated>2012-05-24T00:00:00+10:00</updated>
+		<published>2012-05-24T00:00:00-07:00</published>
+		<updated>2012-05-24T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -487,8 +487,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/bradens-6th-practice</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/bradens-6th-practice.html"/>
 		<title>Braden's 6th Practice</title>
-		<published>2012-05-24T00:00:00+10:00</published>
-		<updated>2012-05-24T00:00:00+10:00</updated>
+		<published>2012-05-24T00:00:00-07:00</published>
+		<updated>2012-05-24T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -505,8 +505,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/sickness-raising-its-ugly-head</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/sickness-raising-its-ugly-head.html"/>
 		<title>Sickness, raising its ugly head</title>
-		<published>2012-05-20T00:00:00+10:00</published>
-		<updated>2012-05-20T00:00:00+10:00</updated>
+		<published>2012-05-20T00:00:00-07:00</published>
+		<updated>2012-05-20T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -525,8 +525,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/tired</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/tired.html"/>
 		<title>Tired ...</title>
-		<published>2012-05-18T00:00:00+10:00</published>
-		<updated>2012-05-18T00:00:00+10:00</updated>
+		<published>2012-05-18T00:00:00-07:00</published>
+		<updated>2012-05-18T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -553,8 +553,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/the-feisty-fiesta</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/the-feisty-fiesta.html"/>
 		<title>The Feisty Fiesta</title>
-		<published>2012-05-16T00:00:00+10:00</published>
-		<updated>2012-05-16T00:00:00+10:00</updated>
+		<published>2012-05-16T00:00:00-07:00</published>
+		<updated>2012-05-16T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -571,8 +571,8 @@ layout: master
 		<id>http://whinnen.com/2012/05/wrecked</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/wrecked.html"/>
 		<title>Wrecked</title>
-		<published>2012-05-15T00:00:00+10:00</published>
-		<updated>2012-05-15T00:00:00+10:00</updated>
+		<published>2012-05-15T00:00:00-07:00</published>
+		<updated>2012-05-15T00:00:00-07:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
