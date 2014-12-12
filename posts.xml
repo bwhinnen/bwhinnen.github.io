@@ -14,7 +14,7 @@ layout: null
 		<name>Brett Whinnen</name>
                 <email>brett@whinnen.com</email>
 	</author>
-	<rights>Copyright (c) 2010-2013, Brett Whinnen; all rights reserved.</rights>
+	<rights>Copyright (c) 2010-2014, Brett Whinnen; all rights reserved.</rights>
 	
 	{% for post in site.posts limit:20 %}
 	<entry>
