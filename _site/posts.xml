@@ -5,7 +5,7 @@
 	<link href="http://www.whinnen.com/"/>
         <link type="application/atom+xml" href="http://www.whinnen.com/post.xml" rel="self"/>
  	<link type="text" href="http://whinnen.com" rel="alternate"/>
-	<updated>2015-11-29T11:49:58-08:00</updated>
+	<updated>2015-11-29T12:49:38-08:00</updated>
 	<id>http://whinnen.com/</id>
 	<author>
 		<name>Brett Whinnen</name>
@@ -15,11 +15,43 @@
 	
 	
 	<entry>
+		<id>http://whinnen.com/2015/11/Torn-Dark-versus-Light</id>
+		<link type="text/html" rel="alternate" href="http://whinnen.com/2015/11/Torn-Dark-versus-Light.html"/>
+		<title>Light v. Dark; Apple iOS v. Android</title>
+		<published>2015-11-29T04:40:00-08:00</published>
+		<updated>2015-11-29T04:40:00-08:00</updated>
+                <author>
+                        <name>Brett Whinnen</name>
+                        <email>brett@whinnen.com</email>
+                </author>
+		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;My first real smartphone was an iPhone 3. I so wanted it and hung out for it and was so happy when I got it. It offered everything I needed at the time and I thought then and there I&#39;d be an Apple fanboy (from a phone perspective) forever.&lt;/p&gt;
+
+&lt;p&gt;I moved to the iPhone 4 and had an iPhone 5S for work but wanted a taste of the dark side. Yes I wanted to try Android, but I didn&#39;t want to give up the quality build of the Apple devices, the polish of IOS ... I ended up getting a HTC One (M7) and fully converted to pure Android via the Google Play Edition release. I played around with customization, but it never really gave me anything extra that I desperately wanted. The same with widgets, they didn&#39;t do much for me. I did like being able to put App Icons anywhere on the desktop grid though, please Apple do that!&lt;/p&gt;
+
+&lt;p&gt;The one thing that I loved was when Google put much more emphasis into Google Now and released the GEL (Google Experience Launcher). This gave me some great nifty little notifications, the ease of being able to look at my cards, quick checks on weather, scores and news that interested me. Integration into other GAPPS (Google Apps) made it such a great tool.&lt;/p&gt;
+
+&lt;p&gt;The phone tells me where I parked (not that I forget very often), how long it will take to get home, when I should leave to make an appointment. The later is rather amusing at times as it will tell me at 8:00AM that I need to leave for work, even though I am sitting at my desk, and have been for over an hour! OK Google has improved to the point that it really rivals Siri, but with the added bonus of Google&#39;s power behind it. Siri has always led the way though, being first to have voice controls on being able to do tasks and so forth.&lt;/p&gt;
+
+&lt;p&gt;The biggest difference was the screen size, and Apple has improved that with the iPhone 6+ and now the iPhone 6S+. I can only imagine the 7 will be just as good. IOS has tended to stagnate a little. I still own an iPad (Air 2) and have kept up to date with IOS, while it has tended to stagnate a little in appearance it has improved in functionality quite well.&lt;/p&gt;
+
+&lt;p&gt;One thing Apple with iOS has really come ahead of Google with Android are the neat little hardware features. It was the first with finger print technology, and it is awesome. Haptic feedback and the ability to detect pressure on the screen is just outstanding and I wish that Android had done some of that as well.&lt;/p&gt;
+
+&lt;p&gt;All this does for me is make we want parts of both. The hardware of the Apple iPhone combined with some of the great iOS features and then to top it off some of the functionality of Android such as the GEL, integration into Google Now and the cards (without having to open another App). I know this won&#39;t happen, but I would like a tighter integration between the two, well specifically the Google Apps that I use rather than Android as a whole.&lt;/p&gt;
+
+&lt;p&gt;The other thing I love with Android is the integration of Google Voice and Hangouts with the default Dialer and SMS integration. That is I can use my Google Voice number without needing to use a different applicaiton. I like this as I use it to receive all calls (I don&#39;t give out my default T-mobile number to anyone). I also use Google voice to make calls, especially international ones as I can just use Google credit rather than an additional $10 a month on my T-mobile account.&lt;/p&gt;
+
+&lt;p&gt;I think that if this level of integration between, well lets be honest, Google and Apple takes off I would probably find myself back onto an iPhone.&lt;/p&gt;
+
+&lt;p&gt;Face it, underneath it all I am an Apple fan boy afterall. I just like to dabble with the dark side. Really all of my computers / tablets are all Apple, I even prefer to run Mac OS X at work rather than Windows and for the things I have to run on Windows I have a VM!&lt;/p&gt;&lt;/section&gt;
+&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2015/11/Torn-Dark-versus-Light.html&quot; title=&quot;Light v. Dark; Apple iOS v. Android&quot;&gt;Light v. Dark; Apple iOS v. Android&lt;/a&gt;</content>
+	</entry>
+	
+	<entry>
 		<id>http://whinnen.com/2015/11/So-Long</id>
 		<link type="text/html" rel="alternate" href="http://whinnen.com/2015/11/So-Long.html"/>
 		<title>So Long Since the Last Update</title>
-		<published>2015-11-29T00:00:00-08:00</published>
-		<updated>2015-11-29T00:00:00-08:00</updated>
+		<published>2015-11-29T02:00:00-08:00</published>
+		<updated>2015-11-29T02:00:00-08:00</updated>
                 <author>
                         <name>Brett Whinnen</name>
                         <email>brett@whinnen.com</email>
@@ -591,24 +623,6 @@ layout: master
 
 &lt;p&gt;He is a very happy camper at the moment though, although he is in bed, his Grandma is here for the weekend, and of course he rarely sees her, so it is great for both him and his Grandma! I know he will want to show off to her when she watches him ice skate tomorrow and then again for hockey practice on Sunday morning.&lt;/p&gt;&lt;/section&gt;
 &lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/tired.html&quot; title=&quot;Tired ...&quot;&gt;Tired ...&lt;/a&gt;</content>
-	</entry>
-	
-	<entry>
-		<id>http://whinnen.com/2012/05/the-feisty-fiesta</id>
-		<link type="text/html" rel="alternate" href="http://whinnen.com/2012/05/the-feisty-fiesta.html"/>
-		<title>The Feisty Fiesta</title>
-		<published>2012-05-16T00:00:00-07:00</published>
-		<updated>2012-05-16T00:00:00-07:00</updated>
-                <author>
-                        <name>Brett Whinnen</name>
-                        <email>brett@whinnen.com</email>
-                </author>
-		<content type="html">&lt;p&gt;&lt;section&gt;&lt;p&gt;Who knew? Not me, and definitely not Vicki. Three hockey bags full of equipment, three sticks, one adult length, one intermediate, and one junior as well as plenty of room for all of us three. I thought I&#39;d fit it in there, but was amazed at just how much room there is in such a small little car. Of course if we were a bigger family it never would do and we&#39;d have to get the roof rack Vicki was thinking.&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;I am very glad that everything fits in the car as I didn&#39;t want to have to buy more stuff just to get to and from hockey, nor did I want to have to drive two cars as it would cost us a fortune in tolls!&lt;/p&gt;
-
-&lt;p&gt;Tomorrow is the day Vicki and I take to the ice for the first time in full hockey equipment, it is going to be rather interesting and I for one will probably get little sleep tonight just thinking about it.&lt;/p&gt;&lt;/section&gt;
-&lt;br /&gt;&lt;strong&gt;This post will be better represented on our blog.&lt;/strong&gt; &lt;a href=&quot;http://whinnen.com/2012/05/the-feisty-fiesta.html&quot; title=&quot;The Feisty Fiesta&quot;&gt;The Feisty Fiesta&lt;/a&gt;</content>
 	</entry>
 	
 
