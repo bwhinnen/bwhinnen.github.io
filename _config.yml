@@ -6,6 +6,7 @@ sass: true
 haml: true
 url: http://whinnen.com
 root_desc: Whinnen.COM
+gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "page/:num"
 post_defaults:
