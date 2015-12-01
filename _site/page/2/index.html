@@ -77,6 +77,74 @@
       <li>
         <header class="entry-title">
           <h2>
+            <a href="/2013/09/the-big-data-migration-affair.html" title="The Big Data Migration Affair">The Big Data Migration Affair</a>
+          </h2>
+          <aside id="post-content" class="clearfix">
+            <category id="category" class="small">
+              <ul id="nav" class="list-none category">
+                <li class="category">Posted in</li>
+                
+                  <li class="category"><a href="/category/Random/index.html" title="Random" class="list-none">Random</a></li>
+                
+              </ul>
+            </category>
+            <category id="category" class="float_right small">
+              <ul id="nav" class="list-none category">
+                <li class="category"><time datetime="2013-09-11 00:00:00 -0700">11 Sep 2013</time></li>
+              </ul>
+            </category>
+          </aside>
+        </header>
+        <div class="content">
+          <p><section><p>I’ve run on a VSP now for a number of years, basically around 6 or 7 of them and have had a great deal of fun and learning in the process. There was a necessity based on running a photographic website for a little start-up company I had that fell through due to changing priorities as well as being able to get push based email out to various iDevices. Now with rising costs and really the fact that the only things I use the VPS for are email serving a Wordpress site and http based file storage the costs far outweighed the needs.</p></p>
+
+<p>I began to setup Google Apps about a year ago, but never really took it any further. This time I did some more investigation and it turns out that full exchange (well ActiveSync) functionality is available to Google Apps for Businesses customers, the cost was $50 per user per calendar year. Not too bad overall, this means three accounts, one for each member of the family.</p>
+
+<p>I could also host my files on Google Sites which also gave me much more storage and bandwidth space than the previous VPS did as well as more redundancy being Google. The photographic website was being closed so a basic landing page was the only thing required. The Wordpress site posed more of a problem as Google Sites does not allow anything of the sort, yes I could have used Blogger but I wanted to keep the same look and feel.</p>
+
+<p>Google announced earlier this year that the Google Cloud Apps was going to start supporting php development, that meant that suddenly Wordpress was about to become available. The only catch, this was going to cost some money as both the Cloud SQL and Cloud Storage were billed on a usage basis. Projected costs are around $0.36 a day for Cloud SQL and not much for the Cloud Storage as I really don’t need much. Rough estimates run to under $150 a year. This combined with the Google Apps for Business still runs at less than the current VPS solution.</p>
+
+<p>However, there were a few gotchas along the way.</p>
+
+<p style="padding-left: 30px;">1. You can only create an alias name for a Google Site from the primary domain, I have three domains in total and really wanted two of those to be landing pages on Google Sites.</p>
+
+<p style="padding-left: 30px;">Solution: Get creative. I used a free hosting site that allowed me to use my domain name against an IP address, this allowed me to put a simple .htaccess with a permanent forward (301) in to point to the new Google Site alias. It did require access and changes to my DNS settings but after those changes it worked perfectly.</p>
+
+<p style="padding-left: 30px;">2. Google has no DNS hosting.</p>
+
+<p style="padding-left: 30px;">Solution: Most of the companies who register the domains for you will offer this as a free service. For me Melbourne IT does it and I had to transfer one domain over in order to get the features I needed, got a great deal on a 5 year registration for the domain too!</p>
+
+<p style="padding-left: 30px;">3. Google Cloud Apps will require billing.</p>
+
+<p style="padding-left: 30px;">Solution: Do it, it really is not all that expensive in the grand scheme of things, especially for the redundancy and scalability involved. While you can opt for daily rates there are also per use rates that can work out cheaper depending on how often your site is accessed. I went for the daily rate first to get all the teething and to allow the site to settle down.</p>
+
+<p>Overall the process was pretty simple, the key areas are to make sure you know your ‘net presence and make sure you have backups of everything. Manage things in a staged approach and run a pilot, Google Apps makes this quite easy to do and they even have a one month trial on Google Apps for Business you can use towards the end of the pilot to make sure everything works as expected.</p>
+
+<p>Getting my Wordpress site to Google Cloud Apps was a little harder but following an online guide and knowing how to use mysql helped a great deal. I will do up another article in the future that shows what I’ve done to get that working with minimal issues.</p></section>
+
+        </div>
+        <section>
+        <tag id="tag" class="clearfix">
+          <div class="center_mod">
+            <ul id="nav" class="list-none tag">
+              
+                <li><a href="/tag/DNS/index.html" title="DNS" class="list-none">DNS</a> </li>
+              
+                <li><a href="/tag/Google/index.html" title="Google" class="list-none">Google</a> </li>
+              
+                <li><a href="/tag/VPS/index.html" title="VPS" class="list-none">VPS</a> </li>
+              
+                <li><a href="/tag/Wordpress/index.html" title="Wordpress" class="list-none">Wordpress</a> </li>
+              
+            </ul>
+          </div>
+        </tag>
+        </section>
+      </li>
+    
+      <li>
+        <header class="entry-title">
+          <h2>
             <a href="/2013/07/take-control-of-your-remotes.html" title="Take control of your remotes">Take control of your remotes</a>
           </h2>
           <aside id="post-content" class="clearfix">
@@ -293,56 +361,6 @@
                 <li><a href="/tag/Depression/index.html" title="Depression" class="list-none">Depression</a> </li>
               
                 <li><a href="/tag/Mental Health/index.html" title="Mental Health" class="list-none">Mental Health</a> </li>
-              
-            </ul>
-          </div>
-        </tag>
-        </section>
-      </li>
-    
-      <li>
-        <header class="entry-title">
-          <h2>
-            <a href="/2013/06/really-i-should-do-this-more-often.html" title="Really I should do this more often">Really I should do this more often</a>
-          </h2>
-          <aside id="post-content" class="clearfix">
-            <category id="category" class="small">
-              <ul id="nav" class="list-none category">
-                <li class="category">Posted in</li>
-                
-                  <li class="category"><a href="/category/Family/index.html" title="Family" class="list-none">Family</a></li>
-                
-              </ul>
-            </category>
-            <category id="category" class="float_right small">
-              <ul id="nav" class="list-none category">
-                <li class="category"><time datetime="2013-06-28 00:00:00 -0700">28 Jun 2013</time></li>
-              </ul>
-            </category>
-          </aside>
-        </header>
-        <div class="content">
-          <p><section><p>I really should. I find that I try and find something really meaningful to write about, something mind-blowingly awesome, but of course never find anything. What I should be doing is just writing things that happen, after all this is what I wanted to do with the blog rather than trying to be all 'clever' and 'sophisticated'!</p></p>
-
-<p>So what I will be trying to write things that are happening around here and in my and our lives. It won't be prize winning prose but at least it will be honest and real.</p>
-
-<p>Today is Friday, I'm taking a mental health day, yes I do need it, but to top things off the poor boy had an episode last night with some vomiting, well three counts of vomiting on his way to the bathroom. One in his bedroom, one in the family room and one at the entrance to the bathroom. All at around 1:00am this morning. Poor little tacker, he was thrown in the shower while we cleaned up. I must admit that is my most hated job in the world, cleaning up after someone that has been sick is never fun.</p>
-
-<p>He has been up all night, and is still awake at 11:00am, but as of 7:00am he has stopped vomiting, which is a relief, but is now running a wondrous 38.9ºC temperature. But he is now taking fluids and medicine as well as eating a few Arnott's Milk Arrowroot biscuits and is actually quite lucid for someone who is running a fever and has a distinct lack of sleep.</p>
-
-<p>Vicki had to go into the office this morning for a few hours to do the banking as her boss was away, which I am sure was a real chore on just a few paltry hours sleep. We are now all just relaxing at home doing very little for the rest of the day as the boy recovers and we keep a close eye on him.</p></section>
-
-        </div>
-        <section>
-        <tag id="tag" class="clearfix">
-          <div class="center_mod">
-            <ul id="nav" class="list-none tag">
-              
-                <li><a href="/tag/Braden/index.html" title="Braden" class="list-none">Braden</a> </li>
-              
-                <li><a href="/tag/Brett/index.html" title="Brett" class="list-none">Brett</a> </li>
-              
-                <li><a href="/tag/Vicki/index.html" title="Vicki" class="list-none">Vicki</a> </li>
               
             </ul>
           </div>
